@@ -2,7 +2,6 @@ import { motion as m, animate } from "framer-motion";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import styles from "./Project.module.css";
 import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import VMHmoneyStack from "../../assets/VMHmoney-stack.svg";
 import Chart2023 from "../../assets/2023-chart.svg";
 import Chart2022 from "../../assets/2022-chart.svg";
@@ -12,7 +11,7 @@ import Chart2017 from "../../assets/2017-chart.svg";
 
 import DoctorIcon from "../../assets/doctor-icon.svg";
 import BarIcon from "../../assets/bar-icon.svg";
-import PlaceIcon from "../../assets/place-icon.svg";
+import PlaceIcon from "../../assets/Place-icon.svg";
 import PuzzleIcon from "../../assets/puzzle-icon.svg";
 
 import ProjectSlider from "../../components/Project/ProjectSlider";

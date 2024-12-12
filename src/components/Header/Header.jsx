@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion as m, AnimatePresence } from "framer-motion";
-import Logo from "../../assets/VMh-vertical.svg";
+import Logo from "../../assets/VMH-vertical.svg";
 import BurgerMenu from "../../assets/burgermenu.svg";
 import styles from "./Header.module.css";
 
