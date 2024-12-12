@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     };
 
     if (command !== "serve") {
-        config.base = "/https://github.com/andreasbbusk/vmh.git/";
+        config.base = "/vmh/";
     }
 
     return config;

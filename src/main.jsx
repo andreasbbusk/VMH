@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/https://github.com/andreasbbusk/vmh.git/"}>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/vmh/"}>
       <App />
     </BrowserRouter>
   </StrictMode>,
