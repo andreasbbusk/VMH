@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Projects from "./pages/Project/Projects";
 import Project2025 from "./pages/Project/Project2025";
 import Donate from "./pages/Donate/Donate";
-
+import Sponsor from "./pages/Sponsor/Sponsor";
 const App = () => {
   return (
     <>
@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/Kontakt" element={<div>Kontakt</div>} />
           <Route path="/Galleri" element={<div>Galleri</div>} />
           <Route path="/Stoet-nu" element={<Donate />} />
-          <Route path="/Sponsorer" element={<div>Sponsorer</div>} />
+          <Route path="/Sponsorer" element={<Sponsor />} />
         </Routes>
       </main>
     </>
