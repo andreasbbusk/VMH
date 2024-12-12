@@ -1,0 +1,52 @@
+.breadcrumb {
+  padding: 1rem 3rem;
+  font-family: "adelle", sans-serif;
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+.link {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 12px;
+  letter-spacing: var(--ls-4%);
+}
+
+.link:hover,
+.link:focus {
+  color: black;
+}
+
+.current {
+  color: black;
+  font-size: 12px;
+  letter-spacing: var(--ls-4%);
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    padding: 1rem;
+  }
+
+  .link,
+  .current {
+    font-size: 0.8rem;
+  }
+}

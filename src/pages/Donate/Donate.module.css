@@ -1,0 +1,626 @@
+/* Base form styles */
+.donation_form {
+  background-color: #efe0bd;
+  padding: 1.5rem;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 1rem;
+  font-family: "adelle", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.donation_form h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Text input styles */
+.donation_form input[type="text"] {
+  width: 100%;
+  background-color: #fbf5eb;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: "adelle", serif;
+  border: none;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.donation_form input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #e0a619;
+}
+
+.donation_form input[type="text"]::placeholder {
+  color: #3c3c3c;
+}
+
+/* Phone number input styles */
+.donation_form input[type="tel"] {
+  width: 100%;
+  background-color: #fbf5eb;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: "adelle", serif;
+  border: none;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.donation_form input[type="tel"]:focus {
+  outline: none;
+  border: 2px solid #e0a619;
+}
+
+.donation_form input[type="tel"]::placeholder {
+  color: #3c3c3c;
+}
+
+/* Amount section */
+.donation_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.amount_buttons {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2rem);
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.amount_buttons button,
+.type_button {
+  flex: 1;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  border-radius: 15px;
+  background: #fbf5eb;
+  color: black;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: clamp(60px, 15vw, 80px);
+  font-size: clamp(0.875rem, 2vw, 1.2rem);
+  font-family: "adelle", serif;
+}
+
+.amount_buttons button:hover,
+.type_button:hover {
+  background: #f5d580;
+}
+
+.amount_buttons button.selected,
+.type_button.selected {
+  background: #e0a619;
+  color: white;
+}
+
+/* Type buttons */
+.type_buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.type_button {
+  border-radius: 15px 0 15px 0;
+}
+
+/* Payment section */
+.payment_method_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment_options_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment_option_label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fbf5eb;
+  color: rgb(0, 0, 0, 0.6);
+  padding: 0.4rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.payment_logo {
+  width: clamp(30px, 6vw, 40px);
+  height: clamp(30px, 6vw, 40px);
+  margin-left: auto;
+}
+
+.payment_option_label:hover {
+  background-color: #f5d580;
+  transform: translateY(-2px);
+}
+
+.payment_option_label.selected {
+  color: black;
+}
+
+/* Radio button styles */
+.payment_option_label input[type="radio"],
+.donor_type_label input[type="radio"],
+.tax_checkbox_label input[type="checkbox"] {
+  display: none;
+}
+
+.payment_radio,
+.donor_type_radio {
+  width: clamp(18px, 4vw, 24px);
+  height: clamp(18px, 4vw, 24px);
+  border: 2px solid #e0a619;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.payment_option_label input[type="radio"]:checked + .payment_radio,
+.donor_type_label input[type="radio"]:checked + .donor_type_radio {
+  border-color: #e0a619;
+  background-color: #fbf5eb;
+}
+
+.payment_option_label input[type="radio"]:checked + .payment_radio::after,
+.donor_type_label input[type="radio"]:checked + .donor_type_radio::after,
+.tax_checkbox_label input[type="checkbox"]:checked + .tax_checkbox::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #e0a619;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: radioScale 0.2s ease-in-out;
+}
+
+/* Submit button */
+.submit_button {
+  background: #e0a619;
+  color: white;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+  border-radius: 15px 0 15px 0;
+  margin: 0 auto 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: 0.08em;
+  max-width: fit-content;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.submit_button:hover {
+  background: #c89316;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit_button:active {
+  transform: translateY(0);
+}
+
+.button_subtext {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Donor type section */
+.donor_type_group {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.donor_type_label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+/* Tax deduction section */
+.tax_deduction_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tax_checkbox_label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+.tax_checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e0a619;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  background-color: #fbf5eb;
+}
+
+/* Animations */
+@keyframes radioScale {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 400px) {
+  .donation_form {
+    padding: 0.75rem; /* Further reduce padding for very small screens */
+  }
+
+  .amount_buttons {
+    flex-direction: column;
+    gap: 0.75rem; /* Reduce gap for compact spacing */
+  }
+
+  .payment_options_group {
+    flex-direction: column;
+    gap: 0.75rem; /* Reduce gap for compact spacing */
+  }
+
+  .donor_type_group {
+    flex-direction: column;
+    gap: 0.75rem; /* Reduce gap for compact spacing */
+  }
+
+  .donation_form input[type="text"],
+  .donation_form input[type="tel"] {
+    font-size: 0.75rem; /* Decrease font size for better fit */
+  }
+
+  .payment_option_label,
+  .tax_checkbox_label {
+    padding: 0.5rem; /* Further reduce padding for very small screens */
+  }
+
+  .submit_button {
+    padding: 0.5rem 1rem; /* Further reduce padding for very small screens */
+    font-size: 0.9rem; /* Decrease font size for better fit */
+  }
+
+  .button_subtext {
+    font-size: 0.7rem; /* Decrease font size for better fit */
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 480px) {
+  .donation_form {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .donation_form h2 {
+    font-size: 1.5rem; /* Smaller header size for mobile */
+  }
+
+  .amount_buttons {
+    flex-direction: column;
+    gap: 1rem; /* Adjust gap for better spacing */
+  }
+
+  .payment_options_group {
+    flex-direction: column;
+    gap: 1rem; /* Adjust gap for better spacing */
+  }
+
+  .donor_type_group {
+    flex-direction: column;
+    gap: 1rem; /* Adjust gap for better spacing */
+  }
+
+  .donation_form input[type="text"],
+  .donation_form input[type="tel"],
+  .donation_form input[type="email"],
+  .donation_form input[type="number"],
+  label {
+    font-size: 0.875rem; /* Slightly smaller font size for better readability */
+  }
+
+  .payment_option_label,
+  .tax_checkbox_label {
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+  }
+
+  .submit_button {
+    padding: 0.75rem 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Maintain font size for readability */
+  }
+
+  .button_subtext {
+    font-size: 0.75rem; /* Maintain font size for readability */
+  }
+}
+
+/* Responsive styles for medium screens */
+@media (max-width: 768px) {
+  .donation_form {
+    padding: 1.5rem; /* Slightly reduce padding for medium screens */
+  }
+
+  .donation_form h2 {
+    font-size: 1.75rem; /* Adjusted header size for tablets */
+  }
+
+  .amount_buttons {
+    flex-direction: row;
+    gap: 1.5rem; /* Adjust gap for better spacing */
+  }
+
+  .type_buttons {
+    flex-direction: column;
+  }
+
+  .payment_options_group {
+    flex-direction: column;
+    gap: 1.5rem; /* Adjust gap for better spacing */
+  }
+
+  .donor_type_group {
+    flex-direction: row;
+    gap: 1.5rem; /* Adjust gap for better spacing */
+  }
+
+  .donation_form input[type="text"],
+  .donation_form input[type="tel"],
+  .donation_form input[type="email"],
+  .donation_form input[type="number"],
+  label {
+    font-size: 1rem; /* Maintain font size for readability */
+  }
+
+  .payment_option_label,
+  .tax_checkbox_label {
+    padding: 0.85rem;
+  }
+
+  .submit_button {
+    padding: 0.85rem 1.75rem; /* Adjust padding for medium screens */
+    font-size: 1.1rem; /* Slightly increase font size for better readability */
+  }
+
+  .button_subtext {
+    font-size: 0.85rem; /* Maintain font size for readability */
+  }
+}
+
+/* Personal info section */
+.name_inputs_container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Bank info section */
+.bank_info_container {
+  overflow: hidden;
+}
+
+/* Tax deduction container */
+.tax_deduction_container {
+  overflow: hidden;
+}
+
+.input_validation {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.input_valid {
+  composes: input_validation;
+  border-color: #4caf50;
+}
+
+.input_invalid {
+  composes: input_validation;
+  border-color: #f44336;
+}
+
+/* Update responsive breakpoints */
+@media (max-width: 480px) {
+  .name_inputs_container,
+  .donor_type_group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .amount_buttons {
+    flex-direction: column;
+  }
+
+  .type_buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .payment_option_label {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .button_subtext {
+    font-size: 0.75rem;
+  }
+
+  .donation_title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .donation_title img {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .name_inputs_container {
+    flex-direction: row;
+  }
+
+  .amount_buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .amount_buttons button {
+    flex: 0 1 calc(33.33% - 1rem);
+  }
+
+  .donation_title img {
+    max-width: 180px;
+  }
+}
+
+/* Add container query support for modern browsers */
+@container (max-width: 400px) {
+  .donation_form {
+    padding: 0.75rem;
+  }
+
+  .amount_buttons button {
+    width: 100%;
+  }
+}
+
+
+
+.donate_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.info_section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 500px;
+}
+
+.main_info {
+  padding: 2rem;
+}
+
+.main_info h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.main_info p {
+  font-family: "adelle", serif;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project_link {
+  background: #3C3C3C;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px 0 15px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.08em;
+}
+
+.project_link:hover {
+  background: #c89316;
+  transform: translateY(-2px);
+}
+
+.info_cards {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.info_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background-color: #fbf5eb;
+  padding: 1rem;
+}
+
+.info_card h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 968px) {
+  .donate_container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .info_section {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_info {
+    padding: 1rem;
+  }
+
+  .info_card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info_card img {
+    width: 50px;
+    height: 50px;
+  }
+}

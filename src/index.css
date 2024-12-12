@@ -1,0 +1,64 @@
+:root {
+  --adelle: "adelle", serif;
+
+  --ls-4%: 0.04em;
+  --ls-6%: 0.06em;
+  --ls-8%: 0.08em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbf5eb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "adelle", serif;
+}
+
+p {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+li {
+  list-style: none;
+  font-family: "adelle-sans", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-content {
+  margin: 120px 0;
+}
+.support-button {
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  letter-spacing: 0.04em;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(16px, 3vw, 2rem);
+  border-radius: 12px 0 12px 0;
+  background-color: #e0a619;
+  color: #fff;
+  white-space: nowrap;
+}

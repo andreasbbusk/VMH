@@ -1,0 +1,367 @@
+/* Header styling */
+.header {
+  background-color: inhert;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 3rem);
+  width: 100%;
+  z-index: 9999;
+  font-family: "adelle", sans-serif;
+}
+
+/* Header content layout */
+.header-content {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Logo image styling */
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation bar styling */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation link styling */
+.nav-link {
+  position: relative;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+/* Active navigation link styling */
+.nav-link.active {
+  color: #e0a619;
+}
+
+/* Active navigation link indicator */
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #e0a619;
+}
+
+/* Navigation list styling */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Link and dropdown toggle styling */
+.nav-list a,
+.dropdown-toggle {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: clamp(0.3rem, 1vw, 0.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown toggle button styling */
+.dropdown-toggle {
+  background: none;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: clamp(0.3rem, 1vw, 0.5rem) 0;
+  min-width: clamp(180px, 30vw, 200px);
+  list-style: none;
+  z-index: 101;
+}
+
+/* Dropdown menu link styling */
+.dropdown-menu a {
+  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+}
+
+/* Active indicator styling */
+.active-indicator {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: #e0a619;
+  transform-origin: top;
+  border-radius: 6px;
+}
+
+/* Menu toggle button styling */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: clamp(0.3rem, 1vw, 0.5rem);
+}
+
+/* Menu icon styling */
+.menu-icon {
+  width: clamp(24px, 4vw, 30px);
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Support button styling */
+.support-button {
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  letter-spacing: 0.04em;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(16px, 3vw, 2rem);
+  border-radius: 12px 0 12px 0;
+  background-color: #e0a619;
+  color: #fff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+}
+
+/* Arrow icon styling */
+.arrow_icon {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+  transform: rotate(-45deg);
+}
+
+/* Hover effect for support button arrow icon */
+.support-button:hover .arrow_icon {
+  transform: translate(2px, -2px) rotate(-45deg) !important;
+}
+
+/* Clicked state for button arrow icon */
+.button-clicked .arrow_icon {
+  transform: translate(-2px, 2px) rotate(-45deg) !important;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .header {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .nav-list {
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .nav-link {
+    font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  }
+
+  .support-button {
+    font-size: clamp(0.8rem, 1.6vw, 1rem);
+    padding: clamp(0.35rem, 0.8vw, 0.45rem) clamp(14px, 2vw, 20px);
+  }
+
+  .logo-image {
+    max-width: clamp(120px, 20vw, 150px);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .nav-list {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+  }
+
+  .nav-link {
+    font-size: clamp(0.75rem, 1.3vw, 0.85rem);
+  }
+
+  .support-button {
+    font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+    padding: clamp(0.3rem, 0.7vw, 0.4rem) clamp(12px, 1.8vw, 18px);
+  }
+
+  .logo-image {
+    max-width: clamp(110px, 18vw, 130px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    margin-left: 1rem;
+  }
+
+  .support-button-wrapper {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fbf5eb;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .nav-open {
+    display: flex;
+  }
+
+  .nav-list {
+    display: flex;
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    box-shadow: none;
+    overflow-y: auto;
+    right: 0;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .close-button::before,
+  .close-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+  }
+
+  .close-button::before {
+    transform: rotate(45deg);
+  }
+
+  .close-button::after {
+    transform: rotate(-45deg);
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border-left: none;
+    margin: 0;
+  }
+
+  .nav-link {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+
+  .nav-open .nav-list {
+    display: flex;
+    right: 0;
+  }
+
+  .nav-open .menu-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(0.75rem, 1.5vw, 1rem)
+      clamp(0.75rem, 1.5vw, 1rem);
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border-left: 2px solid #e0a619;
+    margin-left: clamp(0.75rem, 1.5vw, 1rem);
+  }
+
+  .logo-image {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.75rem, 1.5vw, 1rem);
+  }
+
+  .nav-list {
+    width: 100%;
+    right: -100%;
+  }
+
+  .nav-link {
+    font-size: clamp(0.85rem, 1.6vw, 0.9rem);
+  }
+
+  .support-button {
+    font-size: clamp(0.5rem, 1vw, 0.6rem);
+    padding: clamp(0.2rem, 0.5vw, 0.25rem) clamp(8px, 1.2vw, 12px);
+    border-radius: 4px 0 4px 0;
+  }
+
+  .logo-image {
+    max-width: 120px;
+  }
+}

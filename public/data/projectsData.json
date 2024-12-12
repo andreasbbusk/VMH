@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "år": "2025",
+    "titel": "SPY-Phi infrarød scanner",
+    "beskrivelse": "I år går indsamlingen til den avanceret infrarøde SPY-Phi scanner fra Stryker - Et værktøj der hjælper kirurger med præcis identificering og behandling af kræftramte områder.",
+    "billede": "",
+    "læsMereLink": "/projekter/spy-phi-scanner"
+  },
+  {
+    "id": "2",
+    "år": "2023",
+    "titel": "Faciliteter til projekt ”Lys i Vejle året rundt”",
+    "beskrivelse": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime voluptates corporis omnis! Asperiores excepturi corrupti quos atque ullam repudiandae nihil nemo tempora! Numquam facere fugit accusamus, aliquam perspiciatis unde.",
+    "billede": "",
+    "læsMereLink": "/projekter/digital-dermatoskopi"
+  },
+  {
+    "id": "3",
+    "år": "2022",
+    "titel": "Scanner til optimering af kirurgi øjennært",
+    "beskrivelse": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime voluptates corporis omnis! Asperiores excepturi corrupti quos atque ullam repudiandae nihil nemo tempora! Numquam facere fugit accusamus, aliquam perspiciatis unde.",
+    "billede": "",
+    "læsMereLink": "/projekter/mobil-screening"
+  },
+  {
+    "id": "4",
+    "år": "2019",
+    "titel": "Glaspavillon til dagslysbehandling",
+    "beskrivelse": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime voluptates corporis omnis! Asperiores excepturi corrupti quos atque ullam repudiandae nihil nemo tempora! Numquam facere fugit accusamus, aliquam perspiciatis unde.",
+    "billede": "",
+    "læsMereLink": "/projekter/ai-diagnose"
+  },
+  {
+    "id": "5",
+    "år": "2018",
+    "titel": "Beslutningsstøtte til patienter med hudcancer i ansigtet",
+    "beskrivelse": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime voluptates corporis omnis! Asperiores excepturi corrupti quos atque ullam repudiandae nihil nemo tempora! Numquam facere fugit accusamus, aliquam perspiciatis unde.",
+    "billede": "",
+    "læsMereLink": "/projekter/uv-beskyttelse"
+  },
+  {
+    "id": "6",
+    "år": "2017",
+    "titel": "Pilotprojekt i teledermatologi",
+    "beskrivelse": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime voluptates corporis omnis! Asperiores excepturi corrupti quos atque ullam repudiandae nihil nemo tempora! Numquam facere fugit accusamus, aliquam perspiciatis unde.",
+    "billede": "",
+    "læsMereLink": ""
+  }
+] 
