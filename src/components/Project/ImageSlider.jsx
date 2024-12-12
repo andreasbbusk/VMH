@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion as m } from "framer-motion";
 import styles from "../../pages/Project/Project.module.css";
 import SpyPhi from "../../assets/spyphi.png";
-import SpyPhiStand from "../../assets/Spyphi-stand.png";
+import SpyPhiStand from "../../assets/spyphi-stand.png";
 import CancerImage from "../../assets/cancer-image.png";
 
 const slides = [
