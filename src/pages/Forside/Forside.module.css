@@ -1,0 +1,596 @@
+.forside-intro-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forside-intro-venstre {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.forside-intro-venstre h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 2rem;
+}
+
+.forside-intro-venstre p {
+  margin-left: 2rem;
+}
+
+.forside-intro-hojre {
+  max-width: 100%;
+}
+
+.forside-intro-hojre img {
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 500px;
+  overflow: auto;
+  z-index: 1;
+  transform: translateY(50px);
+  border-radius: 15px 0 15px 0;
+}
+
+.hudcancer-divider {
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 20px 0;
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.forside-stats-container {
+  background-color: white;
+  z-index: -1;
+}
+
+.Forside-stats-content {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  padding: 7rem 0 3rem 0;
+}
+
+.Forside-stats-content h1 {
+  text-align: center;
+  color: #e0a619;
+  font-size: 4rem;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Forside-stats-content p {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Forside-kildetekst {
+  padding-bottom: 5rem;
+}
+
+.Forside-kildetekst p {
+  font-size: 0.8rem;
+  text-align: end;
+  margin-right: 10rem;
+}
+
+.Forside-kildetekst a {
+  color: #e0a619;
+}
+
+.forside-gallamiddag-container {
+  padding: 5rem 0;
+}
+
+.forside-gallamiddag-billeder-container {
+  display: flex;
+}
+
+.forside-gallamiddag-billeder-venstre {
+  flex-direction: column;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.forside-gallamiddag-billeder-hojre {
+  flex-direction: column;
+  display: flex;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
+  width: 90%;
+} 
+
+.forside-gallamiddag-content {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.forside-gallamiddag-tekst-container {
+  align-content: center;
+  align-items: center;
+justify-content: center;
+}
+
+.forside-gallamiddag-tekst p{
+  margin-top: 2rem;
+}
+
+.forside-gallamiddag-tekst h1 {
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.forside-gallamiddag-stats {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.forside-gallamiddag-stats h1 {
+  color: #e0a619;
+  font-size: 4rem;
+}
+
+.forside-gallamiddag-stats p {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Forside-knap-container {
+  gap: 2rem; 
+  display: flex;
+}
+
+ .ForsideResever {
+   background-color: #E0A619;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+.Forsidelasmereknap {
+  background-color: #3C3C3C;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+
+.Forside-projekt-container {
+  padding: 20rem 0;
+  text-align: center;
+  background-color: white;
+}
+
+.Forside-knast-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+.Forside-knast-tekst {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.Forside-knast-tekst h1 {
+  font-size: 4rem;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Forside-knast-tekst p {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.Forside-knast-knap-container {
+  display: flex;
+  justify-content: center;
+  margin-left: -8rem;
+}
+
+.KnastLæsmereKnap {
+  background-color: #3C3C3C;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 3rem;
+   margin-left: 2rem;
+}
+
+.Forside-knast-billede-hojre img, .Forside-knast-billede-venstre img {
+  margin-top: 5rem;
+} 
+
+.Forside-knast-billede-venstre {
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.FraIdeTilIndsats-divider {
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 20px 0;
+  width: 5%;
+}
+
+
+.Forside-knap-container {
+  gap: 2rem; 
+  display: flex;
+}
+
+ .FraIdeTilIndsatsStotNu {
+   background-color: #E0A619;
+   color: #fff;
+   border: none;
+   padding: 10px 30px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+.FraIdeTilIndsatsLasMere {
+  background-color: #3C3C3C;
+   color: #fff;
+   border: none;
+   padding: 10px 30px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+.FraIdeTilIndsats-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.FraIdeTilIndsats-container {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.FraIdeTilIndsats-hojre img {
+  border-radius: 15px 0 15px 0;
+}
+
+.FraIdeTilIndsats-hojre {
+  text-align: center;
+}
+
+.StotteFunktion-container {
+  padding: 15rem 0;
+  text-align: center;
+  background-color: white;
+}
+
+.galla-sponsor{
+  margin-left: 16rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.galla-sponsor h1 {
+  text-transform: uppercase;
+  font-family: "adelle";
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.galla-sponsor p {
+  font-size: .7rem;
+}
+
+.sponsor-divider {
+  border: 0;
+  height: 2px;
+  background-color: #E0A619;
+  margin: 10px 0;
+  width: 10%;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Skjul overskydende tekst udenfor containeren */
+  position: relative;
+  padding: 10px 0;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 130s linear infinite; /* Animation til kontinuerlig scroll */
+  white-space: nowrap; /* Sørg for at teksten ikke brydes */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Sørg for at hvert item tager den plads det behøver */
+  margin-right: 90px; /* Mellemrum på 90px mellem sponsorene */
+  font-size: 3rem; /* Tekststørrelse på 4rem */
+  font-weight: bold;
+  color: #000000; /* Tekstfarve */
+  text-align: center;
+}
+
+/* Animation for kontinuerlig scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0); /* Start ved første element */
+  }
+  to {
+    transform: translateX(-1000%); /* Skub hele bredden af sponsorlisten, inkl. margin */
+  }
+}
+
+.sponsorknap-container {
+  text-align: center;
+  gap: 2rem; 
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+ .allesponsor {
+   background-color: #3C3C3C;
+   color: #fff;
+   border: none;
+   padding: 10px 40px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+.blivsponsor {
+   background-color: #E0A619;
+   color: #fff;
+   border: none;
+   padding: 10px 40px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px 0 5px 0;
+   margin-top: 2rem;
+}
+
+@media only screen and (max-width: 390px) {
+
+.forside-intro-container {
+  flex-direction: column-reverse;
+  padding-bottom: 2rem;
+}
+
+.forside-intro-hojre img {
+  display: block;
+  margin: 0rem auto;
+  width: 300px;
+  transform: translateY(0px);
+  border-radius: 15px 0 15px 0;
+}
+
+.forside-intro-venstre {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.forside-intro-venstre h1 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.forside-intro-venstre p {
+ text-align: center;
+ margin-right: 1rem;
+}
+
+.forside-intro-venstre br {
+  display: none;
+}
+
+.hudcancer-divider {
+ width: 45%;
+}
+
+.Forside-stats-content {
+  display: flex;
+ flex-direction: column;
+}
+
+.Forside-stats-1, .Forside-stats-2, .Forside-stats-3 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.Forside-stats-content h1 {
+  font-size: 3rem;
+ 
+}
+
+.Forside-stats-content p {
+  font-size: .7rem;
+  align-content: center;
+  width: 100%;
+  text-align: left;
+  font-weight: 200;
+}
+
+.Forside-stats-content {
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.Forside-kildetekst p {
+  font-size: 0.8rem;
+  margin-left: 2rem;
+  width: 90%;
+}
+
+.Forside-kildetekst {
+  padding-bottom: 5rem;
+  width: 100%;
+}
+
+.forside-gallamiddag-content {
+ flex-direction: column;
+ justify-content: center;
+}
+
+.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+} 
+
+.forside-gallamiddag-tekst h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: -5rem;
+}
+
+.forside-gallamiddag-tekst h1 br {
+  display: none;
+}
+
+.forside-gallamiddag-tekst p {
+  text-align: center;
+}
+
+.Forside-knap-container {
+  justify-content: center;
+}
+
+.forside-gallamiddag-stats {
+  flex-direction: column;
+}
+
+.forside-gallamiddag-stats-Gaver, .forside-gallamiddag-stats-Indsamlet, .forside-gallamiddag-stats-Projekt {
+  display: flex;
+  align-items: center;
+  align-content:center ;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.forside-gallamiddag-stats h1 {
+  color: #e0a619;
+  font-size: 2rem;
+}
+
+.Forside-knast-billede-venstre img {
+  display: none;
+}
+
+.Forside-knast-billede-hojre img {
+  width: 100%;
+  margin-top: 10rem;
+  z-index: 1000;
+}
+
+.Forside-knast-tekst h1 {
+  font-size: 2rem;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.Forside-knast-tekst p {
+  text-align: center;
+}
+
+.Forside-knast-knap-container {
+  display: flex;
+  justify-content: center;
+  margin-left: -5rem;
+}
+
+.KnastPil img {
+  max-width: 40%;
+}
+
+.FraIdeTilIndsats-content {
+  flex-direction: column-reverse;
+}
+
+.FraIdeTilIndsats-hojre img {
+  width: 80%;
+}
+
+.FraIdeTilIndsats-hojre p {
+  font-size: .7rem;
+  text-align: center;
+}
+
+.FraIdeTilIndsats-content h1 {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.FraIdeTilIndsats-content p {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 90%;
+}
+
+.FraIdeTilIndsats-content br {
+  display: none;
+}
+
+.galla-sponsor {
+  margin-top: 0rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  margin-left: 1rem;
+}
+
+.galla-sponsor h1 {
+  font-size: 2rem;
+  margin-left: 0;
+}
+
+.carousel-item {
+font-size: 1.5rem;
+margin-right: 50px;
+}
+
+
+}
