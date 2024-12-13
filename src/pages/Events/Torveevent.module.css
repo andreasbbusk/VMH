@@ -1,0 +1,249 @@
+* {
+    background-color: transparent;
+}
+
+.torveevent-intro-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.torve-intro-divider {
+    border: 0;
+    height: 2px;
+    background-color: #E0A619;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 15%;
+}
+
+.torveevent-intro-venstre {
+    display: flex;
+    flex-direction: column;
+}
+
+.torveevent-venstre-tekst h1 {
+    font-family: "adelle";
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.torveevent-venstre-slider img {
+    width: 600px;
+    height: 350px;
+    margin-top: 3rem;
+    border-radius: 15px 0 15px 0;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: .5rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot:hover {
+    background-color: #aaa;
+  }
+  
+  .active-dot {
+    background-color: #E0A619;
+  }
+
+
+
+.torveevent-venstre-tekst a {
+    color: #E0A619;
+    font-weight: bold;
+}
+
+.torveevent-hojre-stats {
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    gap: 4rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
+.torveevent-hojre-stats h1 {
+    font-size: 4rem;
+    color: #E0A619;
+    text-transform: uppercase;
+}
+.torveevent-hojre-stats p {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.torveevent-infographic {
+    background-color: #FBF5EB;
+    margin-top: 5rem;
+}
+
+.torveevent-infographic img{
+    background-color: #FBF5EB;
+    padding: 5rem 0 0 0;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.torveevent-infographic-mobil {
+    opacity: 0;
+    height: 0;
+}
+
+.torve-sponsor{
+    margin-top: 5rem;
+    margin-left: 16rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.torve-sponsor img {
+    margin-top: 2rem;
+}
+
+.torve-sponsor h1 {
+    text-transform: uppercase;
+    font-family: "adelle";
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.torve-sponsor p {
+    font-size: 1rem;
+}
+
+.torve-divider {
+    border: 0;
+    height: 2px;
+    background-color: #E0A619;
+    margin: 10px 0;
+    width: 10%;
+}
+
+.torveknap-container {
+    text-align: center;
+    gap: 2rem; 
+    display: flex;
+    justify-content: center;
+ }
+ 
+   .torve-alle-sponsor {
+     background-color: #3C3C3C;
+     color: #fff;
+     border: none;
+     padding: 10px 30px;
+     font-size: 16px;
+     cursor: pointer;
+     border-radius: 5px 0 5px 0;
+     margin-top: 2rem;
+ }
+ 
+ .torve-bliv-sponsor {
+     background-color: #E0A619;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     border-radius: 5px 0 5px 0;
+     margin-top: 2rem;
+ }
+
+ 
+
+ @media only screen and (max-width: 390px) {
+.torveevent-intro-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.torveevent-venstre-slider  {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.torveevent-intro-venstre {
+    flex-direction: column-reverse;
+    margin: 1rem auto;
+    max-width: 92%;
+}
+
+.torveevent-intro-venstre img {
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.torveevent-hojre-billede {
+    display: none;
+}
+
+.torveevent-hojre-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.torveevent-hojre-305, .torveevent-hojre-25, .torveevent-hojre-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: -1rem;
+}
+
+.torve-sponsor{
+    margin-left: 1rem;
+    margin-top: -4rem;
+}
+
+.torve-sponsor h1 {
+    font-size: 2rem;
+}
+
+.torve-sponsor img {
+    width: 40%;
+}
+
+.torveevent-infographic {
+    padding: 0;
+}
+
+.torveevent-infographic img {
+    display: none;
+}
+
+.torveevent-infographic-mobil {
+    background-color: #FBF5EB;
+    width: 100%;
+    opacity: 100;
+    height: 45rem;
+}
+.torveevent-infographic-mobil img {
+    background-color: #FBF5EB;
+    margin-top: 5rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+ }

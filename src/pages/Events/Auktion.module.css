@@ -1,0 +1,220 @@
+* {
+    background-color: #fbf5eb;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auktionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.auktionTekst {
+    max-width: 34%;
+}
+
+.auktionTekst h1 {
+    text-transform: uppercase;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.auktion-divider {
+    border: 0;
+    height: 2px;
+    background-color: #E0A619;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 15%;
+  }
+
+
+.cardContainer {
+    display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Sikrer ligelig fordeling af kolonner */
+  gap: 5rem 3rem; /* Afstand mellem cards */
+  justify-content: space-evenly; /* Centrer hele gridet horisontalt */
+  align-items: center;
+  align-content: center;
+  padding: 4rem 0rem 4rem 13rem;
+  background-color: white;
+}
+  
+  
+  
+
+.Gallacard {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fbf5eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 440px;
+  }
+
+  .Gallacard:hover {
+    box-shadow: 0 0 10px #E0A619;
+  margin-top: -10px;
+  }
+
+  .card-divider {
+    border: 0;
+    height: 2px;
+    background-color: #E0A619;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    margin-left: 1.1rem;
+    width: 40%;
+  }
+  
+  .GallacardImageTop {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #fbf5eb;
+  }
+  
+  .GallacardHeadline {
+    font-size: 1.5rem;
+    margin: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: #fbf5eb;
+  }
+  
+  .GallacardText {
+    font-size: 1rem;
+    margin: 0 16px 16px;
+    color: black;
+    background-color: #fbf5eb;
+  }
+  
+  .GallacardBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px 16px;
+    background-color: #fbf5eb;
+  }
+  
+  .GallacardImageBottom {
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+    background-color: #fbf5eb;
+  }
+  
+  
+  .GallacardPrice {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 1rem;
+    background-color: #fbf5eb;
+  }
+
+  .loadMoreButton {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #E0A619;
+    color: #fff;
+    border: none;
+    border-radius: 15px 0 15px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loadMoreButton:hover {
+    background-color: #b4850d;
+  }
+  
+  .back {
+    padding: 1rem;
+    background-color: white;
+  }
+
+  @media only screen and (max-width: 390px) {
+
+    .cardContainer {
+      grid-template-columns: repeat(1, 1fr); /* Two columns on smaller screens */
+      gap: 1rem;
+      display: grid;
+      padding: 0;
+      
+    }
+
+
+.Gallacard {
+  max-width: 60%;
+  padding: 0;
+  height: 55vh;
+  margin: 1rem auto;
+  
+}
+
+.GallacardImageTop {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.GallacardHeadline {
+  font-size: 1.5rem;
+}
+
+.GallacardText {
+  font-size: 1rem;
+}
+
+.GallacardImageBottom {
+  width: 40%;
+}
+
+.GallacardPrice {
+  font-size: .7rem;
+}
+
+.back {
+  padding: 1;
+}
+
+.auktionContainer {
+  justify-content: space-between; /* Juster mellemrummet mellem elementerne */
+  padding: 0.5rem; /* Reducer padding */
+}
+
+.auktionTekst {
+  max-width: 70%; /* Gør teksten bredere */
+  line-height: 1.5;
+}
+
+.auktionTekst h1 {
+  font-size: 2rem; /* Gør overskriften lidt mindre */
+  width: 100%;
+}
+
+.auktion-divider {
+  width: 60%; /* Gør divideren bredere */
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.auktionBillede img {
+  width: 150%; /* Gør billedet mindre */
+  overflow: hidden;
+  margin-bottom: 20rem ;
+  margin-left: -3rem;
+}
+
+
+
+  }
