@@ -1,0 +1,165 @@
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Juster alle kolonner øverst */
+  padding: 20px;
+  background-color: #3c3c3c;
+  height: 400px; /* Indstil en fast højde til footeren */
+  color: white;
+  margin-bottom: -8rem;
+}
+
+.footerImage {
+  max-width: 70%;
+  margin-top: 2rem;
+  background-color: #3c3c3c;
+  
+}
+
+.footerColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center; /* Sørger for lodret start */
+  background-color: #3c3c3c;
+}
+
+.footerColumn p, .footerColumn h1, .footerMiddle p, .footerMiddle h1 {
+    background-color: #3c3c3c;
+}
+
+.footerMiddle {
+  flex: 2;
+  justify-content: center; /* Centrerer indholdet i midten lodret */
+  margin-top: 3rem;
+  background-color: #3c3c3c;
+}
+
+.footerRight {
+  flex: 1;
+  background-color: #3c3c3c;
+  height: 40vh;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row; /* Holder ikon og tekst på samme linje */
+  align-items: center; /* Vertikal justering */
+  justify-content: center; /* Horisontal justering */
+  margin: 10px 0;
+  width: 100%; /* Sikrer samme bredde for alle rækker */
+  background-color: #3c3c3c;
+}
+
+.icon {
+  margin-right: 10px; /* Afstand mellem ikon og tekst */
+  width: 60px; /* Garanter samme størrelse på alle ikoner */
+  height: 60px;
+  background-color: #3c3c3c;
+}
+
+.iconWrapper {
+  margin-left: -1.3rem; /* Ryk ikonet lidt til venstre */
+  background-color: #3c3c3c;
+}
+
+.separator {
+  width: 15rem;
+  border: 1px solid #e0a619;
+  background-color: #3c3c3c;
+}
+
+.socialIcon {
+  margin: 0 10px;
+  width: 60px; /* Justér størrelsen */
+  height: 60px;
+  cursor: pointer; /* Gør ikoner klikbare */
+  background-color: #3c3c3c;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1); /* Lidt animation ved hover */
+  transition: transform 0.2s ease-in-out;
+  background-color: #3c3c3c;
+}
+
+.footer_copyright p, .footer_copyright2 p {
+  font-size: 10px;
+  position: relative;
+  margin-top: 2rem;
+  background-color: #3c3c3c;
+}
+
+.footer_copyright {
+  background-color: #3c3c3c;
+}
+
+.footer_copyright2 {
+  opacity: 0;
+}
+
+
+@media (max-width: 390px) {
+  .footer {
+    padding: 0px; /* Less padding on smaller screens */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footerImage {
+    margin-top: 1rem; /* Reduce margin on image */
+    width: 40%;
+  }
+
+
+  .footerColumn {
+    margin-bottom: 0.5rem; /* Reduced space between columns */
+  flex-direction: column;
+  }
+
+  .footerMiddle {
+    margin-top: 0.5rem; /* Adjust spacing */
+    flex-direction: column;
+  }
+
+  .footerRight {
+    height: auto; /* Allow height to adjust */
+    margin-bottom: 1px;
+    padding: 0;
+    width: 100%;
+  }
+
+
+  .icon {
+    width: 30px; /* Even smaller icons */
+    height: 30px;
+  }
+
+  .socialIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer_copyright p {
+    display: none;
+  }
+
+  .footer_copyright2 {
+    opacity: 100;
+    background-color: #3c3c3c;
+    font-size: .5rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 1rem;
+    padding-bottom:2rem;
+  }
+
+  .styles.separator2 {
+    display: none;
+  }
+}
