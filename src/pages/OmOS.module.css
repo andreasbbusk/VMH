@@ -1,0 +1,305 @@
+.omos-intro-container {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    margin-left: 10rem;
+}
+
+.omos-intro-venstre {
+    display: block;
+    margin: 0 auto;
+}
+
+.omos-intro-venstre h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+.omos-divider {
+    border: 0;
+    height: 2px;
+    background-color: #e0a619;
+    margin: 20px 0;
+    width: 60%;
+}
+
+.omos-intro-venstre p {
+    font-size: 1rem;
+}
+
+.omos-intro-hojre video {
+    max-width: 30%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 15px 0 15px 0;
+}
+
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .video-overlay img {
+    width: 70px; /* Størrelse på play button */
+    height: 100px;
+  }
+
+  .omos-citat {
+    background-color: white;
+    text-align: center;
+    padding: 10rem 0;
+font-family: "adelle";
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin:5rem 0;
+  }
+
+  .omos-citat p {
+    text-transform: none;
+    text-align: unset;
+    font-style: italic;
+  }
+
+.ideenbag-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+  
+  .ideenbag-billede-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .ideenbag-billede-et-container img{
+    margin-left: .95rem;
+  }
+
+.ideenbag-billede-to-container {
+    margin-left: 1rem;
+}
+
+.ideenbag-divider {
+    border: 0;
+    height: 2px;
+    background-color: #e0a619;
+    margin: 20px 0;
+    width: 18%;
+}
+
+.ideenbag-tekst {
+    margin-left: 2rem;
+}
+
+.ideenbag-tekst h1 {
+font-family: "adelle";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.VMV-container {
+    margin-top: 6rem;
+}
+
+.VMV-container h1 {
+    margin-left: 10rem;
+    font-family: "adelle";
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.VMV-content {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.VMV-content p {
+    font-family: "adelle";
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.omos-kontakt-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: white;
+    margin-top: 10rem;
+}
+
+.omos-kontakt-tekst {
+    text-align: center;
+}
+
+.intro-button {
+    background-color: #e0a619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px 0 5px 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 390px){
+
+.omos-intro-hojre {
+      max-width: 600px;
+      margin-top: 2rem;
+    }
+
+.omos-intro-hojre video {
+    max-width: 70%;
+}
+
+.omos-intro-container {
+    flex-direction: column;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.omos-intro-venstre h1 {
+    font-size: 1.6rem;
+}
+
+.omos-divider {
+    width: 90%;
+}
+
+.omos-intro-venstre p {
+    font-size: .9rem;
+    line-height: 1.5;
+    width: 80%;
+}
+
+.omos-intro-venstre br {
+    display: none;
+}
+
+.omos-citat {
+    padding: 3rem 0;
+}
+
+.omos-citat h1 {
+    font-size: .7rem;
+    font-weight: normal;
+}
+
+.omos-citat p {
+    font-size: .5rem;
+}
+
+
+.ideenbag-container {
+    flex-direction: column;
+}
+
+.ideenbag-billede-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.ideenbag-billede-et-container {
+    flex-direction: row;
+}
+.ideenbag-billede-et-container img {
+    width: 140px; /* Angiv en fast bredde */
+    height: 140px; /* Angiv en fast højde */
+    object-fit: cover; /* Sørger for, at billedet udfylder containeren og beskærer, hvis nødvendigt */
+    overflow: hidden;
+    border-radius: 15px 0 15px 0; /* Tilføj en let afrunding, hvis ønsket */
+}
+
+.ideenbag-billede-to-container img {
+    width: 300px; /* Angiv en fast bredde */
+    height: 140px; /* Angiv en fast højde */
+    object-fit: cover; /* Sørger for, at billedet udfylder containeren og beskærer, hvis nødvendigt */
+    overflow: hidden;
+    border-radius: 15px 0 15px 0; /* Tilføj en let afrunding, hvis ønsket */
+}
+
+.ideenbag-tekst h1 {
+    font-size: 1.5rem;
+}
+
+.ideenbag-tekst br {
+    display: none;
+}
+
+.ideenbag-tekst p {
+    font-size: .8rem;
+    width: 90%;
+}
+
+.ideenbag-tekst {
+    margin-top: 3rem;
+}
+
+.VMV-container h1 {
+    margin-left: 1rem;
+    font-size: 2.2rem;
+}
+
+.VMV-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.VMV-content {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.VMV-content img {
+    width: 70%;
+}
+
+.VMV-sammen, .VMV-stotte, .VMV-lokale {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: -2rem;
+}
+
+.VMV-content p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.omos-kontakt-tekst h1 {
+    font-size: 1.5rem;
+}
+
+.omos-kontakt-tekst p {
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+}
