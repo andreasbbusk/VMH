@@ -3,7 +3,7 @@ import styles from './Torveevent.module.css';
 import TorveDato from "../../assets/TorveDato.svg"
 import TorveInfoGraphic from "../../assets/torveevent-infographic.svg"
 import Poly from "../../assets/polyprint.png"
-import TorveInfoMobil from "../../assets/Torveinfo-Mobil.svg"
+import TorveInfoMobil from "../../assets/TorveInfo-Mobil.svg"
 import { useState, useEffect,} from 'react';
 
 // Billeder til slider
