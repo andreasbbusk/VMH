@@ -5,7 +5,7 @@ import styles from "./Project.module.css";
 import Hands from "../../assets/support-hands2.svg";
 import MoneyBag from "../../assets/money-bag.svg";
 import TargetHit from "../../assets/target-hit.svg";
-import ProjectImage from "../../assets/printer.png";
+import ProjectImage from "../../assets/fed-printer.jpg";
 import ProjectNavigation from "../../components/Project/ProjectNavigation";
 import { Link } from "react-router-dom";
 
