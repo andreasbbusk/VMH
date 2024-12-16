@@ -2,6 +2,7 @@ import styles from "./Auktion.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import { useState,} from 'react';
 import cardsData from "./cardsData";
+import { motion } from "framer-motion";
 
 import Hammer from "../../assets/hammerslag.svg"
 
@@ -31,7 +32,13 @@ const [visibleCards, setVisibleCards] = useState(9); // Start med 9 kort
 
 <div className={styles.cardContainer}>
         {cardsData.slice(0, visibleCards).map((card) => (
-          <div key={card.id} className={styles.Gallacard}>
+          <motion.div
+            key={card.id}
+            className={styles.Gallacard}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <img src={card.image} alt="Card image" className={styles.GallacardImageTop} />
             <h2 className={styles.GallacardHeadline}>{card.headline}</h2>
             <hr className={styles['card-divider']} />
@@ -40,7 +47,7 @@ const [visibleCards, setVisibleCards] = useState(9); // Start med 9 kort
               <img src={card.bottomImage} alt="Bottom image" className={styles.GallacardImageBottom} />
               <div className={styles.GallacardPrice}>{card.price}</div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className={styles['back']}>

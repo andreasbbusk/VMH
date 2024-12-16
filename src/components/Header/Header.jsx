@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion as m, AnimatePresence } from "framer-motion";
 import Logo from "../../assets/VMH-vertical.svg";
@@ -8,9 +8,20 @@ import styles from "./Header.module.css";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const body = document.body;
+
+    if (location.pathname === "/sponsorer" || location.pathname === "/om-hudcancer") {
+      body.setAttribute("data-theme", "light");
+    } else {
+      body.setAttribute("data-theme", "beige");
+    }
+
+    console.log(`Theme set to: ${body.getAttribute("data-theme")}`);
+  }, [location.pathname]);
 
   // Helper functions
   const isActive = (path) => location.pathname === path;
@@ -18,10 +29,7 @@ const Header = () => {
   const handleMouseEnter = (dropdown) => setActiveDropdown(dropdown);
   const handleMouseLeave = () => {
     setActiveDropdown(null);
-    setActiveSubDropdown(null);
   };
-  const handleSubMenuEnter = (submenu) => setActiveSubDropdown(submenu);
-  const handleSubMenuLeave = () => setActiveSubDropdown(null);
   const handleKeyDown = (e) => {
     if (e.key === "Enter" || e.key === " ") handleMenuToggle();
   };
@@ -30,7 +38,7 @@ const Header = () => {
   const isEventActive = () => {
     const eventPaths = [
       "/events/gallamiddag-2025",
-      "/events/gallamiddag-2025/auktion",
+      "/events/gallamiddag-2025/auktion", 
       "/events/torveevent-2025"
     ];
     return eventPaths.some(path => isActive(path));
@@ -40,7 +48,7 @@ const Header = () => {
     const projectPaths = [
       "/projekter",
       "/projekter/projekt-2025",
-      "/projekter/projekt-2023",
+      "/projekter/projekt-2023", 
       "/projekter/projekt-2022",
       "/projekter/projekt-2019",
       "/projekter/projekt-2018",
@@ -99,19 +107,10 @@ const Header = () => {
     </Link>
   );
 
-  const renderDropdownItem = (to, text, hasSubmenu = false) => (
-    <li
-      key={to}
-      className={hasSubmenu ? styles.dropdown : ""}
-      onMouseEnter={hasSubmenu ? () => handleSubMenuEnter(text) : undefined}
-      onMouseLeave={hasSubmenu ? handleSubMenuLeave : undefined}
-    >
+  const renderDropdownItem = (to, text) => (
+    <li key={to} className={styles["dropdown-item"]}>
+      <div className={styles["dropdown-line"]} />
       {renderNavLink(to, text, isActive(to), text, false)}
-      {hasSubmenu && activeSubDropdown === text && (
-        <ul className={`${styles["dropdown-menu"]} ${styles["sub-menu"]}`}>
-          {renderDropdownItem(`${to}/auktion`, "Auktion")}
-        </ul>
-      )}
     </li>
   );
 
@@ -136,7 +135,8 @@ const Header = () => {
         </button>
         {activeDropdown === "events" && (
           <ul className={styles["dropdown-menu"]}>
-            {renderDropdownItem("/events/gallamiddag-2025", "Gallamiddag 2025", true)}
+            {renderDropdownItem("/events/gallamiddag-2025", "Gallamiddag 2025")}
+            {renderDropdownItem("/events/gallamiddag-2025/auktion", "Auktion")}
             {renderDropdownItem("/events/torveevent-2025", "Torveevent 2025")}
           </ul>
         )}
@@ -209,7 +209,7 @@ const Header = () => {
   );
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={{ backgroundColor: 'var(--header-bg-color)' }}>
       <div className={styles["header-content"]}>
         {renderNavLink(
           "/",

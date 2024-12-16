@@ -4,23 +4,42 @@ import styles from "../../pages/Project/Project.module.css";
 import SpyPhi from "../../assets/spyphi.png";
 import SpyPhiStand from "../../assets/spyphi-stand.png";
 import CancerImage from "../../assets/cancer-image.png";
+import Lamp from "../../assets/syg-laser.png";
+import Chair from "../../assets/fed-stol.png";
+import Hospital from "../../assets/vejle-sygehus.png";
 
-const slides = [
-  {
-    title: "Håndholdt infrarød laser",
-    image: SpyPhi,
-  },
-  {
-    title: "Apparatur til nøjagtig kortlægning af hudcancer", 
-    image: SpyPhiStand,
-  },
-  {
-    title: "Kræftramt område",
-    image: CancerImage,
-  },
-];
+const slides = {
+  2025: [
+    {
+      title: "Håndholdt infrarød laser",
+      image: SpyPhi,
+    },
+    {
+      title: "Apparatur til nøjagtig kortlægning af hudcancer",
+      image: SpyPhiStand, 
+    },
+    {
+      title: "Kræftramt område",
+      image: CancerImage,
+    }
+  ],
+  2023: [
+    {
+      title: "Speciallamper til kunstlys-PDT, som muliggør behandling i vintermånederne.",
+      image: Lamp,
+    },
+    {
+      title: "Ergonomiske behandlerstole, der sikrer komfortable og korrekte arbejdsstillinger for patienter og personale.",
+      image: Chair,
+    },
+    {
+      title: "Udvidelse af faciliteter, så behandlingen kunne gennemføres lokalt på Vejle Sygehus hele året.",
+      image: Hospital,
+    }
+  ]
+};
 
-const ImageSlider = () => {
+const ImageSlider = ({ projectYear }) => {
   const sliderRef = useRef(null);
   const [fullscreenImage, setFullscreenImage] = useState(null);
 
@@ -46,7 +65,9 @@ const ImageSlider = () => {
     setFullscreenImage(null);
   };
 
-  if (!slides.length) {
+  const currentSlides = slides[projectYear] || [];
+
+  if (!currentSlides.length) {
     return <div>Ingen billeder at vise</div>;
   }
 
@@ -57,7 +78,7 @@ const ImageSlider = () => {
       aria-label="Billede galleri"
     >
       <div ref={sliderRef} className={styles.sliderStyles}>
-        {slides.map((slide, index) => (
+        {currentSlides.map((slide, index) => (
           <m.div
             key={index}
             className={styles.slide}
@@ -83,7 +104,7 @@ const ImageSlider = () => {
               )}
             </div>
             <div className={styles.slideContent}>
-            <div className={styles.horizontalLine}></div>
+              <div className={styles.horizontalLine}></div>
               <h3>{slide.title}</h3>
             </div>
           </m.div>

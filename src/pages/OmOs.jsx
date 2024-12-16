@@ -3,7 +3,7 @@ import styles from "./OmOs.module.css";
 import OmOsVideo from "../assets/OmOsVideo.mp4"
 import { useState, useRef } from "react";
 import Play from "../assets/play-button.svg";
-import Ideenbag1 from "../assets/IdeenBag1.svg"
+import Ideenbag1 from "../assets/IdeenBag1.png"
 import Ideenbag2 from "../assets/IdeenBag2.svg"
 import Ideenbag3 from "../assets/IdeenBag3.svg"
 import VMVStotte from "../assets/VMVStotte.svg"
@@ -32,7 +32,7 @@ return (
 <div className={styles['omos-intro-container']}>
 <div className={styles['omos-intro-venstre']}>
 <h1>Vi skaber <br /> <bold>Forandring</bold> Sammen</h1>
-<hr className={styles["omos-divider"]} />
+<div className={styles["omos-divider"]} />
 <p>Is simply dummy text of the printing and typesetting industry. <br />
  Lorem Ipsum has been the industrys standard dummy text ever <br />
   since the 1500s, when an unknown printer took a galley of type and <br />

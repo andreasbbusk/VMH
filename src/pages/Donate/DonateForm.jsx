@@ -1,73 +1,80 @@
-import { useState } from "react";
+// React
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../../firebase";
+import { Link } from "react-router-dom";
+
+// Assets
 import styles from "./Donate.module.css";
 import SupportHands from "../../assets/support-hands.svg";
 import MobilePay from "../../assets/mobilepay.png";
 import BS from "../../assets/bs.png";
-import { motion, AnimatePresence } from "framer-motion";
 
 const DonationForm = () => {
-  // Form state
+  // Form state for donation details
   const [amount, setAmount] = useState("");
   const [donationType, setDonationType] = useState("single");
   const [donationFrequency, setDonationFrequency] = useState("monthly");
   const [paymentMethod, setPaymentMethod] = useState("mobilepay");
-  const [taxDeduction, setTaxDeduction] = useState(false);
-  const [cpr, setCpr] = useState("");
-  const [bankInfoValid, setBankInfoValid] = useState({
-    regNumber: false,
-    accountNumber: false,
-  });
-  const [donorType, setDonorType] = useState("personal");
-  const [cvr, setCvr] = useState("");
-  const [cvrValid, setCvrValid] = useState(false);
-  const [companyName, setCompanyName] = useState("");
 
+  // Personal/Company information state
+  const [donorType, setDonorType] = useState("personal");
   const [personalInfo, setPersonalInfo] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
   });
+  const [companyName, setCompanyName] = useState("");
+  const [cvr, setCvr] = useState("");
+  const [cvrValid, setCvrValid] = useState(false);
 
+  // Tax deduction state
+  const [taxDeduction, setTaxDeduction] = useState(false);
+  const [cpr, setCpr] = useState("");
+
+  // Bank information state
   const [bankInfo, setBankInfo] = useState({
     regNumber: "",
     accountNumber: "",
   });
+  const [bankInfoValid, setBankInfoValid] = useState({
+    regNumber: false,
+    accountNumber: false,
+  });
 
-  // Helper function for validation styling
+  // UI state
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+
+  // Load saved donation amount on component mount
+  useEffect(() => {
+    const storedAmount = localStorage.getItem("donationAmount");
+    if (storedAmount) {
+      setAmount(storedAmount);
+      localStorage.removeItem("donationAmount");
+    }
+  }, []);
+
+  // Validation helper functions
   const getValidationStyle = (value, isValid) => {
     if (!value) return {};
-    return isValid ? {
-      borderWidth: "2px",
-      borderStyle: "solid", 
-      borderColor: "#4CAF50"
-    } : {
-      borderWidth: "2px",
-      borderStyle: "solid",
-      borderColor: "#f44336"
-    };
+    return isValid
+      ? { borderWidth: "2px", borderStyle: "solid", borderColor: "#4CAF50" }
+      : { borderWidth: "2px", borderStyle: "solid", borderColor: "#f44336" };
   };
 
-  // Add validation function
   const validateCPR = (cprNumber) => {
-    // Remove any spaces or hyphens
     const cleaned = cprNumber.replace(/[\s-]/g, "");
-
-    // Basic format check (10 digits)
     if (!/^\d{10}$/.test(cleaned)) return false;
-
-    // Extract date parts
+    
     const day = parseInt(cleaned.substring(0, 2));
     const month = parseInt(cleaned.substring(2, 4));
-
-    // Basic date validation
-    if (day < 1 || day > 31) return false;
-    if (month < 1 || month > 12) return false;
-
-    return true;
+    
+    return day >= 1 && day <= 31 && month >= 1 && month <= 12;
   };
 
-  // Add CVR validation
   const validateCVR = (cvrNumber) => {
     const cleaned = cvrNumber.replace(/\s/g, "");
     return /^\d{8}$/.test(cleaned);
@@ -82,7 +89,7 @@ const DonationForm = () => {
     const value = e.target.value;
     setBankInfo((prev) => ({ ...prev, [field]: value }));
 
-    // Validate bank info
+    // Validate bank info based on field
     if (field === "regNumber") {
       setBankInfoValid((prev) => ({
         ...prev,
@@ -103,9 +110,32 @@ const DonationForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  // Form reset and submission handlers
+  const resetForm = () => {
+    // Reset donation details
+    setAmount("");
+    setDonationType("single");
+    setDonationFrequency("monthly");
+    setPaymentMethod("mobilepay");
+    
+    // Reset personal/company info
+    setDonorType("personal");
+    setPersonalInfo({ firstName: "", lastName: "", email: "", phone: "" });
+    setCompanyName("");
+    setCvr("");
+    setCvrValid(false);
+    
+    // Reset tax and bank info
+    setTaxDeduction(false);
+    setCpr("");
+    setBankInfo({ regNumber: "", accountNumber: "" });
+    setBankInfoValid({ regNumber: false, accountNumber: false });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", {
+
+    const donationData = {
       amount,
       donationType,
       donationFrequency,
@@ -117,7 +147,18 @@ const DonationForm = () => {
       donorType,
       cvr,
       companyName,
-    });
+      timestamp: new Date(),
+    };
+
+    try {
+      await addDoc(collection(db, "donations"), donationData);
+      setShowSuccessModal(true);
+      resetForm();
+    } catch (error) {
+      console.error("Error submitting donation:", error);
+      setShowErrorModal(true);
+      setTimeout(() => setShowErrorModal(false), 3000);
+    }
   };
 
   return (
@@ -126,6 +167,82 @@ const DonationForm = () => {
       className={styles.donation_form}
       id="donationForm"
     >
+      {/* Success Modal */}
+      <AnimatePresence>
+        {showSuccessModal && (
+          <motion.div
+            className={styles.modal_overlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className={styles.success_modal}
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 50, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                className={styles.close_button}
+                onClick={() => setShowSuccessModal(false)}
+                aria-label="Luk besked"
+              >
+                ✕
+              </button>
+
+              <div className={styles.modal_content}>
+                <div className={styles.modal_header}>
+                  <div className={styles.modal_header_text}>
+                    <h2>Tak</h2>
+                    <h3>for din støtte</h3>
+                    <div className={styles.modal_header_text_line}></div>
+                  </div>
+                  <div className={styles.modal_header_image}>
+                    <img src={SupportHands} alt="Support hands" />
+                  </div>
+                </div>
+
+                <div className={styles.modal_body}>
+                  <p>
+                    Du er med til at hjælpe borgere til en hurtigere og nemmere
+                    behandling, samt bedre forebyggelse mod hudcancer.
+                  </p>
+                  <p>
+                    <strong>
+                      Din donation går ubeskåret til årets projekt.
+                    </strong>
+                  </p>
+                </div>
+
+                <Link
+                  to="/projekter/projekt-2025"
+                  className={styles.modal_link}
+                  tabIndex={0}
+                >
+                  Se projekt 2025
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Error Modal */}
+      <AnimatePresence>
+        {showErrorModal && (
+          <motion.div
+            className={styles.error_modal}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+          >
+            <h3>Der opstod en fejl</h3>
+            <p>Prøv venligst igen senere.</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Header */}
       <div className={styles.donation_title}>
         <h2>
@@ -186,10 +303,10 @@ const DonationForm = () => {
             </button>
           ))}
         </div>
-        
+
         <AnimatePresence>
           {donationType === "fast" && (
-            <motion.div 
+            <motion.div
               className={styles.frequency_options}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -435,7 +552,10 @@ const DonationForm = () => {
                 placeholder="Reg. nr."
                 value={bankInfo.regNumber}
                 onChange={handleBankInfoChange("regNumber")}
-                style={getValidationStyle(bankInfo.regNumber, bankInfoValid.regNumber)}
+                style={getValidationStyle(
+                  bankInfo.regNumber,
+                  bankInfoValid.regNumber
+                )}
                 aria-label="Indtast registreringsnummer"
                 required
                 id="regNumber"
@@ -449,7 +569,10 @@ const DonationForm = () => {
                 placeholder="Kontonummer"
                 value={bankInfo.accountNumber}
                 onChange={handleBankInfoChange("accountNumber")}
-                style={getValidationStyle(bankInfo.accountNumber, bankInfoValid.accountNumber)}
+                style={getValidationStyle(
+                  bankInfo.accountNumber,
+                  bankInfoValid.accountNumber
+                )}
                 aria-label="Indtast kontonummer"
                 required
                 id="accountNumber"
@@ -463,7 +586,7 @@ const DonationForm = () => {
         )}
       </AnimatePresence>
 
-      {/* Submit */}
+      {/* Submit Button */}
       <button
         type="submit"
         className={styles.submit_button}

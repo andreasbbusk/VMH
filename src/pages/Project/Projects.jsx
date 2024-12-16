@@ -20,6 +20,43 @@ const Projects = () => {
   const ref = useRef(null);
   const [animatedNumber, setAnimatedNumber] = useState(0);
   const [projectsData, setProjectsData] = useState([]);
+  const [currentProjectYear, setCurrentProjectYear] = useState(null);
+
+  // Scroll to project section when year changes
+  useEffect(() => {
+    if (currentProjectYear) {
+      setTimeout(() => {
+        const sliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
+        
+        if (sliderSection) {
+          sliderSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start", 
+            inline: "nearest",
+          });
+        } else {
+          // Retry scrolling with increasing delays if element not found initially
+          [600, 900, 1100].forEach(delay => {
+            setTimeout(() => {
+              const retrySliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
+              if (retrySliderSection) {
+                retrySliderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+              }
+            }, delay);
+          });
+        }
+      }, 800);
+    }
+  }, [currentProjectYear, projectsData]);
+
+  // Simplify the click handler to only update state
+  const handleChartClick = (year) => {
+    setCurrentProjectYear(year.toString());
+  };
 
   useEffect(() => {
     // Start from 0 and animate up to final amount for more dramatic effect
@@ -37,6 +74,25 @@ const Projects = () => {
     });
 
     return () => animation.stop();
+  }, []);
+
+  useEffect(() => {
+    fetch("../../data/projectsData.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch project data");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Convert id to string
+        const formattedData = data.map((project) => ({
+          ...project,
+          id: project.id.toString(),
+        }));
+        setProjectsData(formattedData);
+      })
+      .catch((error) => console.error("Error fetching project data:", error));
   }, []);
 
   const formatAmount = (amount) => {
@@ -76,6 +132,7 @@ const Projects = () => {
     hover: {
       filter: "saturate(1.1)",
       y: -5,
+      cursor: "pointer",
       transition: {
         duration: 0.3,
         ease: "easeInOut",
@@ -142,12 +199,20 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <m.div className={styles.timeline_entry} variants={itemVariants}>
+              <m.div
+                id={`project-2023`}
+                className={styles.timeline_entry}
+                variants={itemVariants}
+              >
                 <m.img
                   src={Chart2023}
                   alt="2023 projekt statistik"
                   variants={combinedChartVariants}
                   whileHover="hover"
+                  onClick={() => handleChartClick(2023)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && handleChartClick(2023)}
                 />
                 <div className={styles.project_info}>
                   <h3>PROJEKT 2023</h3>
@@ -158,12 +223,20 @@ const Projects = () => {
                 </div>
               </m.div>
 
-              <m.div className={styles.timeline_entry} variants={itemVariants}>
+              <m.div
+                className={styles.timeline_entry}
+                variants={itemVariants}
+                id={`project-2022`}
+              >
                 <m.img
                   src={Chart2022}
                   alt="2022 projekt statistik"
                   variants={combinedChartVariants}
                   whileHover="hover"
+                  onClick={() => handleChartClick(2022)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && handleChartClick(2022)}
                 />
                 <div className={styles.project_info}>
                   <h3>PROJEKT 2022</h3>
@@ -171,12 +244,20 @@ const Projects = () => {
                 </div>
               </m.div>
 
-              <m.div className={styles.timeline_entry} variants={itemVariants}>
+              <m.div
+                className={styles.timeline_entry}
+                variants={itemVariants}
+                id={`project-2019`}
+              >
                 <m.img
                   src={Chart2019}
                   alt="2019 projekt statistik"
                   variants={combinedChartVariants}
                   whileHover="hover"
+                  onClick={() => handleChartClick(2019)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && handleChartClick(2019)}
                 />
                 <div className={styles.project_info}>
                   <h3>PROJEKT 2019</h3>
@@ -184,12 +265,20 @@ const Projects = () => {
                 </div>
               </m.div>
 
-              <m.div className={styles.timeline_entry} variants={itemVariants}>
+              <m.div
+                className={styles.timeline_entry}
+                variants={itemVariants}
+                id={`project-2018`}
+              >
                 <m.img
                   src={Chart2018}
                   alt="2018 projekt statistik"
                   variants={combinedChartVariants}
                   whileHover="hover"
+                  onClick={() => handleChartClick(2018)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && handleChartClick(2018)}
                 />
                 <div className={styles.project_info}>
                   <h3>PROJEKT 2018</h3>
@@ -197,12 +286,20 @@ const Projects = () => {
                 </div>
               </m.div>
 
-              <m.div className={styles.timeline_entry} variants={itemVariants}>
+              <m.div
+                className={styles.timeline_entry}
+                variants={itemVariants}
+                id={`project-2017`}
+              >
                 <m.img
                   src={Chart2017}
                   alt="2017 projekt statistik"
                   variants={combinedChartVariants}
                   whileHover="hover"
+                  onClick={() => handleChartClick(2017)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && handleChartClick(2017)}
                 />
                 <div className={styles.project_info}>
                   <h3>PROJEKT 2017</h3>
@@ -305,7 +402,10 @@ const Projects = () => {
             </div>
           </section>
           <section className={styles.projects_slider}>
-            <ProjectSlider projects={projectsData} />
+            <ProjectSlider
+              projects={projectsData}
+              selectedYear={currentProjectYear}
+            />
           </section>
         </div>
       </m.main>

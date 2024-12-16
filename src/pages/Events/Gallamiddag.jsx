@@ -18,6 +18,7 @@ import GallaImage2 from "../../assets/dessert.jpg";
 import GallaImage3 from "../../assets/Servering.jpg";
 import GallaImage4 from "../../assets/SmilMand.png";
 import GallaImage5 from "../../assets/musik.jpg";
+import { Link } from 'react-router-dom';
 
 const Gallamiddag = () => {
 
@@ -294,10 +295,10 @@ er du meget velkommmen til at kontakte os på nedestående link</p>
 
     <div className={styles['teaser-auktion-knap-container']}>
 <div className={styles['teaser-auktion-knaper']}>
-    <button className={styles['teaser-auktion-alle']}>Alle auktionsgaver</button>
+    <Link to="/Events/Gallamiddag-2025/Auktion" className={styles['teaser-auktion-alle']}>Alle auktionsgaver</Link>
     </div>
     <div className={styles['teaser-auktion-knaper']}>
-    <button className={styles['teaser-auktion-kontakt']}>Kontakt os her</button>
+    <Link to="/Kontakt" className={styles['teaser-auktion-kontakt']}>Kontakt os her</Link>
     </div>
         </div>
     

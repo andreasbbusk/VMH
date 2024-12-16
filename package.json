@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "firebase": "^11.1.0",
     "framer-motion": "^11.12.0",
     "gsap": "^3.12.5",
     "prop-types": "^15.8.1",

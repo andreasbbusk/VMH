@@ -2,6 +2,7 @@
   padding: 1rem 3rem;
   font-family: "adelle", sans-serif;
   text-transform: uppercase;
+  background-color: var(--header-bg-color);
 }
 
 .list {
@@ -26,7 +27,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 12px;
-  letter-spacing: var(--ls-4%);
+  letter-spacing: 0.04em;
 }
 
 .link:hover,
@@ -37,7 +38,7 @@
 .current {
   color: black;
   font-size: 12px;
-  letter-spacing: var(--ls-4%);
+  letter-spacing: 0.04em;
 }
 
 @media (max-width: 480px) {

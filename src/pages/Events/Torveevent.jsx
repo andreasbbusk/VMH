@@ -10,6 +10,7 @@ import { useState, useEffect,} from 'react';
 import Torve1 from "../../assets/Torve1.png"
 import Torve2 from "../../assets/Torve2.jpg"
 import Torve3 from "../../assets/Torve3.jpg"
+import { Link } from "react-router-dom";
 
 
 const Torveevent = () => {
@@ -100,10 +101,10 @@ på kræftpakke</p>
         </div>
 <div className={styles['torveknap-container']}>
 <div className={styles['torveknaper']}>
-    <button className={styles['torve-alle-sponsor']}>Alle Sponsorer</button>
+    <Link to="/sponsorer" className={styles['torve-alle-sponsor']}>Alle Sponsorer</Link>
     </div>
     <div className={styles['torveknaper']}>
-    <button className={styles['torve-bliv-sponsor']}>Bliv Sponsor</button>
+    <Link to="/sponsorer" className={styles['torve-bliv-sponsor']}>Bliv Sponsor</Link>
     </div>
         </div>
 </>

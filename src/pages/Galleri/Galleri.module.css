@@ -1,0 +1,368 @@
+.gallery_intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 3rem 5rem 3rem;
+}
+
+.gallery_intro_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gallery_intro_text h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.gallery_intro_text p {
+  letter-spacing: 0.04em;
+  max-width: 450px;
+}
+
+.horizontal_line {
+  max-width: 250px;
+  background-color: #e0a619;
+  height: 1.5px;
+}
+
+/* Overordnet container til galleri sektionen */
+.galleri_container {
+  background-color: white;
+  padding: 4rem 4rem 0 4rem;
+}
+
+/* Styling af overskrift i galleri containeren */
+.galleri_container h1 {
+  text-transform: uppercase;
+  font-family: var(--adelle);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e0a619;
+}
+
+/* Grid layout til visning af galleri billeder */
+.galleri_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Container til individuelle galleri items */
+.galleri_item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling af galleribilleder */
+.galleri_billede {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Overlay til modal visning af billeder */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Styling af billeder i modal visning */
+.modal_overlay img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 15px 0 15px 0;
+}
+
+/* Luk knap i modal visning */
+.luk_knap {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Generel styling af navigations knapper */
+.nav_knap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover effekt på navigations knapper */
+.nav_knap:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Placering af forrige knap */
+.forrige_knap {
+  left: 2rem;
+}
+
+/* Placering af næste knap */
+.næste_knap {
+  right: 2rem;
+}
+
+/* Styling af luk knap */
+.luk_knap {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effekt på luk knap */
+.luk_knap:hover {
+  transform: scale(1.1);
+}
+
+/* Styling af årstal overskrifter */
+.år_overskrift {
+  margin: 2rem 0 1rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Container til custom dropdown */
+.custom_dropdown {
+  position: relative;
+  width: 200px;
+  margin: 1rem 0;
+}
+
+/* Styling af dropdown toggle knap */
+.dropdown_toggle {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e0a619;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Animation af dropdown pil */
+.dropdown_arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Styling af dropdown menu */
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  z-index: 100;
+}
+
+/* Styling af dropdown menu items */
+.dropdown_menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Styling af aktiv menu item */
+.aktiv {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.indlæs_flere_knap {
+  background-color: #e0a619;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px 0 15px 0;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Loading animation styles */
+.loading {
+  position: relative;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Adjust grid layout and font sizes for medium screens */
+@media screen and (max-width: 1024px) {
+  .galleri_container {
+    padding: 2rem;
+  }
+
+  .gallery_intro_text h1 {
+    font-size: 2.2rem; /* Slightly smaller font size for medium screens */
+  }
+
+  .gallery_intro_text p {
+    font-size: 1.1rem; /* Adjust font size for medium screens */
+  }
+
+  .dropdown_toggle {
+    font-size: 1.4rem; /* Adjust font size for medium screens */
+  }
+
+  .indlæs_flere_knap {
+    padding: 0.9rem 1.8rem; /* Adjust padding for medium screens */
+  }
+}
+
+/* Adjust grid layout and font sizes for small screens */
+@media screen and (max-width: 768px) {
+  .galleri_container {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .gallery_intro img {
+    display: none;
+  }
+
+  .galleri_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galleri_billede {
+    height: 200px;
+  }
+
+  .gallery_intro {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 3rem 1rem;
+  }
+
+  .horizontal_line {
+    max-width: 100%;
+  }
+
+  .gallery_intro_text {
+    text-align: center;
+  }
+
+  .gallery_intro_text h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery_intro_text p {
+    font-size: 1rem;
+  }
+
+  .dropdown_toggle {
+    font-size: 1.2rem;
+  }
+
+  .indlæs_flere_knap {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .galleri_billede {
+    height: 150px;
+  }
+
+  .gallery_intro_text h1 {
+    font-size: 1.2rem;
+  }
+
+  .gallery_intro_text p {
+    font-size: 0.9rem;
+  }
+
+  .dropdown_toggle {
+    font-size: 1rem;
+  }
+
+  .indlæs_flere_knap {
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Additional adjustments for extra small screens */
+@media screen and (max-width: 320px) {
+  .gallery_intro_text h1 {
+    font-size: 1.2rem; /* Further reduce font size for extra small screens */
+  }
+
+  .gallery_intro_text p {
+    font-size: 0.8rem; /* Further reduce font size for extra small screens */
+  }
+
+  .dropdown_toggle {
+    font-size: 0.9rem; /* Further reduce font size for extra small screens */
+  }
+
+  .indlæs_flere_knap {
+    padding: 0.5rem 0.8rem; /* Further reduce padding for extra small screens */
+  }
+}

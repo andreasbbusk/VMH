@@ -1,25 +1,23 @@
-body{
-    padding: 0;
-    margin: 0;
-}
 /* Gallamiddag siden */
+
+button {
+  font-family: "adelle", serif;
+}
 
 .intro-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: auto;
     width: 60%;
-    
 }
 
 .intro-container h1 {
     text-transform: uppercase;
     line-height: 1.5;
-    font-family: "adelle";
+    font-family: "adelle", serif;
     font-weight: 400;
-    font-style: normal; 
 }
 
 .divider {
@@ -60,15 +58,16 @@ body{
 .image-container {
     position: relative; /* Sørger for, at overlayet kan placeres korrekt */
     width: 100%;
-    max-width: 400px; /* Justér efter behov */
+    max-width: 450px; /* Justér efter behov */
 }
 
 .background-image {
     width: 100%;
     height: 25rem;
-    display: block;
-    border-radius: 15px 0 15px 0; /* Gør billedet rundere */
+    object-fit: cover;
+    border-radius: 15px 0 15px 0;
     position: relative; /* Sørger for, at pseudo-elementet placeres korrekt */
+    z-index: 10;
 }
 
 .background-image::after {
@@ -80,7 +79,7 @@ body{
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Mørk gennemsigtig overlay */
     border-radius: 8px; /* Matcher billedets runding */
-    z-index: 1; /* Sørger for, at overlayet er ovenpå billedet */
+    z-index: 100; /* Sørger for, at overlayet er ovenpå billedet */
     pointer-events: none; /* Sørger for, at overlayet ikke interfererer med klik */
 }
   
@@ -94,7 +93,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Sørger for, at overlay teksten er ovenpå overlayet */
+    z-index: 100; /* Sørger for, at overlay teksten er ovenpå overlayet */
     border-radius: 8px;
 }
 
@@ -566,7 +565,7 @@ bold {
     gap: 2rem; 
     display: flex;
     justify-content: center;
-    margin-top: 0rem;
+    margin-top: 2rem;
  }
 
   .teaser-auktion-alle {

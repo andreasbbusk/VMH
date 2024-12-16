@@ -1,6 +1,7 @@
 .forside-intro-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 4rem;
 }
 
 .forside-intro-venstre {
@@ -14,12 +15,7 @@
   text-transform: uppercase;
   font-family: "adelle", serif;
   font-weight: 400;
-  font-style: normal;
-  margin-left: 2rem;
-}
-
-.forside-intro-venstre p {
-  margin-left: 2rem;
+  letter-spacing: 0.08em;
 }
 
 .forside-intro-hojre {
@@ -29,7 +25,7 @@
 .forside-intro-hojre img {
   display: block;
   margin: 1rem auto 0 auto;
-  width: 500px;
+  max-width: 600px;
   overflow: auto;
   z-index: 1;
   transform: translateY(50px);
@@ -41,8 +37,7 @@
   height: 2px;
   background-color: #e0a619;
   margin: 20px 0;
-  width: 30%;
-  margin-left: 2rem;
+  max-width: 250px;
 }
 
 .forside-stats-container {
@@ -70,8 +65,10 @@
 
 .Forside-stats-content p {
   text-transform: uppercase;
+  letter-spacing: 0.08em;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
+  font-family: "adelle", serif;
 }
 
 .Forside-kildetekst {
@@ -94,45 +91,49 @@
 
 .forside-gallamiddag-billeder-container {
   display: flex;
+  gap: 1rem;
 }
 
 .forside-gallamiddag-billeder-venstre {
   flex-direction: column;
   display: flex;
-  gap: 1.5rem;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .forside-gallamiddag-billeder-hojre {
   flex-direction: column;
   display: flex;
   margin-top: 2rem;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
+.forside-gallamiddag-billeder-hojre img,
+.forside-gallamiddag-billeder-venstre img {
   width: 90%;
-} 
+}
 
 .forside-gallamiddag-content {
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 .forside-gallamiddag-tekst-container {
   align-content: center;
   align-items: center;
-justify-content: center;
+  justify-content: center;
 }
 
-.forside-gallamiddag-tekst p{
+.forside-gallamiddag-tekst p {
   margin-top: 2rem;
 }
 
 .forside-gallamiddag-tekst h1 {
   font-family: "adelle", serif;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 3rem;
 }
 
 .forside-gallamiddag-stats {
@@ -145,40 +146,41 @@ justify-content: center;
 .forside-gallamiddag-stats h1 {
   color: #e0a619;
   font-size: 4rem;
+  font-weight: 600;
 }
 
 .forside-gallamiddag-stats p {
   text-transform: uppercase;
   text-align: center;
+  font-family: "adelle", serif;
 }
 
 .Forside-knap-container {
-  gap: 2rem; 
+  gap: 2rem;
   display: flex;
 }
 
- .ForsideResever {
-   background-color: #E0A619;
-   color: #fff;
-   border: none;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
+.ForsideResever {
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+  margin-top: 2rem;
 }
 
 .Forsidelasmereknap {
-  background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+  margin-top: 2rem;
 }
-
 
 .Forside-projekt-container {
   padding: 20rem 0;
@@ -218,20 +220,21 @@ justify-content: center;
 }
 
 .KnastLæsmereKnap {
-  background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 3rem;
-   margin-left: 2rem;
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 3rem;
+  margin-left: 2rem;
 }
 
-.Forside-knast-billede-hojre img, .Forside-knast-billede-venstre img {
+.Forside-knast-billede-hojre img,
+.Forside-knast-billede-venstre img {
   margin-top: 5rem;
-} 
+}
 
 .Forside-knast-billede-venstre {
   justify-content: left;
@@ -244,35 +247,34 @@ justify-content: center;
   height: 2px;
   background-color: #e0a619;
   margin: 20px 0;
-  width: 5%;
+  max-width: 150px;
 }
 
-
 .Forside-knap-container {
-  gap: 2rem; 
+  gap: 2rem;
   display: flex;
 }
 
- .FraIdeTilIndsatsStotNu {
-   background-color: #E0A619;
-   color: #fff;
-   border: none;
-   padding: 10px 30px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
+.FraIdeTilIndsatsStotNu {
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 .FraIdeTilIndsatsLasMere {
-  background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 30px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 .FraIdeTilIndsats-content {
@@ -294,12 +296,11 @@ justify-content: center;
 }
 
 .StotteFunktion-container {
-  padding: 15rem 0;
-  text-align: center;
   background-color: white;
+  padding: 8rem 0;
 }
 
-.galla-sponsor{
+.galla-sponsor {
   margin-left: 16rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -313,13 +314,13 @@ justify-content: center;
 }
 
 .galla-sponsor p {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .sponsor-divider {
   border: 0;
   height: 2px;
-  background-color: #E0A619;
+  background-color: #e0a619;
   margin: 10px 0;
   width: 10%;
 }
@@ -352,245 +353,803 @@ justify-content: center;
     transform: translateX(0); /* Start ved første element */
   }
   to {
-    transform: translateX(-1000%); /* Skub hele bredden af sponsorlisten, inkl. margin */
+    transform: translateX(
+      -1000%
+    ); /* Skub hele bredden af sponsorlisten, inkl. margin */
   }
 }
 
 .sponsorknap-container {
   text-align: center;
-  gap: 2rem; 
+  gap: 2rem;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   padding-bottom: 4rem;
 }
 
- .allesponsor {
-   background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 40px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
+.allesponsor {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 .blivsponsor {
-   background-color: #E0A619;
-   color: #fff;
-   border: none;
-   padding: 10px 40px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
-}
-
-@media only screen and (max-width: 390px) {
-
-.forside-intro-container {
-  flex-direction: column-reverse;
-  padding-bottom: 2rem;
-}
-
-.forside-intro-hojre img {
-  display: block;
-  margin: 0rem auto;
-  width: 300px;
-  transform: translateY(0px);
-  border-radius: 15px 0 15px 0;
-}
-
-.forside-intro-venstre {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-.forside-intro-venstre h1 {
-  font-size: 1.5rem;
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
   margin-top: 2rem;
 }
 
-.forside-intro-venstre p {
- text-align: center;
- margin-right: 1rem;
-}
-
-.forside-intro-venstre br {
-  display: none;
-}
-
-.hudcancer-divider {
- width: 45%;
-}
-
-.Forside-stats-content {
+.projekt-container {
   display: flex;
- flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0 2rem 2rem;
+  background-color: #fff;
 }
 
-.Forside-stats-1, .Forside-stats-2, .Forside-stats-3 {
+.projekt-content {
   display: flex;
+  align-items: center;
   gap: 2rem;
-  justify-content: center;
-  flex-direction: row;
+  margin: 2rem 0 2rem 2rem;
 }
 
-.Forside-stats-content h1 {
-  font-size: 3rem;
- 
+.projekt-text {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
 }
 
-.Forside-stats-content p {
-  font-size: .7rem;
-  align-content: center;
-  width: 100%;
-  text-align: left;
-  font-weight: 200;
+.projekt-text h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.Forside-stats-content {
-  gap: 4rem;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.projekt-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
-.Forside-kildetekst p {
-  font-size: 0.8rem;
-  margin-left: 2rem;
-  width: 90%;
+.projekt-text p {
+  margin: 1rem 0;
 }
 
-.Forside-kildetekst {
-  padding-bottom: 5rem;
-  width: 100%;
+.projekt-button {
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.forside-gallamiddag-content {
- flex-direction: column;
- justify-content: center;
+.projekt-image img {
+  max-width: 100%;
+  border-radius: 15px;
 }
 
-.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-} 
-
-.forside-gallamiddag-tekst h1 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-top: -5rem;
+.slider-container {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  max-width: 750px;
 }
 
-.forside-gallamiddag-tekst h1 br {
+.slider-container::-webkit-scrollbar {
   display: none;
 }
 
-.forside-gallamiddag-tekst p {
-  text-align: center;
-}
-
-.Forside-knap-container {
-  justify-content: center;
-}
-
-.forside-gallamiddag-stats {
-  flex-direction: column;
-}
-
-.forside-gallamiddag-stats-Gaver, .forside-gallamiddag-stats-Indsamlet, .forside-gallamiddag-stats-Projekt {
+.slider-item {
+  flex: 0 0 auto;
   display: flex;
-  align-items: center;
-  align-content:center ;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.slider-item h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  text-transform: uppercase;
+}
+
+.slider-item.active {
+  transform: scale(1.05);
+}
+
+.projekt-slide-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.projekt-slide-image:hover {
+  transform: scale(1.05);
+}
+
+.projekt-slide-text {
+  background-color: #fbf5eb;
+  padding: 1rem;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 0 0 8px 8px;
+}
+
+.projekt-info {
+  margin-top: 2rem;
+}
+
+.projekt-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.projekt-info h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.projekt-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #e0a619;
+}
+
+.donation_form_container {
+  background-color: rgba(239, 224, 189, 0.7);
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.small_donation_form {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.small_donation_form img {
+  display: block;
+  margin-left: auto;
+  max-width: 200px;
+  height: auto;
+  transform: translateY(30px);
+}
+
+.small_donation_form_header {
+  margin-bottom: 2rem;
+}
+
+.small_donation_form_header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.small_donation_form_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
 }
 
-.forside-gallamiddag-stats h1 {
-  color: #e0a619;
-  font-size: 2rem;
-}
-
-.Forside-knast-billede-venstre img {
-  display: none;
-}
-
-.Forside-knast-billede-hojre img {
-  width: 100%;
-  margin-top: 10rem;
-  z-index: 1000;
-}
-
-.Forside-knast-tekst h1 {
-  font-size: 2rem;
-  font-family: "adelle", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-
-.Forside-knast-tekst p {
-  text-align: center;
-}
-
-.Forside-knast-knap-container {
+.small_donation_form_preset_amounts {
   display: flex;
-  justify-content: center;
-  margin-left: -5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.KnastPil img {
-  max-width: 40%;
+.small_donation_form_button {
+  background-color: #fff;
+  padding: 0.5rem 3rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-.FraIdeTilIndsats-content {
-  flex-direction: column-reverse;
+.small_donation_form_button:hover {
+  background-color: #e0a619;
+  color: #fff;
 }
 
-.FraIdeTilIndsats-hojre img {
-  width: 80%;
+.small_donation_form_button_active {
+  background-color: #e0a619;
+  color: #fff;
 }
 
-.FraIdeTilIndsats-hojre p {
-  font-size: .7rem;
+.small_donation_form_custom_amount {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.small_donation_form_custom_amount input {
+  background-color: #fff;
+}
+
+.small_donation_form_custom_amount input:focus {
+  border-color: #e0a619;
+}
+
+.small_donation_form_submit {
+  padding: 0.5rem 2rem;
+  background-color: #e0a619;
+  color: #fff;
+  border-radius: 15px 0 15px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  width: fit-content;
+}
+
+.donation_form_link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background-color: #fbf5eb;
+  width: 100%;
   text-align: center;
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+  border-top: 1.5px solid #e0a619;
 }
 
-.FraIdeTilIndsats-content h1 {
-  margin-top: 2rem;
-  margin-left: 1rem;
+/* Tablet and desktop responsive styles */
+/* Large desktop styles (1280px and below) */
+@media only screen and (max-width: 1280px) {
+  .projekt-content {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .projekt-text h1,
+  .projekt-text h2 {
+    font-size: 2.3rem;
+  }
+  .projekt-text p {
+    font-size: 1.1rem;
+  }
+  .slider-item {
+    max-width: 350px ;
+  }
+  .projekt-slide-image {
+    padding: 0.8rem;
+  }
 }
 
-.FraIdeTilIndsats-content p {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  width: 90%;
+/* Medium desktop styles (1024px and below) */
+@media only screen and (max-width: 1024px) {
+  .projekt-container {
+    padding: 1rem;
+  }
+  .slider-container {
+    gap: 1rem;
+  }
+  .projekt-image {
+    margin-left: auto;
+  }
+  .projekt-content {
+    gap: 1rem;
+  }
+  .projekt-text h1,
+  .projekt-text h2 {
+    font-size: 2rem;
+  }
+  .projekt-text p {
+    font-size: 1rem;
+  }
+  .Forsidelasmereknap {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+  .slider-item {
+    max-width: 320px;
+  }
+  .projekt-slide-image {
+    padding: 0.7rem;
+  }
+  .slider-container {
+    gap: 1rem;
+  }
 }
 
-.FraIdeTilIndsats-content br {
-  display: none;
+/* Tablet styles (768px and below) */
+@media only screen and (max-width: 768px) {
+  /* Intro section tablet styles */
+  .forside-intro-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .forside-intro-venstre h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+  .forside-intro-hojre img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Stats section tablet styles */
+  .Forside-stats-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .Forside-stats-content h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Gala dinner section tablet styles */
+  .forside-gallamiddag-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .forside-gallamiddag-billeder-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .forside-intro-divider {
+    width: 100%;
+  }
+  .forside-gallamiddag-billeder-venstre img,
+  .forside-gallamiddag-billeder-hojre img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .forside-gallamiddag-tekst h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Button container tablet styles */
+  .Forside-knap-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Forside-knap-container button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0.5rem 0;
+  }
+
+  /* Fra Ide Til Indsats section tablet styles */
+  .FraIdeTilIndsats-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .FraIdeTilIndsats-hojre img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .carousel-item {
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+
+  /* Donation form tablet styles */
+  .donation_form_container {
+    padding: 1rem;
+    width: 90%;
+  }
+  .small_donation_form {
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .small_donation_form img {
+    max-width: 150px;
+    transform: translateY(15px);
+  }
+  .small_donation_form_header h2 {
+    font-size: 1.2rem;
+  }
+  .small_donation_form_buttons {
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .small_donation_form_preset_amounts {
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .small_donation_form_button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+  .small_donation_form_custom_amount {
+    font-size: 0.9rem;
+  }
+  .small_donation_form_submit {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  .donation_form_link {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+
+  .slider-container {
+    gap: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .slider-item {
+    max-width: 200px;
+  }
+  .projekt-slide-text h4 {
+    font-size: 1rem;
+  }
 }
 
-.galla-sponsor {
-  margin-top: 0rem;
-  padding-top: 4rem;
-  padding-bottom: 5rem;
-  margin-left: 1rem;
+/* Mobile landscape styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .projekt-container {
+    padding: 2rem 1rem;
+  }
+  .projekt-content {
+    gap: 0.75rem;
+    margin: 0;
+  }
+  .projekt-text h1,
+  .projekt-text h2 {
+    font-size: 1.6rem;
+  }
+  .projekt-text p {
+    font-size: 0.8rem;
+  }
+  .slider-container {
+    max-width: 300px;
+    overflow: hidden;
+  }
+
+
+  /* Donation form mobile styles */
+  .small_donation_form img {
+    max-width: 150px;
+    transform: translateY(10px) !important;
+  }
+  .donation_form_container {
+    padding: 0;
+  }
+  .small_donation_form {
+    padding: 1rem !important;
+  }
+  .small_donation_form input {
+    padding: 1rem !important;
+  }
+  .small_donation_form_preset_amounts {
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center !important;
+  }
 }
 
-.galla-sponsor h1 {
-  font-size: 2rem;
-  margin-left: 0;
+/* Mobile styles for iPhone-sized devices (390px and below) */
+@media only screen and (max-width: 390px) {
+  /* Intro section styles */
+  .forside-intro-container {
+    flex-direction: column-reverse;
+    padding-bottom: 2rem;
+  }
+
+  /* Intro image styles */
+  .forside-intro-hojre img {
+    display: block;
+    margin: 0rem auto;
+    width: 300px;
+    transform: translateY(0px);
+    border-radius: 15px 0 15px 0;
+  }
+
+  /* Intro text container styles */
+  .forside-intro-venstre {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  /* Intro text styles */
+  .forside-intro-venstre h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .forside-intro-venstre p {
+    text-align: center;
+    margin-right: 1rem;
+  }
+
+  .forside-intro-venstre br {
+    display: none;
+  }
+
+  /* Divider styles */
+  .hudcancer-divider {
+    width: 45%;
+  }
+
+  /* Statistics section styles */
+  .Forside-stats-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Individual stat box styles */
+  .Forside-stats-1,
+  .Forside-stats-2,
+  .Forside-stats-3 {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  /* Stats text styles */
+  .Forside-stats-content h1 {
+    font-size: 3rem;
+  }
+
+  .Forside-stats-content p {
+    font-size: 0.7rem;
+    align-content: center;
+    width: 100%;
+    text-align: left;
+    font-weight: 200;
+  }
+
+  .Forside-stats-content {
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  /* Source text styles */
+  .Forside-kildetekst p {
+    font-size: 0.8rem;
+    margin-left: 2rem;
+    width: 90%;
+  }
+
+  .Forside-kildetekst {
+    padding-bottom: 5rem;
+    width: 100%;
+  }
+
+  /* Gala dinner section styles */
+  .forside-gallamiddag-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Gala dinner images */
+  .forside-gallamiddag-billeder-hojre img,
+  .forside-gallamiddag-billeder-venstre img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Gala dinner text styles */
+  .forside-gallamiddag-tekst h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: -5rem;
+  }
+
+  .forside-gallamiddag-tekst h1 br {
+    display: none;
+  }
+
+  .forside-gallamiddag-tekst p {
+    text-align: center;
+  }
+
+  /* Button container styles */
+  .Forside-knap-container {
+    justify-content: center;
+  }
+
+  /* Gala dinner stats section */
+  .forside-gallamiddag-stats {
+    flex-direction: column;
+  }
+
+  /* Individual gala stats boxes */
+  .forside-gallamiddag-stats-Gaver,
+  .forside-gallamiddag-stats-Indsamlet,
+  .forside-gallamiddag-stats-Projekt {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .forside-gallamiddag-stats h1 {
+    color: #e0a619;
+    font-size: 2rem;
+  }
+
+  /* Knast section styles */
+  .Forside-knast-billede-venstre img {
+    display: none;
+  }
+
+  .Forside-knast-billede-hojre img {
+    width: 100%;
+    margin-top: 10rem;
+    z-index: 1000;
+  }
+
+  .Forside-knast-tekst h1 {
+    font-size: 2rem;
+    font-family: "adelle", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .Forside-knast-tekst p {
+    text-align: center;
+  }
+
+  .Forside-knast-knap-container {
+    display: flex;
+    justify-content: center;
+    margin-left: -5rem;
+  }
+
+  .KnastPil img {
+    max-width: 40%;
+  }
+
+  /* Fra Ide Til Indsats section styles */
+  .FraIdeTilIndsats-content {
+    flex-direction: column-reverse;
+  }
+
+  .FraIdeTilIndsats-hojre img {
+    width: 80%;
+  }
+
+  .FraIdeTilIndsats-hojre p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .FraIdeTilIndsats-content h1 {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .FraIdeTilIndsats-content p {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 90%;
+  }
+
+  .FraIdeTilIndsats-content br {
+    display: none;
+  }
+
+  /* Sponsor section styles */
+  .galla-sponsor {
+    margin-top: 0rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    margin-left: 1rem;
+  }
+
+  .galla-sponsor h1 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .carousel-item {
+    font-size: 1.5rem;
+    margin-right: 50px;
+  }
+
+  /* Donation form styles */
+  .donation_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .small_donation_form {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .small_donation_form_button,
+  .small_donation_form_submit {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .small_donation_form_custom_amount {
+    width: 100%;
+  }
+
+  .small_donation_form_custom_amount input {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .donation_form_link {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
 }
 
-.carousel-item {
-font-size: 1.5rem;
-margin-right: 50px;
-}
-
-
-}

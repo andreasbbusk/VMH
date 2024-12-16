@@ -1,0 +1,223 @@
+/* Main container */
+
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  margin: clamp(1rem, 4vw, 4rem);
+}
+
+/* Contact formular */
+
+.form_container {
+  background-color: #efe0bd;
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 15px;
+  max-width: 100%;
+  font-family: "adelle", serif;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.form_container h1 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form_container h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact_formular {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+label {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.08em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: #fbf5eb;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: "adelle", serif;
+  border: none;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #e0a619;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #3c3c3c;
+}
+
+.submit_button {
+  background: #e0a619;
+  color: white;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+  border-radius: 15px 0 15px 0;
+  margin-left: auto;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: 0.08em;
+  max-width: fit-content;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.submit_button:hover {
+  background: #c89316;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit_button:active {
+  transform: translateY(0);
+}
+
+/* Contact section */
+
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.contact_text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.contact_text h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact_text p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.06em;
+}
+
+.horizontal_line {
+  max-width: 250px;
+  height: 1px;
+  background-color: #e0a619;
+}
+
+.logo_download {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.logo_download h4 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* Contact formular section */
+
+.contact_formular_section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+  position: relative;
+}
+
+.contact_formular_section img {
+  max-width: 100%;
+  position: absolute;
+  top: -200px;
+  z-index: 99;
+  overflow: auto;
+}
+
+.success_modal {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact_formular_section img {
+    top: -120px;
+    right: -50px;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact_section,
+  .contact_formular_section {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .contact_formular_section img {
+    display: none;
+  }
+  .form_container {
+    min-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_container {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .form_container {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  .main_container {
+    margin: 1rem;
+  }
+  
+  .submit_button {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
