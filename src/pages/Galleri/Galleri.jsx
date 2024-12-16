@@ -27,6 +27,15 @@ const Galleri = () => {
       try {
         setIndlæser(true);
         const response = await fetch("../../data/galleryImages.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new TypeError("Received non-JSON response");
+        }
+
         const data = await response.json();
         setBilleder(data);
         
