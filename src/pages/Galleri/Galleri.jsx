@@ -26,7 +26,7 @@ const Galleri = () => {
     const hentGalleriData = async () => {
       try {
         setIndlæser(true);
-        const response = await fetch("/data/galleryImages.json");
+        const response = await fetch("../../data/galleryImages.json");
         const data = await response.json();
         setBilleder(data);
         
