@@ -1,11 +1,10 @@
-import { motion as m } from "framer-motion";
 
 import styles from "./Sponsor.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import logoSVG from "../../assets/VMHlover.svg";
 // Billeder til sektionerne
 import image1 from "../../assets/C-Beauty-and-Care.png";
-import image2 from "../../assets/Yogilates.png";
+import image2 from "../../assets/yogilates.png";
 import image3 from "../../assets/sparekassenkronjylland.png";
 import image4 from "../../assets/engredo.png";
 import newImage1 from "../../assets/tryksager.png";
