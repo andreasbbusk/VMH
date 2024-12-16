@@ -5,7 +5,7 @@ import styles from "./OmOS.module.css";
 import OmOsVideo from "../assets/OmOsVideo.mp4"
 import { useState, useRef } from "react";
 import Play from "../assets/play-button.svg";
-import Ideenbag1 from "../assets/IdeenBag1.png"
+import Ideenbag1 from "../assets/Ideenbag1.png"
 import Ideenbag2 from "../assets/IdeenBag2.svg"
 import Ideenbag3 from "../assets/IdeenBag3.svg"
 import VMVStotte from "../assets/VMVStotte.svg"
