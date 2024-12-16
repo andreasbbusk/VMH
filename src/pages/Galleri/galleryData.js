@@ -1,4 +1,4 @@
-import sponsorer2023 from "../../assets/Galleri2023/sponsorer.png";
+import sponsorer2023 from "../../assets/Galleri2023/Sponsorer.png";
 import img2023_1 from "../../assets/Galleri2023/1.png";
 import img2023_2 from "../../assets/Galleri2023/2.png";
 import img2023_3 from "../../assets/Galleri2023/3.png";
