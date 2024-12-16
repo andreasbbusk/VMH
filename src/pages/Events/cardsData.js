@@ -49,7 +49,7 @@ import Hedegaarden from "../../assets/Hedegaarden.jpg";
 import HedegaardenLogo from "../../assets/HedegaardenLogo.png";
 import Staal from "../../assets/staalservice_logo.png";
 import Vinsmagning from "../../assets/Vinsmagning.jpg";
-import Drinks from "../../assets/drinks.jpg";
+import Drinks from "../../assets/drinks.png";
 import BottomPrick from "../../assets/BottomPrick.png";
 
 const cardsData = [
