@@ -5,6 +5,13 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import styles from "../../pages/Project/Project.module.css";
 import PropTypes from "prop-types";
 
+import Project2025 from "../../assets/spyphi.png";
+import Project2023 from "../../assets/project-2023.jpg";
+import Project2022 from "../../assets/project-2022.jpg";
+import Project2019 from "../../assets/project-2019.jpeg";
+import Project2018 from "../../assets/404-error.jpg";
+import Project2017 from "../../assets/project-2017.png";
+
 const slideVariants = {
   enter: (direction) => ({
     y: direction > 0 ? "100%" : "-100%",
@@ -35,50 +42,56 @@ const ProjectSlider = ({ selectedYear }) => {
       id: 0,
       år: "2025",
       titel: "SPY-Phi infrarød scanner",
-      beskrivelse: "I år går indsamlingen til den avanceret infrarøde SPY-Phi scanner fra Stryker - Et værktøj der hjælper kirurger med præcis identificering og behandling af kræftramte områder.",
-      billede: "../../src/assets/spyphi.png",
-      læsMereLink: "/projekter/projekt-2025"
+      beskrivelse:
+        "I år går indsamlingen til den avanceret infrarøde SPY-Phi scanner fra Stryker - Et værktøj der hjælper kirurger med præcis identificering og behandling af kræftramte områder.",
+      billede: Project2025,
+      læsMereLink: "/projekter/projekt-2025",
     },
     {
       id: 1,
-      år: "2023", 
+      år: "2023",
       titel: "Faciliteter til projekt 'Lys i Vejle året rundt'",
-      beskrivelse: "I 2023 var projekt 'Lys i Vejle året rundt' en vigtig milepæl i arbejdet for bedre behandling af hudkræft. Projektet blev realiseret i tæt samarbejde med Vejle Sygehus, der arbejder for at være patienternes kræftsygehus med skånsomme, effektive og individuelt tilpassede behandlingstilbud.",
-      billede: "../../src/assets/project-2023.jpg",
-      læsMereLink: "/projekter/projekt-2023"
+      beskrivelse:
+        "I 2023 var projekt 'Lys i Vejle året rundt' en vigtig milepæl i arbejdet for bedre behandling af hudkræft. Projektet blev realiseret i tæt samarbejde med Vejle Sygehus, der arbejder for at være patienternes kræftsygehus med skånsomme, effektive og individuelt tilpassede behandlingstilbud.",
+      billede: Project2023,
+      læsMereLink: "/projekter/projekt-2023",
     },
     {
       id: 2,
       år: "2022",
       titel: "Scanner til optimering af kirurgi øjennært",
-      beskrivelse: "Endnu engang er Vejle Sygehus first mover på et spændende hudkræft projekt. Som noget helt nyt vil man gøre det muligt, at scanne huden omkring øjet for hudkræft. Man har tidligere kunnet scanne øjet, men nu skal det være muligt at scanne huden omkring, så man skal operere mindst muligt (læs mere om det nedenfor). Projektet kræver indkøb af en scanner og det er her, vi kan gøre en forskel.",
-      billede: "../../src/assets/project-2022.jpg",
-      læsMereLink: "/projekter/projekt-2022"
+      beskrivelse:
+        "Endnu engang er Vejle Sygehus first mover på et spændende hudkræft projekt. Som noget helt nyt vil man gøre det muligt, at scanne huden omkring øjet for hudkræft. Man har tidligere kunnet scanne øjet, men nu skal det være muligt at scanne huden omkring, så man skal operere mindst muligt (læs mere om det nedenfor). Projektet kræver indkøb af en scanner og det er her, vi kan gøre en forskel.",
+      billede: Project2022,
+      læsMereLink: "/projekter/projekt-2022",
     },
     {
       id: 3,
       år: "2019",
       titel: "Glaspavillon til dagslysbehandling",
-      beskrivelse: "I 2019/2020 udbygger Vejle Sygehus deres hudkræftafdeling. I den forbindelse har vi fået mulighed for at tilføje en glaspavillon, som er med til at gøre hudkræftbehandlingen hurtigere, mindre smertefuld og ikke mindst merelokal.",
-      billede: "../../src/assets/project-2019.jpeg",
-      læsMereLink: "/projekter/projekt-2019"
+      beskrivelse:
+        "I 2019/2020 udbygger Vejle Sygehus deres hudkræftafdeling. I den forbindelse har vi fået mulighed for at tilføje en glaspavillon, som er med til at gøre hudkræftbehandlingen hurtigere, mindre smertefuld og ikke mindst merelokal.",
+      billede: Project2019,
+      læsMereLink: "/projekter/projekt-2019",
     },
     {
       id: 4,
       år: "2018",
       titel: "Beslutningsstøtte til patienter med hudcancer i ansigtet",
-      beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
-      billede: "../../src/assets/404-error.jpg",
-      læsMereLink: "/projekter/projekt-2018"
+      beskrivelse:
+        "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
+      billede: Project2018,
+      læsMereLink: "/projekter/projekt-2018",
     },
     {
       id: 5,
       år: "2017",
       titel: "Pilotprojekt i teledermatologi",
-      beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
-      billede: "../../src/assets/project-2017.png",
-      læsMereLink: "/projekter/projekt-2017"
-    }
+      beskrivelse:
+        "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
+      billede: Project2017,
+      læsMereLink: "/projekter/projekt-2017",
+    },
   ]);
   const [isScrolling, setIsScrolling] = useState(false);
   const [direction, setDirection] = useState(0);
@@ -209,7 +222,7 @@ const ProjectSlider = ({ selectedYear }) => {
             <div className={styles.projectContent}>
               <div className={styles.imageContainer}>
                 <motion.img
-                  src={currentProject?.billede || "/placeholder-image.jpg"}
+                  src={currentProject?.billede}
                   alt={currentProject?.titel || ""}
                   className={styles.projectImage}
                   initial={{ scale: 1.2, opacity: 0 }}

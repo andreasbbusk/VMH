@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
+import Project2025 from "../assets/spyphi.png";
+import Project2023 from "../assets/project-2023.jpg";
+import Project2022 from "../assets/project-2022.jpg";
+import Project2019 from "../assets/project-2019.jpeg";
+import Project2018 from "../assets/404-error.jpg";
+import Project2017 from "../assets/project-2017.png";
+
 const ProjectHighlight = () => {
   const projectsData = [
     {
@@ -10,7 +17,7 @@ const ProjectHighlight = () => {
       år: "2025",
       titel: "SPY-Phi infrarød scanner",
       beskrivelse: "I år går indsamlingen til den avanceret infrarøde SPY-Phi scanner fra Stryker - Et værktøj der hjælper kirurger med præcis identificering og behandling af kræftramte områder.",
-      billede: "../../src/assets/spyphi.png",
+      billede: Project2025,
       læsMereLink: "/projekter/projekt-2025"
     },
     {
@@ -18,7 +25,7 @@ const ProjectHighlight = () => {
       år: "2023",
       titel: "Faciliteter til projekt 'Lys i Vejle året rundt'",
       beskrivelse: "I 2023 var projekt 'Lys i Vejle året rundt' en vigtig milepæl i arbejdet for bedre behandling af hudkræft. Projektet blev realiseret i tæt samarbejde med Vejle Sygehus, der arbejder for at være patienternes kræftsygehus med skånsomme, effektive og individuelt tilpassede behandlingstilbud.",
-      billede: "../../src/assets/project-2023.jpg",
+      billede: Project2023,
       læsMereLink: "/projekter/projekt-2023"
     },
     {
@@ -26,7 +33,7 @@ const ProjectHighlight = () => {
       år: "2022",
       titel: "Scanner til optimering af kirurgi øjennært",
       beskrivelse: "Endnu engang er Vejle Sygehus first mover på et spændende hudkræft projekt. Som noget helt nyt vil man gøre det muligt, at scanne huden omkring øjet for hudkræft. Man har tidligere kunnet scanne øjet, men nu skal det være muligt at scanne huden omkring, så man skal operere mindst muligt (læs mere om det nedenfor). Projektet kræver indkøb af en scanner og det er her, vi kan gøre en forskel.",
-      billede: "../../src/assets/project-2022.jpg",
+      billede: Project2022,
       læsMereLink: "/projekter/projekt-2022"
     },
     {
@@ -34,7 +41,7 @@ const ProjectHighlight = () => {
       år: "2019",
       titel: "Glaspavillon til dagslysbehandling",
       beskrivelse: "I 2019/2020 udbygger Vejle Sygehus deres hudkræftafdeling. I den forbindelse har vi fået mulighed for at tilføje en glaspavillon, som er med til at gøre hudkræftbehandlingen hurtigere, mindre smertefuld og ikke mindst merelokal.",
-      billede: "../../src/assets/project-2019.jpeg",
+      billede: Project2019,
       læsMereLink: "/projekter/projekt-2019"
     },
     {
@@ -42,7 +49,7 @@ const ProjectHighlight = () => {
       år: "2018",
       titel: "Beslutningsstøtte til patienter med hudcancer i ansigtet",
       beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
-      billede: "../../src/assets/404-error.jpg",
+      billede: Project2018,
       læsMereLink: "/projekter/projekt-2018"
     },
     {
@@ -50,7 +57,7 @@ const ProjectHighlight = () => {
       år: "2017",
       titel: "Pilotprojekt i teledermatologi", 
       beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
-      billede: "../../src/assets/project-2017.png",
+      billede: Project2017,
       læsMereLink: "/projekter/projekt-2017"
     }
   ];
