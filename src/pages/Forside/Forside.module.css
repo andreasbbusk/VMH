@@ -1,11 +1,8 @@
 .forside-intro-container {
   display: flex;
-<<<<<<< HEAD
   justify-content: space-between;
   margin: 0 4rem;
-=======
   justify-content: space-around;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-intro-venstre {
@@ -19,16 +16,13 @@
   text-transform: uppercase;
   font-family: "adelle", serif;
   font-weight: 400;
-<<<<<<< HEAD
   letter-spacing: 0.08em;
-=======
   font-style: normal;
   margin-left: 2rem;
 }
 
 .forside-intro-venstre p {
   margin-left: 2rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-intro-hojre {
@@ -38,11 +32,8 @@
 .forside-intro-hojre img {
   display: block;
   margin: 1rem auto 0 auto;
-<<<<<<< HEAD
   max-width: 600px;
-=======
   width: 500px;
->>>>>>> d673a0d (Add files via upload)
   overflow: auto;
   z-index: 1;
   transform: translateY(50px);
@@ -54,12 +45,9 @@
   height: 2px;
   background-color: #e0a619;
   margin: 20px 0;
-<<<<<<< HEAD
   max-width: 250px;
-=======
   width: 30%;
   margin-left: 2rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-stats-container {
@@ -87,15 +75,10 @@
 
 .Forside-stats-content p {
   text-transform: uppercase;
-<<<<<<< HEAD
   letter-spacing: 0.08em;
   text-align: center;
   font-weight: 400;
   font-family: "adelle", serif;
-=======
-  text-align: center;
-  font-weight: bold;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .Forside-kildetekst {
@@ -118,28 +101,20 @@
 
 .forside-gallamiddag-billeder-container {
   display: flex;
-<<<<<<< HEAD
   gap: 1rem;
-=======
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-gallamiddag-billeder-venstre {
   flex-direction: column;
   display: flex;
-<<<<<<< HEAD
   align-items: flex-end;
   gap: 1rem;
-=======
-  gap: 1.5rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-gallamiddag-billeder-hojre {
   flex-direction: column;
   display: flex;
   margin-top: 2rem;
-<<<<<<< HEAD
   gap: 1rem;
 }
 
@@ -147,52 +122,28 @@
 .forside-gallamiddag-billeder-venstre img {
   width: 90%;
 }
-=======
-  gap: 1.5rem;
-}
-
-.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
-  width: 90%;
-} 
->>>>>>> d673a0d (Add files via upload)
 
 .forside-gallamiddag-content {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   gap: 5rem;
-=======
-  gap: 10rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-gallamiddag-tekst-container {
   align-content: center;
   align-items: center;
-<<<<<<< HEAD
   justify-content: center;
 }
 
 .forside-gallamiddag-tekst p {
-=======
-justify-content: center;
-}
-
-.forside-gallamiddag-tekst p{
->>>>>>> d673a0d (Add files via upload)
   margin-top: 2rem;
 }
 
 .forside-gallamiddag-tekst h1 {
   font-family: "adelle", serif;
-<<<<<<< HEAD
   font-weight: 600;
   letter-spacing: 0.08em;
   font-size: 3rem;
-=======
-  font-weight: 400;
-  font-style: normal;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-gallamiddag-stats {
@@ -205,16 +156,12 @@ justify-content: center;
 .forside-gallamiddag-stats h1 {
   color: #e0a619;
   font-size: 4rem;
-<<<<<<< HEAD
   font-weight: 600;
-=======
->>>>>>> d673a0d (Add files via upload)
 }
 
 .forside-gallamiddag-stats p {
   text-transform: uppercase;
   text-align: center;
-<<<<<<< HEAD
   font-family: "adelle", serif;
 }
 
@@ -245,8 +192,6 @@ justify-content: center;
   margin-top: 2rem;
 }
 
-=======
-}
 
 .Forside-knap-container {
   gap: 2rem; 
@@ -276,7 +221,6 @@ justify-content: center;
 }
 
 
->>>>>>> d673a0d (Add files via upload)
 .Forside-projekt-container {
   padding: 20rem 0;
   text-align: center;
@@ -315,7 +259,6 @@ justify-content: center;
 }
 
 .KnastLæsmereKnap {
-<<<<<<< HEAD
   background-color: #3c3c3c;
   color: #fff;
   border: none;
@@ -331,22 +274,6 @@ justify-content: center;
 .Forside-knast-billede-venstre img {
   margin-top: 5rem;
 }
-=======
-  background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 3rem;
-   margin-left: 2rem;
-}
-
-.Forside-knast-billede-hojre img, .Forside-knast-billede-venstre img {
-  margin-top: 5rem;
-} 
->>>>>>> d673a0d (Add files via upload)
 
 .Forside-knast-billede-venstre {
   justify-content: left;
@@ -359,7 +286,6 @@ justify-content: center;
   height: 2px;
   background-color: #e0a619;
   margin: 20px 0;
-<<<<<<< HEAD
   max-width: 150px;
 }
 
@@ -388,37 +314,6 @@ justify-content: center;
   cursor: pointer;
   border-radius: 5px 0 5px 0;
   margin-top: 2rem;
-=======
-  width: 5%;
-}
-
-
-.Forside-knap-container {
-  gap: 2rem; 
-  display: flex;
-}
-
- .FraIdeTilIndsatsStotNu {
-   background-color: #E0A619;
-   color: #fff;
-   border: none;
-   padding: 10px 30px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
-}
-
-.FraIdeTilIndsatsLasMere {
-  background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 30px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .FraIdeTilIndsats-content {
@@ -440,20 +335,11 @@ justify-content: center;
 }
 
 .StotteFunktion-container {
-<<<<<<< HEAD
   background-color: white;
   padding: 8rem 0;
 }
 
 .galla-sponsor {
-=======
-  padding: 15rem 0;
-  text-align: center;
-  background-color: white;
-}
-
-.galla-sponsor{
->>>>>>> d673a0d (Add files via upload)
   margin-left: 16rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -467,21 +353,13 @@ justify-content: center;
 }
 
 .galla-sponsor p {
-<<<<<<< HEAD
   font-size: 0.7rem;
-=======
-  font-size: .7rem;
->>>>>>> d673a0d (Add files via upload)
 }
 
 .sponsor-divider {
   border: 0;
   height: 2px;
-<<<<<<< HEAD
   background-color: #e0a619;
-=======
-  background-color: #E0A619;
->>>>>>> d673a0d (Add files via upload)
   margin: 10px 0;
   width: 10%;
 }
@@ -514,30 +392,21 @@ justify-content: center;
     transform: translateX(0); /* Start ved første element */
   }
   to {
-<<<<<<< HEAD
     transform: translateX(
       -1000%
     ); /* Skub hele bredden af sponsorlisten, inkl. margin */
-=======
-    transform: translateX(-1000%); /* Skub hele bredden af sponsorlisten, inkl. margin */
->>>>>>> d673a0d (Add files via upload)
   }
 }
 
 .sponsorknap-container {
   text-align: center;
-<<<<<<< HEAD
   gap: 2rem;
-=======
-  gap: 2rem; 
->>>>>>> d673a0d (Add files via upload)
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   padding-bottom: 4rem;
 }
 
-<<<<<<< HEAD
 .allesponsor {
   background-color: #3c3c3c;
   color: #fff;
@@ -1323,234 +1192,3 @@ justify-content: center;
   }
 }
 
-=======
- .allesponsor {
-   background-color: #3C3C3C;
-   color: #fff;
-   border: none;
-   padding: 10px 40px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
-}
-
-.blivsponsor {
-   background-color: #E0A619;
-   color: #fff;
-   border: none;
-   padding: 10px 40px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px 0 5px 0;
-   margin-top: 2rem;
-}
-
-@media only screen and (max-width: 390px) {
-
-.forside-intro-container {
-  flex-direction: column-reverse;
-  padding-bottom: 2rem;
-}
-
-.forside-intro-hojre img {
-  display: block;
-  margin: 0rem auto;
-  width: 300px;
-  transform: translateY(0px);
-  border-radius: 15px 0 15px 0;
-}
-
-.forside-intro-venstre {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-.forside-intro-venstre h1 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-}
-
-.forside-intro-venstre p {
- text-align: center;
- margin-right: 1rem;
-}
-
-.forside-intro-venstre br {
-  display: none;
-}
-
-.hudcancer-divider {
- width: 45%;
-}
-
-.Forside-stats-content {
-  display: flex;
- flex-direction: column;
-}
-
-.Forside-stats-1, .Forside-stats-2, .Forside-stats-3 {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.Forside-stats-content h1 {
-  font-size: 3rem;
- 
-}
-
-.Forside-stats-content p {
-  font-size: .7rem;
-  align-content: center;
-  width: 100%;
-  text-align: left;
-  font-weight: 200;
-}
-
-.Forside-stats-content {
-  gap: 4rem;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.Forside-kildetekst p {
-  font-size: 0.8rem;
-  margin-left: 2rem;
-  width: 90%;
-}
-
-.Forside-kildetekst {
-  padding-bottom: 5rem;
-  width: 100%;
-}
-
-.forside-gallamiddag-content {
- flex-direction: column;
- justify-content: center;
-}
-
-.forside-gallamiddag-billeder-hojre img, .forside-gallamiddag-billeder-venstre img{
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-} 
-
-.forside-gallamiddag-tekst h1 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-top: -5rem;
-}
-
-.forside-gallamiddag-tekst h1 br {
-  display: none;
-}
-
-.forside-gallamiddag-tekst p {
-  text-align: center;
-}
-
-.Forside-knap-container {
-  justify-content: center;
-}
-
-.forside-gallamiddag-stats {
-  flex-direction: column;
-}
-
-.forside-gallamiddag-stats-Gaver, .forside-gallamiddag-stats-Indsamlet, .forside-gallamiddag-stats-Projekt {
-  display: flex;
-  align-items: center;
-  align-content:center ;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.forside-gallamiddag-stats h1 {
-  color: #e0a619;
-  font-size: 2rem;
-}
-
-.Forside-knast-billede-venstre img {
-  display: none;
-}
-
-.Forside-knast-billede-hojre img {
-  width: 100%;
-  margin-top: 10rem;
-  z-index: 1000;
-}
-
-.Forside-knast-tekst h1 {
-  font-size: 2rem;
-  font-family: "adelle", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-
-.Forside-knast-tekst p {
-  text-align: center;
-}
-
-.Forside-knast-knap-container {
-  display: flex;
-  justify-content: center;
-  margin-left: -5rem;
-}
-
-.KnastPil img {
-  max-width: 40%;
-}
-
-.FraIdeTilIndsats-content {
-  flex-direction: column-reverse;
-}
-
-.FraIdeTilIndsats-hojre img {
-  width: 80%;
-}
-
-.FraIdeTilIndsats-hojre p {
-  font-size: .7rem;
-  text-align: center;
-}
-
-.FraIdeTilIndsats-content h1 {
-  margin-top: 2rem;
-  margin-left: 1rem;
-}
-
-.FraIdeTilIndsats-content p {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  width: 90%;
-}
-
-.FraIdeTilIndsats-content br {
-  display: none;
-}
-
-.galla-sponsor {
-  margin-top: 0rem;
-  padding-top: 4rem;
-  padding-bottom: 5rem;
-  margin-left: 1rem;
-}
-
-.galla-sponsor h1 {
-  font-size: 2rem;
-  margin-left: 0;
-}
-
-.carousel-item {
-font-size: 1.5rem;
-margin-right: 50px;
-}
-
-
-}
->>>>>>> d673a0d (Add files via upload)

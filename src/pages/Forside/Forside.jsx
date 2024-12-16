@@ -1,6 +1,5 @@
 import styles from "./Forside.module.css";
 import ForsideIntro from "../../assets/ForsideIntro.png";
-<<<<<<< HEAD
 import ForsideGallaVenstreEt from "../../assets/ForsideGallaVenstre1.png";
 import ForsideGallaVenstreTo from "../../assets/ForsideGallaVenstre2.png";
 import ForsideGallaHojreEt from "../../assets/ForsideGallaHojre1.png";
@@ -55,60 +54,6 @@ const SponsorsCarousel = () => {
     </div>
   );
 };
-=======
-import ForsideGallaVenstreEt from "../../assets/ForsideGallaVenstre1.png"
-import ForsideGallaVenstreTo from "../../assets/ForsideGallaVenstre2.png"
-import ForsideGallaHojreEt from "../../assets/ForsideGallaHojre1.png"
-import ForsideGallaHojreTo from "../../assets/ForsideGallaHojre2.png"
-import KnastBilledeVenstre from "../../assets/KnastBilledeVenstre.svg"
-import KnastBilledeHojre from "../../assets/KnastBilledeHojre.svg"
-import KnastPil from "../../assets/KnastPil.svg"
-import IdeTilIndsats from "../../assets/FraIdeTilIndsats.png"
-
-
-const SponsorsCarousel = () => {
-        const sponsors = [
-          "C Beayty and Care",
-          "Yogilates",
-          "Engredo",
-          "Sparekassen Kronjylland",
-          "Trekantens Lyntryk",
-          "NemTilmeld",
-          "Ernst & Young",
-          "NH Foto & Film",
-          "Torvehallerne",
-          "Østjysk Serviceudlejning",
-          "Det kreative Gartneri",
-          "JE-RA Holding/Cloud Capital",
-          "Slagter Grønvall",
-          "DGI Huset Vejle",
-          "Vanilla",
-          "Kaffebaren",
-          "Skærtoft",
-          "Megavin.dk",
-          "Universal transport",
-          "PH Formula",
-          "Jesper Maigaard",
-          "Pia Liltorp",
-          "Thunderpower",
-          "Kenneth Dupont",
-          "Polyprint"
-        ];
-      
-        return (
-          <div className={styles['carousel-container']}>
-            <div className={styles['carousel']}>
-              {/* Duplicér sponsorerne for kontinuerlig effekt */}
-              {[...sponsors, ...sponsors].map((sponsor, index) => (
-                <div key={index} className={styles['carousel-item']}>
-                  {sponsor}
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      };
->>>>>>> d673a0d (Add files via upload)
 
 const Forside = () => {
   return (
@@ -162,21 +107,17 @@ const Forside = () => {
         </div>
         <div className={styles["Forside-kildetekst"]}>
           <p>
-<<<<<<< HEAD
             Kilde:{" "}
             <a href="https://www.cancer.dk/hudkraeft-hudcancer/">
               Kræftens bekæmpelse
             </a>{" "}
             & <a href="https://netdoktor.dk/">Netdoktor.dk</a>
-=======
             Kilde: <a href="">Kræftens bekæmpelse</a> &{" "}
             <a href="">Netdoktor.dk</a>
->>>>>>> d673a0d (Add files via upload)
           </p>
         </div>
       </div>
 
-<<<<<<< HEAD
       <div className={styles["forside-gallamiddag-container"]}>
         <div className={styles["forside-gallamiddag-content"]}>
           <div className={styles["forside-gallamiddag-billeder-container"]}>
@@ -346,7 +287,6 @@ const Forside = () => {
           <button className={styles["blivsponsor"]}>Bliv Sponsor</button>
         </div>
       </div>
-=======
 <div className={styles['forside-gallamiddag-container']}>
 <div className={styles['forside-gallamiddag-content']}>
 <div className={styles['forside-gallamiddag-billeder-container']}>
@@ -478,7 +418,6 @@ Vi fokuserer på at oplyse om solbeskyttelse, risikofaktorer og vigtigheden
             <button className={styles['blivsponsor']}>Bliv Sponsor</button>
             </div>
                 </div>
->>>>>>> d673a0d (Add files via upload)
     </>
   );
 };
