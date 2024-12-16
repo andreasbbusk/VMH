@@ -1,5 +1,7 @@
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
-import styles from "./OmOs.module.css";
+
+import styles from "./OmOS.module.css";
+
 import OmOsVideo from "../assets/OmOsVideo.mp4"
 import { useState, useRef } from "react";
 import Play from "../assets/play-button.svg";
