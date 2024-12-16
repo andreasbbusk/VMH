@@ -7,7 +7,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.DEV ? "/vmh" : "/vmh/"}>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/vmh/"}>
       <ScrollToTop />
       <App />
     </BrowserRouter>
