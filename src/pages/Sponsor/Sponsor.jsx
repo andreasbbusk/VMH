@@ -322,7 +322,7 @@ const Sponsor = () => {
       </div>
 
       {/* Ny sektion med stort billede nederst */}
-      <div className={styles.SPSection_container}>
+      <div className={styles.SPSection_container2}>
         <div className={styles.LargeImageSection}>
           <img
             src={extraImage18}

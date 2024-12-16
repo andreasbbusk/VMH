@@ -125,7 +125,9 @@ const ProjectSlider = ({ selectedYear }) => {
       if (now - lastScrollTime.current < SCROLL_COOLDOWN) return;
 
       // Only prevent default if we're not on the first project scrolling up
-      if (!(currentPage === 0 && e.deltaY < 0)) {
+      // or the last project scrolling down
+      if (!(currentPage === 0 && e.deltaY < 0) && 
+          !(currentPage === projects.length - 1 && e.deltaY > 0)) {
         e.preventDefault();
       }
 
@@ -168,8 +170,8 @@ const ProjectSlider = ({ selectedYear }) => {
     const handleScrollLock = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
-          // Only disable scroll if not on first project
-          if (currentPage !== 0) {
+          // Only disable scroll if not on first or last project
+          if (currentPage !== 0 && currentPage !== projects.length - 1) {
             disableBodyScroll(slider, {});
           }
         } else {
@@ -207,6 +209,7 @@ const ProjectSlider = ({ selectedYear }) => {
         className={styles.fullscreenSlider}
         ref={sliderRef}
         aria-label="Projekt slider"
+        id="fullscreenSlider_footer"
       >
         <AnimatePresence initial={false} mode="wait" custom={direction}>
           <motion.div

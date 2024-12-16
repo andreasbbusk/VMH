@@ -26,19 +26,23 @@ const Projects = () => {
   useEffect(() => {
     if (currentProjectYear) {
       setTimeout(() => {
-        const sliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
-        
+        const sliderSection = document.getElementById(
+          `slider-project-${currentProjectYear}`
+        );
+
         if (sliderSection) {
           sliderSection.scrollIntoView({
             behavior: "smooth",
-            block: "start", 
+            block: "start",
             inline: "nearest",
           });
         } else {
           // Retry scrolling with increasing delays if element not found initially
-          [600, 900, 1100].forEach(delay => {
+          [600, 900, 1100].forEach((delay) => {
             setTimeout(() => {
-              const retrySliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
+              const retrySliderSection = document.getElementById(
+                `slider-project-${currentProjectYear}`
+              );
               if (retrySliderSection) {
                 retrySliderSection.scrollIntoView({
                   behavior: "smooth",
@@ -407,6 +411,7 @@ const Projects = () => {
               selectedYear={currentProjectYear}
             />
           </section>
+          <div className={styles.footer_spacer}></div>
         </div>
       </m.main>
     </>

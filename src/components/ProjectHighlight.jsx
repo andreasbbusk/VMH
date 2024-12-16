@@ -1,6 +1,6 @@
 import styles from "../pages/Forside/Forside.module.css";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useDragControls } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 import Project2025 from "../assets/spyphi.png";
@@ -57,8 +57,17 @@ const ProjectHighlight = () => {
       år: "2017",
       titel: "Pilotprojekt i teledermatologi", 
       beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
-      billede: Project2017,
+      billede: Project2017, 
       læsMereLink: "/projekter/projekt-2017"
+    },
+    {
+      id: 6,
+      år: "",
+      titel: "",
+      beskrivelse: "",
+      billede: "",
+      læsMereLink: "",
+      isSpacerCard: true
     }
   ];
 
@@ -67,11 +76,12 @@ const ProjectHighlight = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
+  const dragControls = useDragControls();
 
   useEffect(() => {
     // Set latest project as default
     const latestProject = projects.reduce((prev, current) => 
-      parseInt(current.år) > parseInt(prev.år) ? current : prev
+      current.isSpacerCard ? prev : (parseInt(current.år) > parseInt(prev.år) ? current : prev)
     );
     setSelectedProject(latestProject);
     setCurrentIndex(projects.findIndex(p => p.id === latestProject.id));
@@ -88,9 +98,11 @@ const ProjectHighlight = () => {
 
   // Handle project selection and scrolling
   const handleProjectClick = (project, index) => {
-    setSelectedProject(project);
-    setCurrentIndex(index);
-    scrollToProject(index);
+    if (!project.isSpacerCard) {
+      setSelectedProject(project);
+      setCurrentIndex(index);
+      scrollToProject(index);
+    }
   };
 
   // Scroll to selected project
@@ -129,7 +141,7 @@ const ProjectHighlight = () => {
       const direction = distanceScrolled > 0 ? 1 : -1;
       const newIndex = currentIndex + direction;
 
-      if (newIndex >= 0 && newIndex < projects.length) {
+      if (newIndex >= 0 && newIndex < projects.length - 1) { // Exclude spacer card
         handleProjectClick(projects[newIndex], newIndex);
       } else {
         // Snap back if hitting boundaries
@@ -142,6 +154,25 @@ const ProjectHighlight = () => {
   };
 
   const debouncedScroll = debounce(handleScroll, 100);
+
+  // Handle drag end
+  const handleDragEnd = (event, info) => {
+    const velocity = info.velocity.x;
+    const offset = info.offset.x;
+    
+    if (Math.abs(velocity) > 500 || Math.abs(offset) > 100) {
+      const direction = velocity < 0 || offset < 0 ? 1 : -1;
+      const newIndex = currentIndex + direction;
+      
+      if (newIndex >= 0 && newIndex < projects.length - 1) { // Exclude spacer card
+        handleProjectClick(projects[newIndex], newIndex);
+      } else {
+        scrollToProject(currentIndex);
+      }
+    } else {
+      scrollToProject(currentIndex);
+    }
+  };
 
   return (
     <div className={styles["projekt-container"]}>
@@ -182,42 +213,51 @@ const ProjectHighlight = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             onScroll={debouncedScroll}
+            drag="x"
+            dragControls={dragControls}
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={handleDragEnd}
           >
             {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className={`${styles["slider-item"]} ${
-                  project.id === selectedProject?.id ? styles["active"] : ""
-                }`}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.2 }}
-                onClick={() => handleProjectClick(project, index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    handleProjectClick(project, index);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`Vis projekt ${project.titel}`}
-                style={{ cursor: "pointer" }}
-              >
-                <img
-                  src={project.billede}
-                  alt={project.titel}
-                  className={styles["projekt-slide-image"]}
-                />
-                <div className={styles["projekt-slide-text"]}>
-                  <h4>{project.titel}</h4>
-                </div>
-              </motion.div>
+              !project.isSpacerCard && (
+                <motion.div
+                  key={project.id}
+                  className={`${styles["slider-item"]} ${
+                    project.id === selectedProject?.id ? styles["active"] : ""
+                  }`}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.2 }}
+                  onClick={() => handleProjectClick(project, index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      handleProjectClick(project, index);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Vis projekt ${project.titel}`}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img
+                    src={project.billede}
+                    alt={project.titel}
+                    className={styles["projekt-slide-image"]}
+                  />
+                  <div className={styles["projekt-slide-text"]}>
+                    <h4>{project.titel}</h4>
+                  </div>
+                </motion.div>
+              )
             ))}
+            {/* Add an empty div at the end to create space */}
+            <div style={{ minWidth: '70px' }} />
           </motion.div>
 
           {/* Navigation dots */}
           <div className={styles["slider-dots"]}>
-            {projects.map((_, index) => (
+            {projects.filter(p => !p.isSpacerCard).map((_, index) => (
               <motion.button
                 key={index}
                 className={`${styles["slider-dot"]} ${

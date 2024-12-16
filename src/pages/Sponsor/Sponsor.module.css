@@ -171,6 +171,12 @@
   .SPSection_container {
     text-align: left; /* Centrer indholdet i sektionen */
   }
+
+  .SPSection_container2 {
+    text-align: left; /* Centrer indholdet i sektionen */
+    background-color: #fbf5eb;
+    padding: 2rem;
+  }
   
   .LargeImageSection {
     display: flex;
