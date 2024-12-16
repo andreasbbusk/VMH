@@ -1,19 +1,19 @@
 {
   "2023": [
     {
-      "src": "/vmh/src/assets/Galleri2023/sponsorer.png", 
-        "alt": "Sponsorer fra støttegalla 2023"
+      "src": "../../src/assets/Galleri2023/sponsorer.png",
+      "alt": "Sponsorer fra støttegalla 2023"
     },
     {
-      "src": "/vmh/src/assets/Galleri2023/1.png",
+      "src": "../../src/assets/Galleri2023/1.png",
       "alt": "Støttegalla 2023"
     },
     {
-      "src": "/vmh/src/assets/Galleri2023/2.png",
+      "src": "../../src/assets/Galleri2023/2.png",
       "alt": "Støttegalla 2023"
     },
     {
-      "src": "/vmh/src/assets/Galleri2023/3.png",
+      "src": "../../src/assets/Galleri2023/3.png",
       "alt": "Støttegalla 2023"
     },
     {
@@ -25,7 +25,7 @@
       "alt": "Støttegalla 2023"
     },
     {
-      "src": "../../src/assets/Galleri2023/6.png", 
+      "src": "../../src/assets/Galleri2023/6.png",
       "alt": "Støttegalla 2023"
     },
     {
@@ -132,10 +132,10 @@
     },
     {
       "src": "../../src/assets/Galleri2022/2.jpg",
-        "alt": "Støttegalla 2022"
+      "alt": "Støttegalla 2022"
     },
     {
-      "src": "../../src/assets/Galleri2022/3.jpg", 
+      "src": "../../src/assets/Galleri2022/3.jpg",
       "alt": "Støttegalla 2022"
     },
     {
@@ -253,7 +253,7 @@
       "alt": "Støttegalla 2019"
     },
     {
-      "src": "../../src/assets/Galleri2019/2.jpg", 
+      "src": "../../src/assets/Galleri2019/2.jpg",
       "alt": "Støttegalla 2019"
     },
     {

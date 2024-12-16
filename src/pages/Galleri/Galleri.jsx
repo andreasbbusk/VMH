@@ -26,7 +26,7 @@ const Galleri = () => {
     const hentGalleriData = async () => {
       try {
         setIndlæser(true);
-        const response = await fetch("/vmh/data/galleryImages.json");
+        const response = await fetch("../../data/galleryImages.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
