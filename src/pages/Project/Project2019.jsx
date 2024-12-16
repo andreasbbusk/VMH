@@ -230,7 +230,9 @@ const Project2019 = () => {
                   <h4>Glaspavillion til daglysbehandling</h4>
                 </div>
               </div>
-              <p> <br />
+              <p>
+                {" "}
+                <br />
                 Størrelsen og udformningen af bygningen var afhængig af
                 donationens størrelse, da den alene finansierer glaspavillonen.
                 Og med det fantastisk store beløb, er der blevet mulighed for en
@@ -275,9 +277,11 @@ const Project2019 = () => {
                     kræftpatienter kan få hurtigere og mere præcis behandling.
                   </p>
                   <p>
-                    <strong>Vi kan altid bruge din hjælp til vores kommende projekter.</strong>
+                    <strong>
+                      Vi kan altid bruge din hjælp til vores kommende projekter.
+                    </strong>
                   </p>
-                  <Link to="/donate" className="support-button">
+                  <Link to="/stoet-nu" className="support-button">
                     Støt nu
                     <svg
                       width="16"

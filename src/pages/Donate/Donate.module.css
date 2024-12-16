@@ -18,7 +18,7 @@
   text-transform: uppercase;
   margin: 2.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e0a619;
+  border-bottom: 1px 2 #e0a619;
 }
 
 .video {
@@ -293,9 +293,6 @@ label {
   background-color: #fbf5eb;
 }
 
-
-
-
 /* Animations */
 @keyframes radioScale {
   0% {
@@ -536,7 +533,6 @@ label {
   }
 }
 
-
 .donate_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -572,7 +568,7 @@ label {
 }
 
 .project_link {
-  background: #3C3C3C;
+  background: #3c3c3c;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 15px 0 15px 0;
@@ -620,8 +616,9 @@ label {
   z-index: 1000;
 }
 
-.success_modal, .error_modal {
-  background: #FBF5EB;
+.success_modal,
+.error_modal {
+  background: #fbf5eb;
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -687,4 +684,14 @@ label {
 
 .close_button:hover {
   color: #e0a619;
+}
+
+.hudcancer-divider {
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 20px 0;
+  width: 12%;
+  margin-left: 2.5rem;
+  margin-top: -3rem;
 }

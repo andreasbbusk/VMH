@@ -45,7 +45,7 @@ const Project2025 = () => {
   // Video playback handler
   const handlePlayVideo = () => {
     if (!videoRef.current) return;
-    
+
     videoRef.current.play();
     setHasStartedPlaying(true);
   };
@@ -69,7 +69,10 @@ const Project2025 = () => {
         const elementTop = rect.top;
 
         if (elementTop <= viewportHeight * 0.8) {
-          const progress = Math.min(1, 1.5 * (1 - elementTop / (viewportHeight * 0.8)));
+          const progress = Math.min(
+            1,
+            1.5 * (1 - elementTop / (viewportHeight * 0.8))
+          );
           setIsHighlightVisible(true);
 
           // Reveal characters progressively
@@ -443,7 +446,7 @@ const Project2025 = () => {
                     Ved at støtte projektet er du med til at sikre, at
                     kræftpatienter kan få hurtigere og mere præcis behandling.
                   </p>
-                  <Link to="/donate" className="support-button">
+                  <Link to="/stoet-nu" className="support-button">
                     Støt nu
                     <svg
                       width="16"

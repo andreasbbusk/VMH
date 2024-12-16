@@ -298,7 +298,7 @@ const Project2023 = () => {
                   <p>
                     Vi kan altid bruge din hjælp til vores kommende projekter.
                   </p>
-                  <Link to="/donate" className="support-button">
+                  <Link to="/stoet-nu" className="support-button">
                     Støt nu
                     <svg
                       width="16"

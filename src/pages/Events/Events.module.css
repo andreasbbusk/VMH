@@ -5,730 +5,736 @@ button {
 }
 
 .intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: auto;
-    width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: auto;
+  width: 60%;
 }
 
 .intro-container h1 {
-    text-transform: uppercase;
-    line-height: 1.5;
-    font-family: "adelle", serif;
-    font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-family: "adelle", serif;
+  font-weight: 400;
 }
 
 .divider {
-    border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin: 20px 0;
-    width: 30%;
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 20px 0;
+  width: 30%;
 }
 
-.galla-menu-divider { 
+.galla-menu-divider {
   border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin: 20px 0;
-    width: 30%;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 20px 0;
+  width: 30%;
 }
 
 .intro-divider {
   border: 0;
   height: 2px;
-  background-color: #E0A619;
+  background-color: #e0a619;
   margin: 20px 0;
   width: 30%;
 }
 
 .intro-button {
-    background-color: #3C3C3C;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px 0 5px 0;
-    margin-top: 2rem;
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 .image-container {
-    position: relative; /* Sørger for, at overlayet kan placeres korrekt */
-    width: 100%;
-    max-width: 450px; /* Justér efter behov */
+  position: relative; /* Sørger for, at overlayet kan placeres korrekt */
+  width: 100%;
+  max-width: 450px; /* Justér efter behov */
 }
 
 .background-image {
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
-    border-radius: 15px 0 15px 0;
-    position: relative; /* Sørger for, at pseudo-elementet placeres korrekt */
-    z-index: 10;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 15px 0 15px 0;
+  position: relative; /* Sørger for, at pseudo-elementet placeres korrekt */
+  z-index: 10;
 }
 
 .background-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Mørk gennemsigtig overlay */
-    border-radius: 8px; /* Matcher billedets runding */
-    z-index: 100; /* Sørger for, at overlayet er ovenpå billedet */
-    pointer-events: none; /* Sørger for, at overlayet ikke interfererer med klik */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Mørk gennemsigtig overlay */
+  border-radius: 8px; /* Matcher billedets runding */
+  z-index: 100; /* Sørger for, at overlayet er ovenpå billedet */
+  pointer-events: none; /* Sørger for, at overlayet ikke interfererer med klik */
 }
-  
+
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 100; /* Sørger for, at overlay teksten er ovenpå overlayet */
-    border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Sørger for, at overlay teksten er ovenpå overlayet */
+  border-radius: 8px;
 }
 
 .overlay-text {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-family: "adelle-sans", sans-serif;
-    font-style: normal;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "adelle-sans", sans-serif;
+  font-style: normal;
 }
 
 .overlay-button {
-    background-color: #E0A619;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 15px 0 15px 0;
-    margin-top: 2rem;
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+  margin-top: 2rem;
 }
 
 .overlay-description {
-    font-size: 1rem;
-    color: black;
-    margin: 10px 0;
-    text-align: center;
-    line-height: 1.5;
+  font-size: 1rem;
+  color: black;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /*Program*/
 
 .galla-program-tekst {
-    text-transform: uppercase;
-    font-family: "adelle-sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.5;
-    background-color: white;
+  text-transform: uppercase;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: white;
 }
 
 .galla-program-tekst p {
-    background-color: white;
+  background-color: white;
 }
 
 .galla-program-tekst h1 {
-    font-size: 3rem;
-    background-color: white;
+  font-size: 3rem;
+  background-color: white;
 }
 
 .galla-program-container {
-    display: flex;
-    justify-content: center;
-    gap: 15rem;
-    margin-top: 5rem;
-    width: 100%;
-    background-color: white;
-    padding-top: 5rem;
-  }
-  
-  .galla-program-slider {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden;
-    background-color: white;
-    height: 400px; /* Juster højden af slideren efter behov */
-  }
-  
-  .galla-slider-image {
-    width: 100%;
-    height: 90%;
-    object-fit: cover; /* Sørg for, at billederne fylder hele slideren */
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Glidende transition for at fade billederne ind og ud */
-    border-radius: 15px 0 15px 0;
-    background-color: white;
-  }
-  
-  .galla-slider-image.active {
-    background-color: white;
-    opacity: 1; /* Sørg for, at kun den aktive billede har opacity 1 */
-  }
-  
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+  margin-top: 5rem;
+  width: 100%;
+  background-color: white;
+  padding-top: 5rem;
+}
+
+.galla-program-slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  background-color: white;
+  height: 400px; /* Juster højden af slideren efter behov */
+}
+
+.galla-slider-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Sørg for, at billederne fylder hele slideren */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Glidende transition for at fade billederne ind og ud */
+  border-radius: 15px 0 15px 0;
+  background-color: white;
+}
+
+.galla-slider-image.active {
+  background-color: white;
+  opacity: 1; /* Sørg for, at kun den aktive billede har opacity 1 */
+}
 
 .galla-program-dresscode {
-    margin-top: 1rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: white;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: white;
 }
-
 
 .galla-program-lille-tekst p {
-    font-size: .6rem;
-    font-style: italic;
-    background-color: white;
+  font-size: 0.6rem;
+  font-style: italic;
+  background-color: white;
 }
-
 
 /* Dots under slideren */
 .galla-slider-dots {
-    position: absolute;
-    bottom: .5rem; /* Sæt dotsene 1rem under slideren */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-  }
-  
-  .galla-slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgb(141, 137, 137);
-    cursor: pointer;
-  }
-  
-  .galla-slider-dot.activeDot {
-    background-color: #E0A619;
-  }
+  position: absolute;
+  bottom: 0.5rem; /* Sæt dotsene 1rem under slideren */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
 
-  /* Menu */
+.galla-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(141, 137, 137);
+  cursor: pointer;
+}
 
-  .galla-menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    background-color: white;
-    padding-top: 15rem;
-    padding-bottom: 10rem;
-  }
+.galla-slider-dot.activeDot {
+  background-color: #e0a619;
+}
+
+/* Menu */
+
+.galla-menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: white;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+}
 
 .galla-menu-billede {
-    margin-right: 15rem;
-    background-color: white;
+  margin-right: 15rem;
+  background-color: white;
 }
 
-  .galla-menu-billede img {
-    width: 100%;
-    border-radius: 15px 0 15px 0;
-    background-color: white;
-  }
+.galla-menu-billede img {
+  width: 100%;
+  border-radius: 15px 0 15px 0;
+  background-color: white;
+}
 
 .galla-menu-tekst {
-    margin-right: 9rem;
-    background-color: white;
+  margin-right: 9rem;
+  background-color: white;
 }
 
-  .galla-menu-tekst h1 {
-    font-family: "adelle";
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: white;
-  }
+.galla-menu-tekst h1 {
+  font-family: "adelle";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: white;
+}
 
-  .galla-menu-tekst p {
-    font-family: "adelle-sans", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1.5;
-    background-color: white;
-  }
+.galla-menu-tekst p {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5;
+  background-color: white;
+}
 
-  .galla-menu-tekst h3 {
-    font-family: "adelle";
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: white;
-  }
+.galla-menu-tekst h3 {
+  font-family: "adelle";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: white;
+}
 
 /*Sponsor*/
 
-.galla-sponsor{
-    margin-top: 5rem;
-    margin-left: 16rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.galla-sponsor {
+  margin-top: 5rem;
+  margin-left: 16rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .galla-sponsor h1 {
-    text-transform: uppercase;
-    font-family: "adelle";
-    font-weight: bold;
-    font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "adelle";
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .galla-sponsor p {
-    font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .sponsor-divider {
-    border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin: 10px 0;
-    width: 10%;
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 10px 0;
+  width: 10%;
 }
 
 .carousel-container {
-    width: 100%;
-    overflow: hidden; /* Skjul overskydende tekst udenfor containeren */
-    position: relative;
-    padding: 10px 0;
-  }
-  
-  .carousel {
-    display: flex;
-    animation: scroll 130s linear infinite; /* Animation til kontinuerlig scroll */
-    white-space: nowrap; /* Sørg for at teksten ikke brydes */
-  }
-  
-  .carousel-item {
-    flex: 0 0 auto; /* Sørg for at hvert item tager den plads det behøver */
-    margin-right: 90px; /* Mellemrum på 90px mellem sponsorene */
-    font-size: 3rem; /* Tekststørrelse på 4rem */
-    font-weight: bold;
-    color: #000000; /* Tekstfarve */
-    text-align: center;
-  }
-  
-  /* Animation for kontinuerlig scrolling */
-  @keyframes scroll {
-    from {
-      transform: translateX(0); /* Start ved første element */
-    }
-    to {
-      transform: translateX(-1000%); /* Skub hele bredden af sponsorlisten, inkl. margin */
-    }
-  }
-
-.sponsorknap-container {
-   text-align: center;
-   gap: 2rem; 
-   display: flex;
-   justify-content: center;
-   margin-top: 2rem;
+  width: 100%;
+  overflow: hidden; /* Skjul overskydende tekst udenfor containeren */
+  position: relative;
+  padding: 10px 0;
 }
 
-  .allesponsor {
-    background-color: #3C3C3C;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px 0 5px 0;
-    margin-top: 2rem;
+.carousel {
+  display: flex;
+  animation: scroll 130s linear infinite; /* Animation til kontinuerlig scroll */
+  white-space: nowrap; /* Sørg for at teksten ikke brydes */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Sørg for at hvert item tager den plads det behøver */
+  margin-right: 90px; /* Mellemrum på 90px mellem sponsorene */
+  font-size: 3rem; /* Tekststørrelse på 4rem */
+  font-weight: bold;
+  color: #000000; /* Tekstfarve */
+  text-align: center;
+  font-family: "adelle", serif;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-style: normal;
+}
+
+/* Animation for kontinuerlig scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0); /* Start ved første element */
+  }
+  to {
+    transform: translateX(
+      -1000%
+    ); /* Skub hele bredden af sponsorlisten, inkl. margin */
+  }
+}
+
+.sponsorknap-container {
+  text-align: center;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.allesponsor {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 .blivsponsor {
-    background-color: #E0A619;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px 0 5px 0;
-    margin-top: 2rem;
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
 /*Auktion teaser*/
 
 .auktion-teaser-container h1 {
-    text-transform: uppercase;
-    font-family: "adelle";
-    font-weight: bold;
-    font-size: 3rem;
-    background-color: white;
+  text-transform: uppercase;
+  font-family: "adelle";
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: white;
 }
 
-
-
 .auktion-teaser-container p {
-    font-family: "adelle-sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: white;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white;
 }
 
 .teaser-divider {
-    border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin: 10px 0;
-    width: 25%;
-    
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin: 10px 0;
+  width: 25%;
 }
 
-
 bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .auktion-teaser-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    background-color: white;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .auktion-teaser-billeder {
-    flex-direction: column;
-    display: flex;
-    margin-left: 2rem;
-    gap: 1rem;
-    background-color: white;
+  flex-direction: column;
+  display: flex;
+  margin-left: 2rem;
+  gap: 1rem;
+  background-color: white;
 }
 
 .auktion-teaser-billede-tre {
-    margin-left: 1rem;
-    align-content: center;
-    background-color: white;
+  margin-left: 1rem;
+  align-content: center;
+  background-color: white;
 }
 
 .auktion-teaser-billeder img,
 .auktion-teaser-billede-tre img {
-    border-radius: 15px 0 15px 0;
+  border-radius: 15px 0 15px 0;
 }
 
 .gaver-divider {
-    border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin-left: 6rem;
-    width: 8%;
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin-left: 6rem;
+  width: 8%;
 }
 
 .auktions-gaver-teaser {
-    background-color: white;
-    padding: 10rem;
+  background-color: white;
+  padding: 4rem;
 }
 
 .auktions-gaver-teaser h1 {
-    margin-left: 6rem;
+  margin-left: 6rem;
 }
 
 .gallacard-container {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: white;
-    padding-bottom: 20rem;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 20rem;
+  gap: 6rem;
 }
 
 .Gallacard {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fbf5eb;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .GallacardImageTop {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
-  }
-  
-  .GallacardHeadline {
-    font-size: 1.5rem;
-    margin: 16px;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .GallacardText {
-    font-size: 1rem;
-    margin: 0 16px 16px;
-    color: black;
-  }
-  
-  .GallacardBottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 16px 16px;
-  }
-  
-  .GallacardImageBottom {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
-  
-  .GallacardPrice {
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    margin-top: 1rem;
-  }
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fbf5eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.GallacardImageTop {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.GallacardHeadline {
+  font-size: 1.5rem;
+  margin: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.GallacardText {
+  font-size: 1rem;
+  margin: 0 16px 16px;
+  color: black;
+}
+
+.GallacardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 16px;
+}
+
+.GallacardImageBottom {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.GallacardPrice {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 1rem;
+}
 
 .Gallacard2 {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fbf5eb;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .GallacardImageTop2 {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
-  }
-  
-  .GallacardHeadline2 {
-    font-size: 1.5rem;
-    margin: 16px;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .GallacardText2 {
-    font-size: 1rem;
-    margin: 0 16px 16px;
-    color: black;
-  }
-  
-  .GallacardBottom2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 16px 16px;
-  }
-  
-  .GallacardImageBottom2 {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
-  
-  .GallacardPrice2 {
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-    margin-top: 1rem;
-  }
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fbf5eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .card-divider {
-    border: 0;
-    height: 2px;
-    background-color: #E0A619;
-    margin-left: 1rem;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 40%;
-  }
+.GallacardImageTop2 {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.GallacardHeadline2 {
+  font-size: 1.5rem;
+  margin: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.GallacardText2 {
+  font-size: 1rem;
+  margin: 0 16px 16px;
+  color: black;
+}
+
+.GallacardBottom2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 16px;
+}
+
+.GallacardImageBottom2 {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.GallacardPrice2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 1rem;
+}
+
+.card-divider {
+  border: 0;
+  height: 2px;
+  background-color: #e0a619;
+  margin-left: 1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 40%;
+}
 
 .teaser-auktion-tekst-for-knapper {
   text-align: center;
   margin-top: -15rem;
 }
 
+.teaser-auktion-knap-container {
+  text-align: center;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
 
-  .teaser-auktion-knap-container {
-    text-align: center;
-    gap: 2rem; 
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
- }
-
-  .teaser-auktion-alle {
-    background-color: #3C3C3C;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 15px 0 15px 0;
-    margin-top: 2rem;
+.teaser-auktion-alle {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+  margin-top: 2rem;
 }
 
 .teaser-auktion-kontakt {
-    background-color: #E0A619;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px 0 5px 0;
-    margin-top: 2rem;
+  background-color: #e0a619;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px 0 5px 0;
+  margin-top: 2rem;
 }
 
-  
-  @media only screen and (max-width: 390px) {
+.Gallacard:hover {
+  box-shadow: 0 0 10px #e0a619;
+  margin-top: -10px;
+}
+.Gallacard2:hover {
+  box-shadow: 0 0 10px #e0a619;
+  margin-top: -10px;
+}
 
-    .overlay-text {
-      font-weight: bold;
-    }
+@media only screen and (max-width: 390px) {
+  .overlay-text {
+    font-weight: bold;
+  }
 
-    .overlay-description {
-      font-size: 1.8rem;
-    }
+  .overlay-description {
+    font-size: 1.8rem;
+  }
 
-    .overlay-button {
-      margin-top: 0;
-    }
+  .overlay-button {
+    margin-top: 0;
+  }
 
+  .intro-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 
-    .intro-container {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
+  .intro-tekst h1 {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: -2rem;
+  }
 
+  .intro-tekst p {
+    text-align: left;
+    margin-left: -2rem;
+  }
 
-    .intro-tekst h1 {
-      font-size: 1rem;
-      text-align: left;
-      margin-left: -2rem;
-    }
+  .image-container {
+    width: 300px;
+  }
 
-    .intro-tekst p {
-      text-align: left;
-      margin-left: -2rem;
-    }
-    
-    .image-container {
-      width: 300px;
-    }
+  .image-container img {
+    height: 300px;
+    max-width: 100%;
+  }
 
-    .image-container img {
-      height: 300px;
-      max-width: 100%;
-    }
+  .intro-divider {
+    width: 120%;
+    margin-left: -2rem;
+  }
 
-    .intro-divider {
-      width: 120%;
-      margin-left: -2rem;
-    }
+  .intro-button {
+    display: none;
+  }
 
-    .intro-button {
-      display: none;
-    }
+  .galla-program-slider {
+    width: 90%;
+    overflow: hidden;
+    background-color: white;
+    height: 300px; /* Juster højden af slideren efter behov */
+    margin: 1rem auto;
+    padding-bottom: 0.5rem;
+  }
 
-    .galla-program-slider {
-      width: 90%;
-      overflow: hidden;
-      background-color: white;
-      height: 300px; /* Juster højden af slideren efter behov */
-      margin: 1rem auto;
-      padding-bottom: .5rem;
-    }
-    
-    .galla-program-container {
-      flex-direction: column-reverse;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      gap: 2rem;
-    }
+  .galla-program-container {
+    flex-direction: column-reverse;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    gap: 2rem;
+  }
 
-    .galla-program-container h1 {
-      margin-left: 2rem;
-      font-size: 2rem;
-    }
+  .galla-program-container h1 {
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
 
-    .galla-program-container p {
-      margin-left: 2rem;
-    }
+  .galla-program-container p {
+    margin-left: 2rem;
+  }
 
-    .divider {
-      margin-left: 2rem;
-      width: 70%;
-    }
+  .divider {
+    margin-left: 2rem;
+    width: 70%;
+  }
 
-    .galla-program-dresscode p {
-      font-size: 1.5rem;
-    }
+  .galla-program-dresscode p {
+    font-size: 1.5rem;
+  }
 
-    .galla-program-lille-tekst p {
-      margin-left: 0rem;
-      margin-top: 5px;
-      width: 100%;
-      text-align: left;
-      font-size: .8rem;
-    }
+  .galla-program-lille-tekst p {
+    margin-left: 0rem;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+  }
 
-    .galla-program-lille-tekst br {
-      display: none;
-    }
+  .galla-program-lille-tekst br {
+    display: none;
+  }
 
-    .galla-sponsor {
-      margin-left: 1rem;
-    }
-  
-    .galla-menu-container {
-      flex-direction: column;
-    }
-    
-    .galla-menu-billede {
-      margin: 0 auto;
-      width: 90%;
-    }
+  .galla-sponsor {
+    margin-left: 1rem;
+  }
 
-    .galla-menu-tekst {
-      margin-left: 2rem;
-    }
+  .galla-menu-container {
+    flex-direction: column;
+  }
 
-    .galla-menu-tekst p {
-      width: 140%;
-    }
+  .galla-menu-billede {
+    margin: 0 auto;
+    width: 90%;
+  }
 
-    .galla-menu-divider {
-      width: 80%;
-      margin-top: 0;
-    }
-  
-    .galla-sponsor {
-      margin-top: 0rem;
-      padding-top: 4rem;
-      padding-bottom: 5rem;
+  .galla-menu-tekst {
+    margin-left: 2rem;
+  }
+
+  .galla-menu-tekst p {
+    width: 140%;
+  }
+
+  .galla-menu-divider {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  .galla-sponsor {
+    margin-top: 0rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
   }
 
   .galla-sponsor h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .carousel-item {
     font-size: 1.5rem;
     margin-right: 50px;
   }
-  
+
   .auktion-teaser-container {
     flex-direction: column-reverse;
   }
@@ -750,7 +756,7 @@ bold {
 
   .auktion-teaser-container p {
     margin-left: 2rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
     width: 80%;
   }
 
@@ -766,93 +772,91 @@ bold {
   .auktions-gaver-teaser {
     padding: 1rem;
     box-shadow: none;
-}
+  }
 
   .auktions-gaver-teaser h1 {
     margin-left: 0;
   }
 
-.Gallacard2 {
-  display: none;
-}
+  .Gallacard2 {
+    display: none;
+  }
 
-.gaver-divider {
-  border: 0;
-  height: 2px;
-  background-color: #E0A619;
-  margin-left: 1rem;
-  width: 45%;
-}
+  .gaver-divider {
+    border: 0;
+    height: 2px;
+    background-color: #e0a619;
+    margin-left: 1rem;
+    width: 45%;
+  }
 
+  .Gallacard {
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fbf5eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 270px;
+    margin-top: 2rem;
+  }
 
-.Gallacard {
-  width: 150px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fbf5eb;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 270px;
-  margin-top: 2rem;
-}
+  .GallacardImageTop {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 5px;
+  }
 
-.GallacardImageTop {
-  width: 100%;
-  height: 100px;
-  object-fit: contain;
-  padding: 5px;
-}
+  .GallacardHeadline {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+  }
 
-.GallacardHeadline {
-  font-size: .7rem;
-  font-weight: bold;
-  color: black;
-  text-align: left;
-}
+  .GallacardText {
+    font-size: 0.5rem;
+    margin: 0 16px 16px;
+    color: black;
+  }
 
-.GallacardText {
-  font-size: .5rem;
-  margin: 0 16px 16px;
-  color: black;
-}
+  .GallacardBottom {
+    display: flex;
+    margin: 0 16px 16px;
+  }
 
-.GallacardBottom {
-  display: flex;
-  margin: 0 16px 16px;
-}
+  .GallacardImageBottom {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    align-content: start;
+  }
 
-.GallacardImageBottom {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  align-content: start;
-}
+  .GallacardPrice {
+    font-size: 0.5rem;
+    color: black;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
 
-.GallacardPrice {
-  font-size: .5rem;
-  color: black;
-  align-content: center;
-  align-items: center;
-  margin-bottom: .5rem;
-}
-
-.teaser-auktion-tekst-for-knapper {
-  text-align: center;
-  margin-top: -18rem;
-  font-size: .7rem;
-}
-
+  .teaser-auktion-tekst-for-knapper {
+    text-align: center;
+    margin-top: -18rem;
+    font-size: 0.7rem;
+  }
 
   .teaser-auktion-knap-container {
     text-align: center;
-    gap: 2rem; 
+    gap: 2rem;
     display: flex;
     justify-content: center;
     padding-bottom: 6rem;
- }
+  }
 
   .teaser-auktion-alle {
-    background-color: #3C3C3C;
+    background-color: #3c3c3c;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -860,10 +864,10 @@ bold {
     cursor: pointer;
     border-radius: 15px 0 15px 0;
     margin-top: 2rem;
-}
+  }
 
-.teaser-auktion-kontakt {
-    background-color: #E0A619;
+  .teaser-auktion-kontakt {
+    background-color: #e0a619;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -871,6 +875,5 @@ bold {
     cursor: pointer;
     border-radius: 5px 0 5px 0;
     margin-top: 2rem;
-}
-
   }
+}

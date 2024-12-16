@@ -32,18 +32,18 @@ const Donate = () => {
     {
       icon: VMHmoneyStack2,
       alt: "Penge ikon",
-      text: "MED DIN STØTTE KAN VI SAMLE IND TIL KAMPEN MOD HUDCANCER"
+      text: "MED DIN STØTTE KAN VI SAMLE IND TIL KAMPEN MOD HUDCANCER",
     },
     {
       icon: Together,
-      alt: "Sammen ikon", 
-      text: "SAMMEN KAN VI OPNÅ STORE RESULTATER"
+      alt: "Sammen ikon",
+      text: "SAMMEN KAN VI OPNÅ STORE RESULTATER",
     },
     {
       icon: Earth,
       alt: "Verden ikon",
-      text: "GENNEM LOKALE MIDLER KAN VI GAVNE KRÆFTCENTERET I VEJLE"
-    }
+      text: "GENNEM LOKALE MIDLER KAN VI GAVNE KRÆFTCENTERET I VEJLE",
+    },
   ];
 
   return (
@@ -52,7 +52,7 @@ const Donate = () => {
       <h1 className={styles.donate_title}>
         <strong>Din støtte</strong> hjælper <br /> i kampen mod hudcancer
       </h1>
-      
+      <hr className={styles["hudcancer-divider"]} />
       <div className={styles.donate_container}>
         {/* Donation form component */}
         <DonateForm onSuccess={handleDonationSuccess} />
@@ -94,7 +94,7 @@ const Donate = () => {
       {/* Success modal with animation */}
       <AnimatePresence>
         {showSuccessModal && (
-          <motion.div 
+          <motion.div
             className={styles.success_modal}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ const Donate = () => {
           >
             <h3>Tak for din donation!</h3>
             <p>Din støtte gør en stor forskel i kampen mod hudcancer.</p>
-            <button 
+            <button
               onClick={() => setShowSuccessModal(false)}
               className={styles.close_button}
               aria-label="Luk besked"

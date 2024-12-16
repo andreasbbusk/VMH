@@ -5,7 +5,7 @@ import styles from "./Project.module.css";
 import Hands from "../../assets/support-hands2.svg";
 import MoneyBag from "../../assets/money-bag.svg";
 import TargetHit from "../../assets/target-hit.svg";
-import ProjectImage from "../../assets/fed-printer.jpg";
+import ProjectImage from "../../assets/printer.png";
 import ProjectNavigation from "../../components/Project/ProjectNavigation";
 import { Link } from "react-router-dom";
 
@@ -295,7 +295,7 @@ const Project2022 = () => {
                   <p>
                     Vi kan altid bruge din hjælp til vores kommende projekter.
                   </p>
-                  <Link to="/donate" className="support-button">
+                  <Link to="/stoet-nu" className="support-button">
                     Støt nu
                     <svg
                       width="16"

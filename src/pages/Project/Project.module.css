@@ -224,7 +224,6 @@
   display: flex;
   flex-direction: column;
   padding: 10rem 0 0 0;
-  z-index: 9999;
 }
 
 .yearNavigation {
@@ -890,10 +889,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-family: "adelle", serif;
-}
-
-.footer_spacer {
-  height: 1000px;
 }
 
 /* Tablet and smaller desktop screens */

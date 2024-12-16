@@ -1,4 +1,3 @@
-
 import styles from "./Sponsor.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import logoSVG from "../../assets/VMHlover.svg";
@@ -123,7 +122,7 @@ const Sponsor = () => {
               <span className={styles.SPImage_text}>Tilmeldingshåndtering</span>
             </div>
 
-            <div className={styles.SPImage_item}>
+            <div className={styles.SPImage_item2}>
               <img
                 src={newImage3}
                 alt="Nyt billede 3"
@@ -322,7 +321,7 @@ const Sponsor = () => {
       </div>
 
       {/* Ny sektion med stort billede nederst */}
-      <div className={styles.SPSection_container2}>
+      <div className={styles.SPSection_container}>
         <div className={styles.LargeImageSection}>
           <img
             src={extraImage18}

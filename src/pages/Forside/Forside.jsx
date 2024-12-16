@@ -109,11 +109,12 @@ const Forside = () => {
           <p>
             Kilde:{" "}
             <a href="https://www.cancer.dk/hudkraeft-hudcancer/">
-              Kræftens bekæmpelse
+              <bold>Kræftens bekæmpelse</bold>
             </a>{" "}
-            & <a href="https://netdoktor.dk/">Netdoktor.dk</a>
-            Kilde: <a href="">Kræftens bekæmpelse</a> &{" "}
-            <a href="">Netdoktor.dk</a>
+            &{" "}
+            <a href="https://netdoktor.dk/kraeft/hudkraft/sygdomme/hudkraft/">
+              <bold>Netdoktor.dk</bold>
+            </a>
           </p>
         </div>
       </div>
@@ -152,9 +153,15 @@ const Forside = () => {
 
             <div className={styles["Forside-knap-container"]}>
               <div className={styles["Forside-knaper"]}>
-                <button className={styles["ForsideResever"]}>
-                  Reservér plads
-                </button>
+                <a
+                  target="blank"
+                  href="
+                https://vejlemodhudcancer.nemtilmeld.dk/6/"
+                >
+                  <button className={styles["ForsideResever"]}>
+                    Reservér plads
+                  </button>
+                </a>
               </div>
               <div className={styles["Forside-knaper"]}>
                 <Link
@@ -203,7 +210,7 @@ const Forside = () => {
             </div>
             <div className={styles["KnastKnap"]}>
               <button className={styles["KnastLæsmereKnap"]}>
-                Læs mere her
+                <Link to="/events/torveevent-2025"> Læs mere her</Link>
               </button>
             </div>
           </div>
@@ -248,12 +255,12 @@ const Forside = () => {
             <div className={styles["Forside-knap-container"]}>
               <div className={styles["Forside-knaper"]}>
                 <button className={styles["FraIdeTilIndsatsStotNu"]}>
-                  Støt nu
+                  <Link to="/stoet-nu">Støt nu</Link>
                 </button>
               </div>
               <div className={styles["Forside-knaper"]}>
                 <button className={styles["FraIdeTilIndsatsLasMere"]}>
-                  Læs mere
+                  <Link to="/om-os">Læs mere</Link>
                 </button>
               </div>
             </div>
@@ -281,13 +288,16 @@ const Forside = () => {
       <SponsorsCarousel />
       <div className={styles["sponsorknap-container"]}>
         <div className={styles["sponsorknaper"]}>
-          <button className={styles["allesponsor"]}>Alle Sponsorer</button>
+          <button className={styles["allesponsor"]}>
+            <Link to="/sponsorer">Alle sponsorer</Link>
+          </button>
         </div>
         <div className={styles["sponsorknaper"]}>
-          <button className={styles["blivsponsor"]}>Bliv Sponsor</button>
+          <button className={styles["blivsponsor"]}>
+            <Link to="/Kontakt">Bliv sponsor</Link>
+          </button>
         </div>
       </div>
-     
     </>
   );
 };
