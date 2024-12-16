@@ -7,7 +7,7 @@ import AddressIcon from "../../assets/location.svg";
 
 // Socials
 import Facebook from "../../assets/Facebook.svg";
-import Instagram from "../../assets/instagram.svg";
+import Instagram from "../../assets/Instagram.svg";
 import LinkedIn from "../../assets/linkedin.svg";
 
 const Footer = () => {
