@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Galleri.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import Album from "../../assets/album.svg";
+import galleryData from "./galleryData";
 
 const Galleri = () => {
   // State for managing gallery images and active image
   const [aktivtBillede, setAktivtBillede] = useState(null);
   const [aktivtIndex, setAktivtIndex] = useState(0);
-  const [billeder, setBilleder] = useState({});
+  const [billeder, setBilleder] = useState(galleryData);
 
   // State for filtering and displaying images
   const [valgtÅr, setValgtÅr] = useState("vis_alle");
@@ -21,38 +22,16 @@ const Galleri = () => {
   const [indlæser, setIndlæser] = useState(true);
   const [indlæserFlere, setIndlæserFlere] = useState(false);
 
-  // Fetch gallery data on component mount
+  // Initialize gallery data on component mount
   useEffect(() => {
-    const hentGalleriData = async () => {
-      try {
-        setIndlæser(true);
-        const response = await fetch("../../public/data/galleryImages.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const contentType = response.headers.get("content-type");
-        if (!contentType || !contentType.includes("application/json")) {
-          throw new TypeError("Received non-JSON response");
-        }
-
-        const data = await response.json();
-        setBilleder(data);
-        
-        // Initialize number of shown images per year
-        const initialÅrAntal = {};
-        Object.keys(data).forEach(år => {
-          initialÅrAntal[år] = 12;
-        });
-        setÅrAntalViste(initialÅrAntal);
-      } catch (error) {
-        console.error("Error fetching gallery data:", error);
-      } finally {
-        setIndlæser(false);
-      }
-    };
-
-    hentGalleriData();
+    setIndlæser(true);
+    // Initialize number of shown images per year
+    const initialÅrAntal = {};
+    Object.keys(galleryData).forEach(år => {
+      initialÅrAntal[år] = 12;
+    });
+    setÅrAntalViste(initialÅrAntal);
+    setIndlæser(false);
   }, []);
 
   // Image click handlers

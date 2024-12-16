@@ -30,7 +30,56 @@ const slideVariants = {
 
 const ProjectSlider = ({ selectedYear }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([
+    {
+      id: 0,
+      år: "2025",
+      titel: "SPY-Phi infrarød scanner",
+      beskrivelse: "I år går indsamlingen til den avanceret infrarøde SPY-Phi scanner fra Stryker - Et værktøj der hjælper kirurger med præcis identificering og behandling af kræftramte områder.",
+      billede: "../../src/assets/spyphi.png",
+      læsMereLink: "/projekter/projekt-2025"
+    },
+    {
+      id: 1,
+      år: "2023", 
+      titel: "Faciliteter til projekt 'Lys i Vejle året rundt'",
+      beskrivelse: "I 2023 var projekt 'Lys i Vejle året rundt' en vigtig milepæl i arbejdet for bedre behandling af hudkræft. Projektet blev realiseret i tæt samarbejde med Vejle Sygehus, der arbejder for at være patienternes kræftsygehus med skånsomme, effektive og individuelt tilpassede behandlingstilbud.",
+      billede: "../../src/assets/project-2023.jpg",
+      læsMereLink: "/projekter/projekt-2023"
+    },
+    {
+      id: 2,
+      år: "2022",
+      titel: "Scanner til optimering af kirurgi øjennært",
+      beskrivelse: "Endnu engang er Vejle Sygehus first mover på et spændende hudkræft projekt. Som noget helt nyt vil man gøre det muligt, at scanne huden omkring øjet for hudkræft. Man har tidligere kunnet scanne øjet, men nu skal det være muligt at scanne huden omkring, så man skal operere mindst muligt (læs mere om det nedenfor). Projektet kræver indkøb af en scanner og det er her, vi kan gøre en forskel.",
+      billede: "../../src/assets/project-2022.jpg",
+      læsMereLink: "/projekter/projekt-2022"
+    },
+    {
+      id: 3,
+      år: "2019",
+      titel: "Glaspavillon til dagslysbehandling",
+      beskrivelse: "I 2019/2020 udbygger Vejle Sygehus deres hudkræftafdeling. I den forbindelse har vi fået mulighed for at tilføje en glaspavillon, som er med til at gøre hudkræftbehandlingen hurtigere, mindre smertefuld og ikke mindst merelokal.",
+      billede: "../../src/assets/project-2019.jpeg",
+      læsMereLink: "/projekter/projekt-2019"
+    },
+    {
+      id: 4,
+      år: "2018",
+      titel: "Beslutningsstøtte til patienter med hudcancer i ansigtet",
+      beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
+      billede: "../../src/assets/404-error.jpg",
+      læsMereLink: "/projekter/projekt-2018"
+    },
+    {
+      id: 5,
+      år: "2017",
+      titel: "Pilotprojekt i teledermatologi",
+      beskrivelse: "Projektet ved plastikkirurgisk sektion på Vejle Sygehus forbedrer behandlingen af hudkræft ved at samle et tværfagligt team af specialister til første konsultation. Dette sikrer overblik over behandlingsmuligheder og styrker samarbejdet mellem patient, pårørende og læger.",
+      billede: "../../src/assets/project-2017.png",
+      læsMereLink: "/projekter/projekt-2017"
+    }
+  ]);
   const [isScrolling, setIsScrolling] = useState(false);
   const [direction, setDirection] = useState(0);
   const sliderRef = useRef(null);
@@ -38,20 +87,6 @@ const ProjectSlider = ({ selectedYear }) => {
   const SCROLL_THRESHOLD = 50;
   const lastScrollTime = useRef(Date.now());
   const SCROLL_COOLDOWN = 800;
-
-  useEffect(() => {
-    fetch("../../data/projectsData.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Noget gik galt!");
-        }
-        return response.json();
-      })
-      .then((data) => setProjects(data))
-      .catch((error) =>
-        console.error("Fejl ved hentning af projektdata", error)
-      );
-  }, []);
 
   // Handle selectedYear changes from chart clicks
   useEffect(() => {
