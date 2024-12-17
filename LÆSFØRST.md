@@ -1,13 +1,2 @@
-Hvis der ikke er angivet person i toppen af dokumenterne er det lavet fælles
+*Der er skrevet navn på hver enkelt JSX dokument. Dette er personen der har kode både JSX, Komponenterne og CSS der tilhører.*
 
-Der er navn på personen der har kodet i toppen af hvert JSX dokument - Her er CSS til pågældene side også den samme som har kodet JSX filen.
-
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
