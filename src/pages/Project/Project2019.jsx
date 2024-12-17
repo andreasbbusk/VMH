@@ -1,3 +1,5 @@
+// Kodet af Andreas + Tilhørende CSS og Komponenter er kodet af Andreas
+
 import { motion as m } from "framer-motion";
 import { useState, useEffect } from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
