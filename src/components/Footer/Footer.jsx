@@ -1,3 +1,5 @@
+// Kodet af Oliver + Tilhørende CSS og Komponenter er kodet af Oliver
+
 import styles from "./Footer.module.css";
 import FooterLogo from "../../assets/FooterLogo.svg";
 

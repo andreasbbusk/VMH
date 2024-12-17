@@ -1,3 +1,5 @@
+// Kodet af Oliver + Tilhørende CSS og Komponenter er kodet af Oliver
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion as m, AnimatePresence } from "framer-motion";
