@@ -1,3 +1,5 @@
+// Kodet af Andreas + Tilhørende CSS og Komponenter er kodet af Andreas
+
 import { motion as m } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
