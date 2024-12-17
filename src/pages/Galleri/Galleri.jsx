@@ -1,3 +1,5 @@
+// Kodet af Andreas + Tilhørende CSS og Komponenter er kodet af Andreas
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Galleri.module.css";
