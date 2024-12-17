@@ -241,8 +241,8 @@
   .torveevent-infographic-mobil {
     background-color: #fbf5eb;
     width: 100%;
+    height: 100%; 
     opacity: 100;
-    height: 45rem;
   }
 
   .torveevent-infographic-mobil img {

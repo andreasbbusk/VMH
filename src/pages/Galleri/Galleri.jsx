@@ -27,7 +27,7 @@ const Galleri = () => {
     setIndlæser(true);
     // Initialize number of shown images per year
     const initialÅrAntal = {};
-    Object.keys(galleryData).forEach(år => {
+    Object.keys(galleryData).forEach((år) => {
       initialÅrAntal[år] = 12;
     });
     setÅrAntalViste(initialÅrAntal);
@@ -60,23 +60,26 @@ const Galleri = () => {
   // Load more images handlers
   const handleIndlæsFlereBillederForÅr = (år) => {
     setIndlæserFlere(true);
-    setÅrAntalViste(prev => ({
+    setÅrAntalViste((prev) => ({
       ...prev,
-      [år]: prev[år] + 12
+      [år]: prev[år] + 12,
     }));
     setIndlæserFlere(false);
   };
 
   const handleIndlæsFlereBilleder = () => {
     setIndlæserFlere(true);
-    setAntalVisteIndlæg(prev => prev + 12);
+    setAntalVisteIndlæg((prev) => prev + 12);
     setIndlæserFlere(false);
   };
 
   // Image navigation handlers
   const handleNæsteBillede = (e) => {
     e.stopPropagation();
-    const aktuelleSamling = visAlleÅr ? billeder[valgtÅr] : billeder[valgtÅr];
+    const aktuelleSamling = visAlleÅr
+      ? Object.values(billeder).flat()
+      : billeder[valgtÅr] || [];
+    if (aktuelleSamling.length === 0) return; // Ensure collection is not empty
     const nyIndex = (aktivtIndex + 1) % aktuelleSamling.length;
     setAktivtIndex(nyIndex);
     setAktivtBillede(aktuelleSamling[nyIndex]);
@@ -84,8 +87,12 @@ const Galleri = () => {
 
   const handleForrigeBillede = (e) => {
     e.stopPropagation();
-    const aktuelleSamling = visAlleÅr ? billeder[valgtÅr] : billeder[valgtÅr];
-    const nyIndex = aktivtIndex === 0 ? aktuelleSamling.length - 1 : aktivtIndex - 1;
+    const aktuelleSamling = visAlleÅr
+      ? Object.values(billeder).flat()
+      : billeder[valgtÅr] || [];
+    if (aktuelleSamling.length === 0) return; // Ensure collection is not empty
+    const nyIndex =
+      aktivtIndex === 0 ? aktuelleSamling.length - 1 : aktivtIndex - 1;
     setAktivtIndex(nyIndex);
     setAktivtBillede(aktuelleSamling[nyIndex]);
   };
@@ -95,7 +102,7 @@ const Galleri = () => {
     const handleKeyDown = (e) => {
       if (!aktivtBillede) return;
 
-      switch(e.key) {
+      switch (e.key) {
         case "ArrowRight":
           handleNæsteBillede(e);
           break;
@@ -191,7 +198,9 @@ const Galleri = () => {
                 </motion.li>
                 <motion.li
                   onClick={() => handleÅrValg("2023")}
-                  className={!visAlleÅr && valgtÅr === "2023" ? styles.aktiv : ""}
+                  className={
+                    !visAlleÅr && valgtÅr === "2023" ? styles.aktiv : ""
+                  }
                   whileHover={{ backgroundColor: "#f0f0f0" }}
                   role="option"
                   aria-selected={!visAlleÅr && valgtÅr === "2023"}
@@ -200,7 +209,9 @@ const Galleri = () => {
                 </motion.li>
                 <motion.li
                   onClick={() => handleÅrValg("2022")}
-                  className={!visAlleÅr && valgtÅr === "2022" ? styles.aktiv : ""}
+                  className={
+                    !visAlleÅr && valgtÅr === "2022" ? styles.aktiv : ""
+                  }
                   whileHover={{ backgroundColor: "#f0f0f0" }}
                   role="option"
                   aria-selected={!visAlleÅr && valgtÅr === "2022"}
@@ -214,7 +225,7 @@ const Galleri = () => {
 
         {/* Loading state */}
         {indlæser ? (
-          <motion.div 
+          <motion.div
             className={styles.loading_container}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -236,32 +247,34 @@ const Galleri = () => {
                   {år}
                 </motion.h2>
                 <div className={styles.galleri_grid}>
-                  {billeder[år]?.slice(0, årAntalViste[år]).map((billede, index) => (
-                    <motion.div
-                      key={index}
-                      className={styles.galleri_item}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <motion.img
-                        src={billede.src}
-                        alt={billede.alt}
-                        onClick={() => handleBilledeKlik(billede, index)}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                        className={styles.galleri_billede}
-                        tabIndex={0}
-                        role="button"
-                        aria-label={`Åbn ${billede.alt}`}
-                      />
-                    </motion.div>
-                  ))}
+                  {billeder[år]
+                    ?.slice(0, årAntalViste[år])
+                    .map((billede, index) => (
+                      <motion.div
+                        key={index}
+                        className={styles.galleri_item}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <motion.img
+                          src={billede.src}
+                          alt={billede.alt}
+                          onClick={() => handleBilledeKlik(billede, index)}
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.3 }}
+                          className={styles.galleri_billede}
+                          tabIndex={0}
+                          role="button"
+                          aria-label={`Åbn ${billede.alt}`}
+                        />
+                      </motion.div>
+                    ))}
                 </div>
                 {billeder[år]?.length > årAntalViste[år] && (
                   <>
                     {indlæserFlere ? (
-                      <motion.div 
+                      <motion.div
                         className={styles.loading_container}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -270,17 +283,19 @@ const Galleri = () => {
                         <p>Indlæser flere billeder...</p>
                       </motion.div>
                     ) : (
-                      <motion.button
-                        className={styles.indlæs_flere_knap}
-                        onClick={() => handleIndlæsFlereBillederForÅr(år)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        aria-label={`Indlæs flere billeder fra ${år}`}
-                      >
-                        {`Indlæs flere billeder fra ${år}`}
-                      </motion.button>
+                      <div className={styles.indlæs_flere_container}>
+                        <motion.button
+                          className={styles.indlæs_flere_knap}
+                          onClick={() => handleIndlæsFlereBillederForÅr(år)}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          aria-label={`Indlæs flere billeder fra ${år}`}
+                        >
+                          {`Indlæs flere billeder fra ${år}`}
+                        </motion.button>
+                      </div>
                     )}
                   </>
                 )}
@@ -289,27 +304,29 @@ const Galleri = () => {
         ) : (
           // Display filtered year
           <div className={styles.galleri_grid}>
-            {billeder[valgtÅr]?.slice(0, antalVisteIndlæg).map((billede, index) => (
-              <motion.div
-                key={index}
-                className={styles.galleri_item}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <motion.img
-                  src={billede.src}
-                  alt={billede.alt}
-                  onClick={() => handleBilledeKlik(billede, index)}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className={styles.galleri_billede}
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`Åbn ${billede.alt}`}
-                />
-              </motion.div>
-            ))}
+            {billeder[valgtÅr]
+              ?.slice(0, antalVisteIndlæg)
+              .map((billede, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.galleri_item}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <motion.img
+                    src={billede.src}
+                    alt={billede.alt}
+                    onClick={() => handleBilledeKlik(billede, index)}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                    className={styles.galleri_billede}
+                    tabIndex={0}
+                    role="button"
+                    aria-label={`Åbn ${billede.alt}`}
+                  />
+                </motion.div>
+              ))}
           </div>
         )}
 
@@ -317,7 +334,7 @@ const Galleri = () => {
         {!visAlleÅr && billeder[valgtÅr]?.length > antalVisteIndlæg && (
           <>
             {indlæserFlere ? (
-              <motion.div 
+              <motion.div
                 className={styles.loading_container}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

@@ -33,6 +33,7 @@ html {
 
 a {
   font-family: "adelle", serif;
+  color: inherit;
 }
 
 h1,
@@ -60,6 +61,7 @@ button {
   font-family: inherit;
   border: none;
   cursor: pointer;
+  color: inherit;
 }
 
 a {
@@ -76,7 +78,7 @@ a {
 
 @media screen and (max-width: 480px) {
   .page-content {
-    margin: 1rem 0;
+    margin: 0;
   }
 }
 

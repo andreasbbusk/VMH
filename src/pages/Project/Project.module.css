@@ -1032,8 +1032,6 @@
     font-size: clamp(5rem, 3vw, 6rem);
   }
 
-  .projectContent {
-  }
 
   .imageContainer {
     max-width: 250px;
@@ -1160,6 +1158,10 @@
     left: 0;
     gap: 2rem;
     z-index: 10;
+  }
+
+  .footer_space {
+    height: 0;
   }
 
   .fullscreenSlider {

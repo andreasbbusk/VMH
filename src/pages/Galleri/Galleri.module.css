@@ -206,6 +206,10 @@
   font-weight: bold;
 }
 
+.indlæs_flere_container {
+  padding: 2rem;
+}
+
 .indlæs_flere_knap {
   background-color: #e0a619;
   color: white;

@@ -664,6 +664,10 @@ bold {
     gap: 2rem;
   }
 
+  .gallacard-container {
+    gap: 2rem;
+  }
+
   .galla-program-container h1 {
     margin-left: 2rem;
     font-size: 2rem;
