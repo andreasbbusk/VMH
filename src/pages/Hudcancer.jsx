@@ -58,7 +58,9 @@ const Hudcancer = () => {
             </h1>
             <p>
               Søg læge hvis du er i tvivl <br />
-              <a href="#">Klik her og lær, hvor du skal tjekke</a>
+              <a href="https://www.euromelanoma.eu/da-dk/kontrol-af-din-egen-hud/hvor-skal-du-tjekke-og-efter-hvad">
+                Klik her og lær, hvor du skal tjekke
+              </a>
             </p>
           </div>
 
@@ -82,7 +84,8 @@ const Hudcancer = () => {
             <hr className={styles["pletter-divider"]} />
             <div className={styles["pletter-kilde"]}>
               <p>
-                Kilde: <a href="#">Euromelanoma</a>
+                Kilde:{" "}
+                <a href="https://www.euromelanoma.eu/da-dk/">Euromelanoma</a>
               </p>
             </div>
           </div>
