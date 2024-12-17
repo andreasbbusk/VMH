@@ -1,3 +1,5 @@
+// Kodet af Nikoline + Tilhørende CSS og Komponenter er kodet af Nikoline
+
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
 import styles from "./OmOS.module.css";
