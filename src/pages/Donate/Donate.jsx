@@ -1,3 +1,5 @@
+// Kodet af Andreas + Tilhørende CSS og Komponenter er kodet af Andreas
+
 // React
 import { useState } from "react";
 import styles from "./Donate.module.css";
