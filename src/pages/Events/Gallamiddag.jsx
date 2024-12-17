@@ -150,12 +150,12 @@ const Gallamiddag = () => {
           </h1>
           <hr className={styles["intro-divider"]} />
           <p>
-            Som en del af Vejle, inviteres du til at deltage i vores Gallaaften.
-            Her kan du byde på auktionen med masser af eksklusive gaver <br />{" "}
-            <br />
+            Som en del af lokalsamfundet, inviteres du til at deltage i vores
+            Gallaaften. Her kan du byde på auktionen med masser af eksklusive
+            gaver <br /> <br />
             Hele arrangementet er sponsoreret, så entré og auktionsprovenue går
             ubeskåret til kampen mod hudcancer. Lokalt forankrede virksomheder
-            stiller med ekspertise/udstyr/faciliteter u/b.
+            stiller med ekspertise,udstyr og faciliteter uden beregning.
           </p>
           <button className={styles["intro-button"]}>
             <Link to="/sponsorer">Se sponsorer</Link>
