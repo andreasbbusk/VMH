@@ -1,3 +1,5 @@
+// Kodet af Oliver + Tilhørende CSS og Komponenter er kodet af Oliver
+
 import styles from "./Auktion.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import { useState,} from 'react';
