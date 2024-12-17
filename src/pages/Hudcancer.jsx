@@ -1,3 +1,5 @@
+// Kodet af Oliver + Tilhørende CSS og Komponenter er kodet af Oliver
+
 import styles from "./Hudcancer.module.css";
 import { useState, useRef } from "react";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
