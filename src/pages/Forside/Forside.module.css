@@ -1,7 +1,6 @@
 .forside-intro-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 4rem;
   justify-content: space-around;
   padding-bottom: 2rem;
 }
@@ -48,6 +47,7 @@
   margin: 20px 0;
   max-width: 250px;
   width: 30%;
+  margin-left: 2rem;
 }
 
 .forside-stats-container {
@@ -203,29 +203,7 @@
   display: flex;
 }
 
-.ForsideResever {
-  background-color: #e0a619;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px 0 5px 0;
-  margin-top: 2rem;
-}
-
-.Forsidelasmereknap {
-  background-color: #3c3c3c;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px 0 5px 0;
-  margin-top: 2rem;
-}
-
-.Forside-projekt-container {
+.orside-projekt-container {
   padding: 20rem 0;
   text-align: center;
   background-color: white;
@@ -269,7 +247,7 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px 0 5px 0;
+  border-radius: 15px 0 15px 0;
   margin-top: 3rem;
   margin-left: 2rem;
 }
@@ -305,7 +283,7 @@
   padding: 10px 30px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px 0 5px 0;
+  border-radius: 15px 0 15px 0;
   margin-top: 2rem;
 }
 
@@ -316,7 +294,7 @@
   padding: 10px 30px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px 0 5px 0;
+  border-radius: 15px 0 15px 0;
   margin-top: 2rem;
 }
 
@@ -418,10 +396,10 @@
   background-color: #3c3c3c;
   color: #fff;
   border: none;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px 0 5px 0;
+  border-radius: 15px 0 15px 0;
   margin-top: 2rem;
 }
 
@@ -429,10 +407,10 @@
   background-color: #e0a619;
   color: #fff;
   border: none;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px 0 5px 0;
+  border-radius: 15px 0 15px 0;
   margin-top: 2rem;
 }
 
@@ -747,8 +725,14 @@
     font-size: 1rem;
   }
   .Forsidelasmereknap {
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
+    background-color: #3c3c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px 0 15px 0;
+    margin: 0;
   }
   .slider-item {
     max-width: 320px;
@@ -770,13 +754,14 @@
   }
   .forside-intro-venstre h1 {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
     margin-left: 0;
   }
   .forside-intro-hojre img {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    align-items: center;
   }
 
   /* Stats section tablet styles */
@@ -800,10 +785,12 @@
   .forside-intro-divider {
     width: 100%;
   }
-  .forside-gallamiddag-billeder-venstre img,
-  .forside-gallamiddag-billeder-hojre img {
-    width: 80%;
-    margin: 0 auto;
+  .forside-gallamiddag-billeder-venstre {
+    display: none;
+  }
+
+  .forside-gallamiddag-billeder-hojre {
+    display: none;
   }
   .forside-gallamiddag-tekst h1 {
     font-size: 2rem;
@@ -813,7 +800,7 @@
 
   /* Button container tablet styles */
   .Forside-knap-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   .Forside-knap-container button {
@@ -851,7 +838,10 @@
     transform: translateY(15px);
   }
   .small_donation_form_header h2 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+  .small_donation_form p {
+    font-size: 0.8rem;
   }
   .small_donation_form_buttons {
     gap: 1rem;
@@ -871,7 +861,6 @@
     font-size: 0.9rem;
   }
   .small_donation_form_submit {
-    padding: 0.5rem 1.5rem;
     font-size: 1rem;
   }
   .donation_form_link {
@@ -946,8 +935,7 @@
   .forside-intro-hojre img {
     display: block;
     margin: 0rem auto;
-    width: 300px;
-    transform: translateY(0px);
+    transform: translateY(-15px);
     border-radius: 15px 0 15px 0;
   }
 
@@ -961,12 +949,11 @@
   /* Intro text styles */
   .forside-intro-venstre h1 {
     font-size: 1.5rem;
-    margin-top: 2rem;
   }
 
   .forside-intro-venstre p {
-    text-align: center;
-    margin-right: 1rem;
+    text-align: left;
+    font-size: 0.8rem;
   }
 
   .forside-intro-venstre br {
@@ -976,6 +963,7 @@
   /* Divider styles */
   .hudcancer-divider {
     width: 45%;
+    margin-left: 0rem;
   }
 
   /* Statistics section styles */
@@ -1008,10 +996,11 @@
   }
 
   .Forside-stats-content {
-    gap: 4rem;
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding: 2rem 0 3rem 0;
+    gap: 3rem;
   }
 
   /* Source text styles */
@@ -1035,7 +1024,7 @@
   /* Gala dinner images */
   .forside-gallamiddag-billeder-hojre img,
   .forside-gallamiddag-billeder-venstre img {
-    width: 90%;
+    width: 50%;
     display: block;
     margin: 0 auto;
   }
@@ -1053,6 +1042,9 @@
 
   .forside-gallamiddag-tekst p {
     text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   /* Button container styles */
@@ -1063,6 +1055,7 @@
   /* Gala dinner stats section */
   .forside-gallamiddag-stats {
     flex-direction: column;
+    gap: 2rem;
   }
 
   /* Individual gala stats boxes */
@@ -1087,9 +1080,7 @@
   }
 
   .Forside-knast-billede-hojre img {
-    width: 100%;
-    margin-top: 10rem;
-    z-index: 1000;
+    display: none;
   }
 
   .Forside-knast-tekst h1 {
@@ -1107,11 +1098,11 @@
   .Forside-knast-knap-container {
     display: flex;
     justify-content: center;
-    margin-left: -5rem;
+    margin-left: -2rem;
   }
 
   .KnastPil img {
-    max-width: 40%;
+    display: none;
   }
 
   /* Fra Ide Til Indsats section styles */
@@ -1137,6 +1128,8 @@
     margin-top: 1rem;
     margin-left: 1rem;
     width: 90%;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .FraIdeTilIndsats-content br {
@@ -1179,7 +1172,6 @@
   .small_donation_form_button,
   .small_donation_form_submit {
     width: 100%;
-    padding: 0.5rem 0;
   }
 
   .small_donation_form_custom_amount {
@@ -1194,5 +1186,31 @@
   .donation_form_link {
     width: 100%;
     margin-top: 1.5rem;
+  }
+
+  .forside-intro-venstre p {
+    margin-left: 0rem;
+  }
+  .FraIdeTilIndsats-divider {
+    border: 0;
+    height: 2px;
+    background-color: #e0a619;
+    margin: 20px 0;
+    max-width: 150px;
+    margin-left: 1rem;
+  }
+  .sponsor-divider {
+    border: 0;
+    height: 2px;
+    background-color: #e0a619;
+    margin: 10px 0;
+    width: 55%;
+  }
+  .StotteFunktion-container {
+    background-color: white;
+    padding: 2rem 1rem;
+  }
+  .forside-gallamiddag-container {
+    padding: 2rem 0;
   }
 }
