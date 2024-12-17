@@ -69,7 +69,7 @@ const Forside = () => {
             Vejle Mod Hudcancer støtter hvert år et nyt lokalt projekt i kampen
             mod
             <br />
-            hudcancer. Alle midler skaffes gennem lokale sponsorer i det
+            hudcancer. Alle midler indsamles gennem lokale sponsorer i det
             Vejlensiske
             <br />
             erhvervsliv og alle opgaver udføres frivilligt, så det indsamlede
@@ -138,16 +138,16 @@ const Forside = () => {
                 2025
               </h1>
               <p>
-                Som en del af Vejle, inviteres du til at deltage i vores
-                Gallaaften. <br />
+                Som en del af lokalsamfundet, inviteres du til at deltage i
+                vores Gallaaften. <br />
                 Her kan du byde på auktionen med masser af eksklusive gaver.{" "}
                 <br />
                 <br /> <br />
                 Hele arrangementet er sponsoreret, så entré og auktionsprovenue
                 går <br />
                 ubeskåret til kampen mod hudcancer. <br />
-                Lokalt forankrede virksomheder stiller med
-                ekspertise/udstyr/faciliteter u/b.
+                Lokalt forankrede virksomheder stiller med ekspertise,udstyr og
+                faciliteter uden beregning.
               </p>
             </div>
 
@@ -200,8 +200,8 @@ const Forside = () => {
         <div className={styles["Forside-knast-tekst"]}>
           <h1>“KNAST, SÅR & PLET” - DAG </h1>
           <p>
-            Få din hud tjekket af læger i teltet på torvet - Det er helt gratis
-            og uforpligtende
+            Få din hud tjekket af en læge i teltet på torvet - Det er helt
+            gratis og uforpligtende
             <br /> Ny dato for 2025 på vej
           </p>
           <div className={styles["Forside-knast-knap-container"]}>
@@ -228,7 +228,7 @@ const Forside = () => {
             <p>
               Vejle mod Hudcancer er et lokalt initiativ dedikeret til at
               bekæmpe
-              <br /> hudkræft gennem oplysning, forebyggelse og tidlig
+              <br /> hudcancer gennem oplysning, forebyggelse og tidlig
               diagnosticering. Med
               <br /> udgangspunkt i Vejle Sygehus’ ekspertise og et stærkt
               samarbejde med
