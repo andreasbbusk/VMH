@@ -186,18 +186,18 @@
 
 @media (max-width: 390px) {
   .omos-intro-hojre {
-    max-width: 600px;
-    margin-top: 2rem;
+    margin-left: 1.5rem;
+    max-height: 200px;
   }
 
   .omos-intro-hojre video {
-    max-width: 70%;
+    max-width: 90%;
   }
 
   .omos-intro-container {
     flex-direction: column;
     padding: 0;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
   }
 
   .omos-intro-venstre h1 {
@@ -211,7 +211,7 @@
   .omos-intro-venstre p {
     font-size: 0.9rem;
     line-height: 1.5;
-    width: 80%;
+    width: 100%;
   }
 
   .omos-intro-venstre br {
@@ -224,7 +224,7 @@
 
   .omos-citat h1 {
     font-size: 0.7rem;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .omos-citat p {
@@ -275,12 +275,12 @@
   }
 
   .ideenbag-tekst {
-    margin-top: 3rem;
+    margin: 3rem 0 0 3rem;
   }
 
   .VMV-container h1 {
     margin-left: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .VMV-container {
@@ -297,7 +297,8 @@
   }
 
   .VMV-content img {
-    width: 70%;
+    width: 40%;
+    margin-left: 2rem;
   }
 
   .VMV-sammen,
@@ -307,7 +308,11 @@
     display: flex;
     align-items: center;
     align-content: center;
-    margin-left: -2rem;
+    margin-left: -3rem;
+    margin-right: 2rem;
+    gap: 1rem;
+    text-align: left;
+    padding: 2rem;
   }
 
   .VMV-content p {

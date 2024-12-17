@@ -1,4 +1,4 @@
-.gallery_intro{
+.gallery_intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -243,7 +243,7 @@
   top: 50%;
   left: 50%;
   margin: -10px 0 0 -10px;
-  border: 3px solid rgba(255,255,255,0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: #fff;
   animation: spin 1s ease-in-out infinite;
@@ -254,7 +254,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 /* Adjust grid layout and font sizes for medium screens */
 @media screen and (max-width: 1024px) {
@@ -309,7 +308,7 @@
   }
 
   .gallery_intro_text {
-    text-align: center;
+    text-align: left;
   }
 
   .gallery_intro_text h1 {
