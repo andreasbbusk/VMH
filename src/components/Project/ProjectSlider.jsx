@@ -121,7 +121,7 @@ const ProjectSlider = ({ selectedYear }) => {
     const handleWheel = (e) => {
       // Return early if window width is 768px or less
       if (window.innerWidth <= 768) return;
-      
+
       if (isScrolling) return;
 
       const now = Date.now();
@@ -129,8 +129,10 @@ const ProjectSlider = ({ selectedYear }) => {
 
       // Only prevent default if we're not on the first project scrolling up
       // or the last project scrolling down
-      if (!(currentPage === 0 && e.deltaY < 0) && 
-          !(currentPage === projects.length - 1 && e.deltaY > 0)) {
+      if (
+        !(currentPage === 0 && e.deltaY < 0) &&
+        !(currentPage === projects.length - 1 && e.deltaY > 0)
+      ) {
         e.preventDefault();
       }
 
