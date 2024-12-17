@@ -1,3 +1,5 @@
+// Kodet af Oliver + Tilhørende CSS og Komponenter er kodet af Oliver
+
 import { useState, useEffect } from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import styles from "./Events.module.css";
