@@ -43,9 +43,22 @@ const Footer = () => {
 
       <div className={`${styles.footerColumn} ${styles.footerRight}`}>
         <div className={styles.row}>
-          <img src={Facebook} alt="Facebook" className={styles.socialIcon} />
-          <img src={Instagram} alt="Instagram" className={styles.socialIcon} />
-          <img src={LinkedIn} alt="LinkedIn" className={styles.socialIcon} />
+          <a href="https://www.facebook.com/Vejlemodhudcancer" target="blank">
+            <img src={Facebook} alt="Facebook" className={styles.socialIcon} />
+          </a>
+          <a href="https://www.instagram.com/vejlemodhudcancer/" target="blank">
+            <img
+              src={Instagram}
+              alt="Instagram"
+              className={styles.socialIcon}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/vejle-mod-hudcancer/"
+            target="blank"
+          >
+            <img src={LinkedIn} alt="LinkedIn" className={styles.socialIcon} />
+          </a>
         </div>
         <div className={styles.row}>
           <div className={styles.separator}></div>
