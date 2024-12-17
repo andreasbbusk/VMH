@@ -408,6 +408,7 @@ const Projects = () => {
           </section>
         </div>
       </m.main>
+      <div className={styles.footer_space}></div>
     </>
   );
 };

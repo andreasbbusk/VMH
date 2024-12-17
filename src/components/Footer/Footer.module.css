@@ -9,6 +9,8 @@
   height: 400px; /* Indstil en fast højde til footeren */
   color: white;
   margin-bottom: -8rem;
+  z-index: 9999;
+  position: relative;
 }
 
 .footerImage {
