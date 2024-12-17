@@ -1,3 +1,5 @@
+// Kodet af Oliver & Andreas + Tilhørende CSS og Komponenter er kodet af Oliver & Andreas
+
 import styles from "./Forside.module.css";
 import ForsideIntro from "../../assets/ForsideIntro.png";
 import ForsideGallaVenstreEt from "../../assets/ForsideGallaVenstre1.png";
@@ -12,6 +14,7 @@ import { Link } from "react-router-dom";
 import ProjectHighlight from "../../components/ProjectHighlight";
 import SmallDonationForm from "../../components/SmallDonationForm";
 
+// Oliver
 const SponsorsCarousel = () => {
   const sponsors = [
     "C Beayty and Care",
@@ -191,6 +194,7 @@ const Forside = () => {
         </div>
       </div>
 
+      {/* Andreas */} 
       <ProjectHighlight />
 
       <div className={styles["Forside-knast-container"]}>
