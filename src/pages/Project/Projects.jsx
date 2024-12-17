@@ -1,3 +1,5 @@
+// Kodet af Andreas + Tilhørende CSS og Komponenter er kodet af Andreas
+
 import { motion as m, animate } from "framer-motion";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import styles from "./Project.module.css";
