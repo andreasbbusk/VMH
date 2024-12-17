@@ -432,6 +432,7 @@ bold {
   .forebygge-background {
     flex-direction: column;
     display: flex;
+    padding-top: 5rem;
   }
 
   .infographic-container {
