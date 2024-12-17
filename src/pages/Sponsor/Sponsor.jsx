@@ -1,3 +1,5 @@
+// Kodet af Nicolaj + Tilhørende CSS og Komponenter er kodet af Nicolaj
+
 import styles from "./Sponsor.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import logoSVG from "../../assets/VMHlover.svg";
