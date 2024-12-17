@@ -114,7 +114,7 @@ const Project2017 = () => {
               <section className={styles.project_description}>
                 <p>
                   Flere og flere mennesker i Danmark får modermærkekræft, og det
-                  samme gælder almindelig hudkræft. Modermærkekræft er en
+                  samme gælder almindelig hudcancer. Modermærkekræft er en
                   alvorlig sygdom, som kan være dødelig, det er derfor meget
                   vigtigt, at det opdages og behandles så tidligt som mulig
                 </p>
@@ -161,7 +161,7 @@ const Project2017 = () => {
                     <div className={styles.listItem}>
                       <p className={styles.listItemNumber}>01</p>
                       <li>
-                        Effektiv og patientcentreret behandling af hudkræft
+                        Effektiv og patientcentreret behandling af hudcancer
                       </li>
                     </div>
                     <div className={styles.listItem}>
@@ -216,7 +216,7 @@ const Project2017 = () => {
                 <h3>Beløbet gik til:</h3>
                 <div className={styles.money_item}>
                   <h4>
-                    Udvikle og forbedre behandlingen af hudkræft på Vejle
+                    Udvikle og forbedre behandlingen af hudcancer på Vejle
                     Sygehus
                   </h4>
                 </div>

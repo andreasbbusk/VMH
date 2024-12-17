@@ -199,10 +199,10 @@ const Project2019 = () => {
                   <div className={styles.introText}>
                     <p>
                       Dagslys-PDT kan anvendes til behandling af såvel
-                      enkeltstående solskader i huden (hudkræft), som store
+                      enkeltstående solskader i huden (hudcancer), som store
                       områder, når det drejer sig om enten tynde eller moderat
                       tykke solskader. Behandlingen er især en fordel for
-                      patienter med store områder med hudkræft, som er svært
+                      patienter med store områder med hudcancer, som er svært
                       afgrænselige mod normal hud, da belysningen med dagslys i
                       princippet er smertefri uafhængigt af behandlingsområdets
                       størrelse. <br /> <br /> Glaspavillonen placeres i en
