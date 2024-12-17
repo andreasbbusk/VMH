@@ -1,4 +1,4 @@
-// Kodet af Nikoline
+// Kodet af Nikoline + Tilhørende CSS og Komponenter er kodet af Nikoline
 
 import ContactFormular from "../../components/About/ContactFormular";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
