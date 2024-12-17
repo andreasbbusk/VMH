@@ -56,7 +56,7 @@ const App = () => {
           <Route path="/Sponsorer" element={<Sponsor />} />
         </Routes>
       </m.main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

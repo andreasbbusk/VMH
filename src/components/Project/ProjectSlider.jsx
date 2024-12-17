@@ -119,6 +119,9 @@ const ProjectSlider = ({ selectedYear }) => {
     if (!slider) return;
 
     const handleWheel = (e) => {
+      // Return early if window width is 768px or less
+      if (window.innerWidth <= 768) return;
+      
       if (isScrolling) return;
 
       const now = Date.now();
@@ -169,13 +172,15 @@ const ProjectSlider = ({ selectedYear }) => {
 
     const handleScrollLock = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
-          // Only disable scroll if not on first or last project
-          if (currentPage !== 0 && currentPage !== projects.length - 1) {
-            disableBodyScroll(slider, {});
+        if (window.innerWidth > 768) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+            // Only disable scroll if not on first or last project
+            if (currentPage !== 0 && currentPage !== projects.length - 1) {
+              disableBodyScroll(slider, {});
+            }
+          } else {
+            enableBodyScroll(slider);
           }
-        } else {
-          enableBodyScroll(slider);
         }
       });
     };
@@ -275,18 +280,20 @@ const ProjectSlider = ({ selectedYear }) => {
               key={project.år}
               style={{ display: "flex", alignItems: "center", gap: "1rem" }}
             >
-              <motion.div
-                style={{
-                  height: "2px",
-                  backgroundColor: currentPage === index ? "#E0A619" : "#666",
-                  width: currentPage === index ? "30px" : "10px",
-                }}
-                animate={{
-                  width: currentPage === index ? "30px" : "10px",
-                  backgroundColor: currentPage === index ? "#E0A619" : "#666",
-                }}
-                transition={{ duration: 0.3 }}
-              />
+              {window.innerWidth > 768 && (
+                <motion.div
+                  style={{
+                    height: "2px",
+                    backgroundColor: currentPage === index ? "#E0A619" : "#666",
+                    width: currentPage === index ? "30px" : "10px",
+                  }}
+                  animate={{
+                    width: currentPage === index ? "30px" : "10px",
+                    backgroundColor: currentPage === index ? "#E0A619" : "#666",
+                  }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
               <motion.button
                 className={styles.yearIndicator}
                 onClick={() => handleYearClick(index)}

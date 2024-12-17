@@ -47,10 +47,11 @@
 }
 
 /* Total amount heading */
-.total_amount h2 {
+.total_amount span {
   font-size: 6rem;
   color: #e0a619;
   margin-bottom: 1rem;
+  font-family: "adelle", serif;
 }
 
 .total_amount p {
@@ -568,7 +569,7 @@
 
 .slideImage {
   width: 100%;
-  height: 400px;
+  max-height: 400px;
   object-fit: contain;
 }
 
@@ -806,7 +807,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-wrap: nowrap;
 }
 
 .target_section img {
@@ -891,42 +891,161 @@
   font-family: "adelle", serif;
 }
 
-/* Tablet and smaller desktop screens */
-@media (max-width: 968px) {
-  /* Stack content vertically on smaller screens */
+/* Large desktop screens */
+@media (max-width: 1280px) {
   .project_content {
-    flex-direction: column;
+    margin: 0 4rem;
+    gap: 3rem;
   }
 
-  .section {
-    margin: 0 2rem;
+  .project_media {
+    width: 50%;
+  }
+
+  .project_text {
+    width: 45%;
+  }
+
+  .project_text p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+
+  .timeline_entry {
+    gap: 2rem;
+    margin: 0 1rem 0 0;
+  }
+
+  .timeline_entry img {
+    max-width: 75%;
+  }
+
+  .navigation {
+    margin: 8rem 4rem 2rem 4rem;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+  }
+
+  .current_project {
+    font-size: 2.5rem;
+  }
+
+  .target_section img {
+    overflow-x: hidden;
   }
 
   .stickyNav {
     display: none;
   }
 
-  /* Reorder content for better mobile experience */
-  .project_text {
-    order: 2;
+  .section {
+    margin: 0 2rem;
   }
 
-  .project_media {
-    order: 1;
+  .project_content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .imageContainer {
+    max-width: 350px;
+  }
+
+  .project_text {
     width: 100%;
   }
 
-  /* Adjust navigation spacing and font size */
+  .project_media {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .imageContainer {
+    max-width: 300px;
+  }
+
+  .imageTitle h3 {
+    font-size: clamp(1.2rem, 3vw, 1.2rem);
+  }
+
+  .projectInfo h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .projectInfo p {
+    font-size: clamp(1rem, 3vw, 1rem);
+  }
+}
+
+/* Tablet and smaller desktop screens */
+@media (max-width: 968px) {
   .navigation {
     margin: 5rem 1rem 1rem 1rem;
   }
 
+  .section {
+    margin: 0 1rem;
+  }
+
   .navLink {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
 
   .current_project {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sliderStyles {
+    gap: 1rem;
+  }
+  .slide {
+    flex: 0 0 350px;
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+
+  .slideImage {
+    max-height: 280px;
+  }
+
+  .projects_intro h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .projects_intro_text_content img {
+    display: none;
+  }
+
+  .total_amount span {
+    font-size: clamp(5rem, 3vw, 6rem);
+  }
+
+  .projectContent {
+  }
+
+  .imageContainer {
+    max-width: 250px;
+  }
+
+  .imageTitle h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .projectInfo h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  }
+
+  .projectInfo p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+
   }
 }
 
@@ -934,14 +1053,34 @@
 @media (max-width: 768px) {
   /* Center timeline content */
   .timeline_entry {
+    gap: 1rem;
     flex-direction: column;
-    text-align: center;
-    gap: clamp(1rem, 3vw, 2rem);
+    align-items: flex-start;
+  }
+
+  .project_info {
+    margin-left: 1rem;
   }
 
   .timeline_entry img {
     max-width: 100%;
-    height: auto;
+    padding-right: 1rem;
+  }
+
+  .projects_intro {
+    margin: 1.5rem;
+  }
+
+  .projects_intro h1 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .projects_intro p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .total_amount span {
+    font-size: clamp(3rem, 3vw, 4rem);
   }
 
   /* Stack support criteria vertically */
@@ -952,48 +1091,75 @@
 
   .criteria_left {
     position: static;
-    margin-bottom: clamp(1rem, 3vw, 2rem);
+    margin-bottom: 3rem;
+  }
+
+  .criteria_item_text p,
+  .criteria_left p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+  }
+
+  .criteria_item_text h3 {
+    font-size: clamp(1.4rem, 1.5vw, 1.5rem);
   }
 
   /* Adjust project layout */
-  .projectContent {
+  .fullscreenSlider {
+    display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5rem;
   }
 
-  .list {
-    flex-wrap: wrap;
+  .projectContent {
+    align-items: center;
+    position: relative;
+    margin-top: 2rem;
   }
 
-  .target_section img {
-    display: none;
+  .imageContainer {
+    max-width: 200px;
   }
 
-  .projectImage,
+  .imageTitle {
+    padding: 0.5rem;
+  }
+
+  .imageTitle h3 {
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+  }
+
   .projectInfo {
-    width: 100%;
+    padding: 0.5rem;
   }
 
-  .projectImage {
-    height: 50vh;
-    min-height: 300px;
+  .projectInfo h2 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
-  .projectInfo {
-    height: auto;
-    min-height: 50vh;
-    padding: clamp(1rem, 3vw, 2rem);
+  .projectInfo p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+
+  .projectYear, .projectTitle, .projectDescription {
+    margin-bottom: 0.5rem;
   }
 
   /* Reposition year navigation */
   .yearNavigation {
     flex-direction: row;
-    position: fixed;
-    bottom: 2rem;
-    right: 50%;
-    transform: translateX(50%);
-    gap: clamp(1rem, 3vw, 2rem);
+    position: relative;
+    top: -20px;
+    left: 0;
+    gap: 2rem;
     z-index: 10;
+  }
+
+  .fullscreenSlider {
+    flex-direction: column-reverse;
+    padding: 4rem 1.5rem;
   }
 
   /* Adjust container and navigation styles */
@@ -1001,13 +1167,6 @@
     flex-direction: column;
     gap: clamp(1rem, 3vw, 2rem);
     padding: clamp(0.5rem, 2vw, 1rem);
-  }
-
-  .stickyNav {
-    position: relative;
-    top: 0;
-    padding: 0 0 1rem 0;
-    border-bottom: 1px solid #eee;
   }
 
   /* Adjust spacing and sizing for various elements */
@@ -1024,11 +1183,6 @@
     padding: clamp(0.5rem, 2vw, 1rem);
     gap: clamp(0.5rem, 2vw, 1rem);
   }
-
-  .slide {
-    flex: 0 0 100%;
-  }
-
   /* Adjust list styling */
   .listItem {
     flex-direction: column;
@@ -1041,7 +1195,7 @@
   }
 
   .list li {
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    font-size: clamp(1rem, 1.5vw, 0.9rem);
   }
 
   /* Stack section content */
@@ -1081,14 +1235,71 @@
     padding: clamp(1rem, 4vw, 2rem);
   }
 
-  /* Scale down play button */
-  .play_button_overlay {
-    width: clamp(40px, 12vw, 60px);
-    height: clamp(40px, 12vw, 60px);
+  .projects_intro {
+    margin: 1rem;
   }
 
-  .play_icon {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+  .projects_intro h1 {
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+  }
+
+  .projects_intro p,
+  .total_amount p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .total_amount span {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .timeline_entries {
+    gap: 1rem;
+  }
+
+  .timeline_entry {
+    gap: 1rem;
+  }
+
+  .project_info p {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+
+  .project_info h3 {
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
+    margin: 0;
+  }
+
+  .contact_info {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .projectContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .yearNavigation {
+    gap: 1.3rem;
+  }
+
+  .yearNavigation button {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    max-width: 100%;
+  }
+
+  .projectImage {
+    max-width: 100%;
+  }
+
+  .projectInfo {
+    width: 100%;
   }
 
   /* Stack navigation vertically */
@@ -1096,6 +1307,110 @@
     margin: clamp(2rem, 5vw, 3rem) clamp(0.5rem, 2vw, 1rem);
     flex-direction: column;
     gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  .section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .criteria_item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .criteria_right {
+    gap: 1rem;
+  }
+
+  .criteria_item_text p,
+  .criteria_left p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .criteria_left h2 {
+    font-size: clamp(1.4rem, 1.5vw, 1.5rem);
+  }
+
+  .list {
+    gap: 0;
+    margin-right: 0;
+  }
+
+  .slide {
+    flex: 0 0 250px;
+  }
+
+  .slideImage {
+    max-height: 180px;
+  }
+
+  .section {
+    margin-top: 1rem;
+  }
+
+  .listItem {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .money_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .money_section h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 1rem 0;
+  }
+
+  .money_section p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 0;
+  }
+
+  .money_list {
+    margin-top: 1rem;
+  }
+
+  .money_item {
+    margin: 0;
+  }
+
+  .benefitsList {
+    margin-bottom: 3rem;
+  }
+
+  .benefitItem p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .highlightText p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .money_section img {
+    display: none;
+  }
+
+  .money_item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .target_section_content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
   }
 
   /* Adjust font sizes */

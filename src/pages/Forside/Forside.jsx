@@ -61,7 +61,7 @@ const Forside = () => {
       <div className={styles["forside-intro-container"]}>
         <div className={styles["forside-intro-venstre"]}>
           <h1>
-            <bold>VEJLE MOD HUDCANCER </bold> <br />
+            <strong>VEJLE MOD HUDCANCER </strong> <br />
             STØTTER KAMPEN MOD <br /> HUDCANCER
           </h1>
           <hr className={styles["hudcancer-divider"]} />
@@ -109,11 +109,11 @@ const Forside = () => {
           <p>
             Kilde:{" "}
             <a href="https://www.cancer.dk/hudkraeft-hudcancer/">
-              <bold>Kræftens bekæmpelse</bold>
+              <strong>Kræftens bekæmpelse</strong>
             </a>{" "}
             &{" "}
             <a href="https://netdoktor.dk/kraeft/hudkraft/sygdomme/hudkraft/">
-              <bold>Netdoktor.dk</bold>
+              <strong>Netdoktor.dk</strong>
             </a>
           </p>
         </div>

@@ -35,14 +35,13 @@ const OmOs = () => {
           </h1>
           <div className={styles["omos-divider"]} />
           <p>
-            Is simply dummy text of the printing and typesetting industry.{" "}
-            <br />
-            Lorem Ipsum has been the industrys standard dummy text ever <br />
-            since the 1500s, when an unknown printer took a galley of type and{" "}
-            <br />
-            scrambled it to make a type specimen book. It has survived not{" "}
-            <br />
-            only five centuries, but also the leap into electronic typesetting.{" "}
+            Vores indsats bunder i fællesskab og nærområdets opbakning.
+            Sponsorer fra Vejles erhvervsliv bidrager med lokale midler, og
+            frivillige sørger for, at hver opgave bliver løst med engagement og
+            hjerte. Det betyder, at vi sammen skaber forandring og styrke det
+            samlede kræftcenter i Vejle. <br /> Ved at stå sammen kan vi skabe
+            en lysere fremtid uden hudcancer. Vi tror på, at fællesskab gør en
+            forskel - og sammen kan vi skabe en verden med færre kræfttilfælde.
           </p>
         </div>
 
@@ -96,12 +95,18 @@ const OmOs = () => {
           </h1>
           <hr className={styles["ideenbag-divider"]} />
           <p>
-            is simply dummy text of the printing and typesetting <br />
-            industry. Lorem Ipsum has been the industrys standard <br />
-            dummy text ever since the 1500s, when an unknown printer <br />
-            took a galley of type and scrambled it to make a type <br />
-            specimen book. It has survived not only five centuries, but <br />
-            also the leap into electronic typesetting,{" "}
+            Vejle mod hudcancer blev skabt ud fra en simpel idé: At bidrage til
+            kampen mod hudcancer, gennem lokale midler. Visionen er at skabe
+            opmærksomhed om sygdommen og gøre en konkret forskel gennem støtte
+            til lokale initiativer, der fremmer forebyggelse, behandling,
+            forskning og udvikling. Alt vi gør, er baseret på frivillighed og
+            lokal opbakning. Midlerne indsamles gennem det Vejlensiske
+            erhvervsliv, som støtter de forskellige projekter, og fordi alle
+            opgaver udføres af frivillige, går alle indsamlede midler til det
+            pågældende projekt. Bag vores indsats ligger en stor tro på, at
+            sammen kan vi bidrage til at bekæmpe hudkræft og samtidig skabe
+            større bevidsthed om hudcancer. Det er gennem styrke fra
+            lokalsamfundet og dets sammenhold, der gør vores arbejde muligt.
           </p>
         </div>
       </div>
@@ -113,10 +118,8 @@ const OmOs = () => {
             <img src={VMVStotte} alt="" />
             <div className={styles["VMV-stotte-tekst"]}>
               <p>
-                {" "}
-                <bold>med din støtte</bold> <br />
-                kan vi samle ind til <br />
-                kampen mod hudcancer
+                <strong>Mission:</strong> <br />
+                Bekæmpe hudcancer gennem lokale midler
               </p>
             </div>
           </div>
@@ -125,9 +128,8 @@ const OmOs = () => {
             <div className={styles["VMV-stotte-tekst"]}>
               <p>
                 {" "}
-                <bold>Sammen kan</bold> <br />
-                vi opnå store <br />
-                Resultater
+                <strong>Vision:</strong> <br />
+                Skabe oplysning omkring forebyggelse, behandling og forskning
               </p>
             </div>
           </div>
@@ -135,10 +137,8 @@ const OmOs = () => {
             <img src={VMVLokale} alt="" />
             <div className={styles["VMV-stotte-tekst"]}>
               <p>
-                {" "}
-                <bold>gennem lokale</bold> <br />
-                midler kan vi gavne <br />
-                kræftcenteret i vejle
+                <strong>Værdier:</strong> <br />
+                Fællesskab, gennemsigtighed og lokal støtte
               </p>
             </div>
           </div>

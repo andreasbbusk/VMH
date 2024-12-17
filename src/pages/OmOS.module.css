@@ -3,6 +3,7 @@
   padding: 2rem;
   margin: 0 2rem;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .omos-intro-venstre {
@@ -75,6 +76,7 @@
 .ideenbag-container {
   display: flex;
   justify-content: center;
+  gap: 3rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -82,10 +84,12 @@
 .ideenbag-billede-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 .ideenbag-billede-et-container img {
-  margin-left: 0.95rem;
+  margin-left: 1rem;
 }
 
 .ideenbag-billede-to-container {
@@ -101,7 +105,10 @@
 }
 
 .ideenbag-tekst {
-  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
 }
 
 .ideenbag-tekst h1 {
@@ -128,6 +135,7 @@
   display: flex;
   text-align: center;
   justify-content: space-evenly;
+  margin: 2rem;
 }
 
 .VMV-content p {
@@ -136,6 +144,22 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+.VMV-stotte,
+.VMV-sammen,
+.VMV-lokale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.VMV-stotte img,
+.VMV-sammen img,
+.VMV-lokale img {
+  max-width: 200px;
 }
 
 .omos-kontakt-container {

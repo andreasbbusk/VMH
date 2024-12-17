@@ -26,19 +26,23 @@ const Projects = () => {
   useEffect(() => {
     if (currentProjectYear) {
       setTimeout(() => {
-        const sliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
-        
+        const sliderSection = document.getElementById(
+          `slider-project-${currentProjectYear}`
+        );
+
         if (sliderSection) {
           sliderSection.scrollIntoView({
             behavior: "smooth",
-            block: "start", 
+            block: "start",
             inline: "nearest",
           });
         } else {
           // Retry scrolling with increasing delays if element not found initially
-          [600, 900, 1100].forEach(delay => {
+          [600, 900, 1100].forEach((delay) => {
             setTimeout(() => {
-              const retrySliderSection = document.getElementById(`slider-project-${currentProjectYear}`);
+              const retrySliderSection = document.getElementById(
+                `slider-project-${currentProjectYear}`
+              );
               if (retrySliderSection) {
                 retrySliderSection.scrollIntoView({
                   behavior: "smooth",
@@ -175,17 +179,16 @@ const Projects = () => {
 
           <section className={styles.projects_timeline}>
             <div className={styles.total_amount} ref={ref}>
-              <m.h2>
-                <m.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.5,
-                  }}
-                >
-                  {`${formatAmount(animatedNumber)} kr.`}
-                </m.span>
-              </m.h2>
+              <m.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              >
+                {`${formatAmount(animatedNumber)} kr.`}
+              </m.span>
+
               <p>
                 Vejle mod hudcancer har siden 2017 indsamlet over 3,4 millioner
                 kroner, som er gået til en lang række formål.
@@ -354,12 +357,12 @@ const Projects = () => {
                 <div className={styles.criteria_item_text}>
                   <h3>MÅLBARHED</h3>
                   <p>
-                    Det skal bidrage til at øge kendskabet til hudcancer i
-                    Region Syddanmark. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Asperiores voluptatum deleniti aspernatur
-                    ipsam optio deserunt impedit commodi error repellat autem.
-                    Illo quidem optio, necessitatibus recusandae libero
-                    inventore vero cum id?
+                    For at sikre projektets succes er det afgørende at opstille
+                    konkrete resultater der kan vise effekten af indsatsen.
+                    Projekterne skal samtidig bidrage til at øge kendskabet til
+                    hudcancer i Region Syddanmark, dette gør det muligt at
+                    vurdere projekternes indflydelse og justere indsatsen
+                    løbende.
                   </p>
                 </div>
               </div>
@@ -373,11 +376,8 @@ const Projects = () => {
                   <h3>LOKAL FORANKRING</h3>
                   <p>
                     Projektet skal styrke samarbejdet mellem sundhedspersonale
-                    og borgere i Region Syddanmark. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Libero maxime voluptates
-                    corporis omnis! Asperiores excepturi corrupti quos atque
-                    ullam repudiandae nihil nemo tempora! Numquam facere fugit
-                    accusamus, aliquam perspiciatis unde.
+                    og borgere i Region Syddanmark ved at skabe en tættere
+                    dialog og øget tillid mellem parterne.
                   </p>
                 </div>
               </div>
@@ -390,12 +390,11 @@ const Projects = () => {
                 <div className={styles.criteria_item_text}>
                   <h3>SAMARBEJDE</h3>
                   <p>
-                    Projektet skal styrke samarbejdet mellem sundhedspersonale
-                    og borgere i Region Syddanmark. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Consequuntur repellat quaerat
-                    eaque laborum veniam quis quia. Magni, atque libero. Illo
-                    natus ipsam iste illum, delectus voluptatem consequatur
-                    eveniet officiis culpa?
+                    Projekterne skal fremme et tæt samarbejde mellem
+                    sundhedspersonalet, borgerene og lokale midler i Region
+                    Syddanmark. Ved at inddrage forskellige interessenter skabes
+                    der en fælles indsats for at øge opmærksomheden omkring
+                    hudcancer.
                   </p>
                 </div>
               </div>
