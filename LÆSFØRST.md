@@ -1,3 +1,8 @@
+Hvis der ikke er angivet person i toppen af dokumenterne er det lavet fælles
+
+Der er navn på personen der har kodet i toppen af hvert JSX dokument - Her er CSS til pågældene side også den samme som har kodet JSX filen.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
