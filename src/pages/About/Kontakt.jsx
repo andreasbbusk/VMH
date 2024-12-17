@@ -10,9 +10,9 @@ import Emblem from "../../assets/emblem.png";
 const Kontakt = () => {
   const handleDownload = () => {
     // Create a link element
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = Emblem;
-    link.download = 'virksomheds-emblem.png';
+    link.download = "virksomheds-emblem.png";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -35,7 +35,7 @@ const Kontakt = () => {
             </h1>
             <div className={styles.horizontal_line}></div>
             <p>
-              Kontakt os og find ud af hvordan du kan være med til at kæmpe mod
+              Kontakt os og find ud af hvordan du kan være med til at bekæmpe
               hudcancer.
             </p>
             <p>
@@ -48,14 +48,14 @@ const Kontakt = () => {
               materiale.
             </p>
           </div>
-          <div 
+          <div
             className={styles.logo_download}
             onClick={handleDownload}
-            onKeyDown={(e) => e.key === 'Enter' && handleDownload()}
+            onKeyDown={(e) => e.key === "Enter" && handleDownload()}
             role="button"
             tabIndex={0}
             aria-label="Download logo pakke"
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: "pointer" }}
           >
             <img src={LogoDownload} alt="Download logo" />
             <h4>Logo pakke</h4>
