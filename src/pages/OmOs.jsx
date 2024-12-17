@@ -71,7 +71,7 @@ const OmOs = () => {
       <div className={styles["omos-citat"]}>
         <h1>
           "Vi har startet vejle mod hudcancer, <br />
-          fordi hudkræft er et større problem <br />
+          fordi hudcancer er et større problem <br />
           og det skal der endnu mere fokus på" <br />
         </h1>
         <p>-Dorthe, Susanne, Christina, Birgitte </p>
@@ -104,7 +104,7 @@ const OmOs = () => {
             erhvervsliv, som støtter de forskellige projekter, og fordi alle
             opgaver udføres af frivillige, går alle indsamlede midler til det
             pågældende projekt. Bag vores indsats ligger en stor tro på, at
-            sammen kan vi bidrage til at bekæmpe hudkræft og samtidig skabe
+            sammen kan vi bidrage til at bekæmpe hudcancer og samtidig skabe
             større bevidsthed om hudcancer. Det er gennem styrke fra
             lokalsamfundet og dets sammenhold, der gør vores arbejde muligt.
           </p>

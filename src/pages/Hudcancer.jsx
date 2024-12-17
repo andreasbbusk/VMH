@@ -126,7 +126,7 @@ const Hudcancer = () => {
       </div>
 
       <div className={styles["forebygge-background"]}>
-      <div className={styles["forebygge-overskrift-mobil"]}>
+        <div className={styles["forebygge-overskrift-mobil"]}>
           <h1>
             sådan <bold> Forebygger du </bold> <br />
             udviklingen af hudkræft
@@ -163,66 +163,91 @@ const Hudcancer = () => {
           </p>
         </div>
 
-<div className={styles['infographic-container']}>
-            <div className={styles['solhat-container']}>
-            <div className={styles['Solhat-billede-container']}>
-            <img src={solhat} alt="" />
-            <div className={styles['mobil-farvel-1']}>
-            <img src={solhatpil} alt="" />
-            </div>
-            </div>
-            <div className={styles['solhat-tekst']}>
-            <h2>Solhat/tøj</h2>
-            <p>
-            Hvis du ikke har mulighed for at være i skyggen er en solhat med <br />
-             bred skygge og en langærmet t-shirt den bedste beskyttelse mod <br /> solens uv-stråling.</p>
-             </div>
-            </div>
-
-
-            <div className={styles['solcreme-container']}>
-            <div className={styles['Solcreme-billede-container']}>
-            <div className={styles['mobil-farvel']}>
-            <img src={solcremepil} alt="" />
-            </div>
-            <img src={solcreme} alt="" />
-            </div>
-            <div className={styles['sol-creme-tekst']}>
-            <h2>Solcreme</h2>
-            <p>
-          Husk altid rigeligt med solcreme. Efter badning og aftørring bør <br />
-           du smøre igen. Brug faktor 15 eller mere i Danmark og faktor 30 <br />
-            eller mere, når du er ude og rejse i lande, der har et varmere <br />
-             klima. Solcremen skal være bredspektret, dvs. beskytte mod både <br />
-              UVA- og UVB-stråling.</p>
+        <div className={styles["infographic-container"]}>
+          <div className={styles["solhat-container"]}>
+            <div className={styles["Solhat-billede-container"]}>
+              <img src={solhat} alt="" />
+              <div className={styles["mobil-farvel-1"]}>
+                <img src={solhatpil} alt="" />
               </div>
             </div>
+            <div className={styles["solhat-tekst"]}>
+              <h2>Solhat/tøj</h2>
+              <p>
+                Hvis du ikke har mulighed for at være i skyggen er en solhat med{" "}
+                <br />
+                bred skygge og en langærmet t-shirt den bedste beskyttelse mod{" "}
+                <br /> solens uv-stråling.
+              </p>
             </div>
+          </div>
+
+          <div className={styles["solcreme-container"]}>
+            <div className={styles["Solcreme-billede-container"]}>
+              <div className={styles["mobil-farvel"]}>
+                <img src={solcremepil} alt="" />
+              </div>
+              <img src={solcreme} alt="" />
+            </div>
+            <div className={styles["sol-creme-tekst"]}>
+              <h2>Solcreme</h2>
+              <p>
+                Husk altid rigeligt med solcreme. Efter badning og aftørring bør{" "}
+                <br />
+                du smøre igen. Brug faktor 15 eller mere i Danmark og faktor 30{" "}
+                <br />
+                eller mere, når du er ude og rejse i lande, der har et varmere{" "}
+                <br />
+                klima. Solcremen skal være bredspektret, dvs. beskytte mod både{" "}
+                <br />
+                UVA- og UVB-stråling.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className={styles['yderlige-info-background']}>
-      <div className={styles['yderlige-info-overkskrift']}>
-      <h1>For Yderligere Information</h1>
-      </div>
-      <div className={styles['yderlige-info-container']}>
-        <div className={styles['yderlige-info-links']}>
-          <p>Kræftens Bekæmpelse:</p>
-          <a href="">Hudkræft: Symptomer, behandling, undersøgelser, diagnose og årsager</a> <br />
-          <a href="">Statistik om modermærkekræft</a> <br />
-          <a href="">Statistik om basalcelle- og pladecellekræft samlet</a>
+      <div className={styles["yderlige-info-background"]}>
+        <div className={styles["yderlige-info-overkskrift"]}>
+          <h1>For Yderligere Information</h1>
         </div>
+        <div className={styles["yderlige-info-container"]}>
+          <div className={styles["yderlige-info-links"]}>
+            <p>Kræftens Bekæmpelse:</p>
+            <a href="https://www.cancer.dk/hudkraeft-hudcancer/">
+              Hudkræft: Symptomer, behandling, undersøgelser, diagnose og
+              årsager
+            </a>
+            <br />
+            <a href="https://www.cancer.dk/modermaerkekraeft-malignt-melanom/fakta/statistik/">
+              Statistik om modermærkekræft
+            </a>{" "}
+            <br />
+            <a href="https://www.cancer.dk/hudkraeft-hudcancer/fakta/statistik/basalcellekraeft-pladecellekraeft-samlet/">
+              Statistik om basalcelle- og pladecellekræft samlet
+            </a>
+          </div>
 
-        <div className={styles['yderlige-info-links']}>
-          <p>Euromelanoma:</p>
-          <a href="">Fakta om hudkræft</a> <br />
-          <a href="">Forebyggelse af hudkræft</a> <br />
-          <a href="">Hvad skal du kigge efter</a>
-        </div>
+          <div className={styles["yderlige-info-links"]}>
+            <p>Euromelanoma:</p>
+            <a href="https://www.euromelanoma.eu/da-dk/fakta-om-hudkraeft">
+              Fakta om hudkræft
+            </a>{" "}
+            <br />
+            <a href="https://www.euromelanoma.eu/da-dk/forebyggelse-af-hudkraeft">
+              Forebyggelse af hudkræft
+            </a>{" "}
+            <br />
+            <a href="https://www.euromelanoma.eu/da-dk/kontrol-af-din-egen-hud/hvad-skal-du-kigge-efter">
+              Hvad skal du kigge efter
+            </a>
+          </div>
 
-        <div className={styles['yderlige-info-links']}>
-          <a href="">Solkampagnen</a> <br />
+          <div className={styles["yderlige-info-links"]}>
+            <a href="https://www.cancer.dk/solkampagnen/">Solkampagnen</a>{" "}
+            <br />
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

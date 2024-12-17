@@ -274,10 +274,16 @@ bold {
   background-color: white;
 }
 
-.yderlige-info-container a,
-.yderlige-info-container p {
+.yderlige-info-container a {
   color: #e0a619;
   line-height: 1.5;
+}
+
+.yderlige-info-container p {
+  color: black;
+  font-family: "adelle", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .yderlige-info-container a:hover {
